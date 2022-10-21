@@ -47,12 +47,12 @@ Global Settings
 ====================================================================
    ***/
 body {
-  font-family: $inter;
-  font-size: 21px;
-  color: $white;
-  line-height: 40px;
+  font-family: $roboto;
+  font-size: 14px;
+  color: $black2;
+  line-height: 17px;
   font-weight: 400;
-  background: $black;
+  background: $white;
 }
 a {
   text-decoration: none;
@@ -71,7 +71,6 @@ ul {
 }
 .auto__container {
   position: relative;
-  max-width: 1250px;
   margin: 0 auto;
   padding: 0 40px;
 }

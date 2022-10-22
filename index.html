@@ -14,7 +14,10 @@
     <main>
     <!-- sidebar start
     =========================================== -->
-    <section class="sidebar">
+    <div class="burger" id="sidebarBtn">
+      <span></span>
+    </div>
+    <section class="sidebar" id="sidebar">
         <div class="sidebar__inner">
           <a href="#" class="sidebar__inner-logo">
             <img src="./images/logo.png" alt="">
@@ -76,7 +79,7 @@
               </a>
             </li>
           </ul>
-          <a href="#" class="sidebar__inner-user">
+          <a href="#" class="sidebar__inner-user" id="importBtn">
             <span>
               <img src="./images/sidebar/user.png" alt="">
             </span>
@@ -91,16 +94,131 @@
     =========================================== -->
     <section class="intro">
         <div class="intro__inner">
-     
+          <!-- when no users are selected
+              =========================================== -->
+          <div class="voter">
+            <div class="voter__inner">
+              <div class="voter__inner-image">
+                <img src="./images/voter.png" alt="">
+              </div>
+              <div class="voter__inner-content">
+                <h1>
+                  Add your first Voter
+                </h1>
+                <p class="big">
+                  Create your first voter, select from existing users and groups, or import them from a CSV.
+                </p>
+              </div>
+            </div>
+
+          </div>
         </div>
     </section>
     <!-- intro end
     =========================================== -->
-    <div class="addUser">
-      <div class="addUser__inner">
-        
-      </div>
+    <!-- modals start
+     =========================================== -->
+    <div class="addUser" id="addUser">
+      <form action="" class="addUser__inner">
+        <h2>
+          Add User
+        </h2>
+        <p class="sm">
+          Enter the details below to create a new User
+        </p>
+        <div class="input">
+          <label for="name">
+            First Name
+          </label>
+          <input type="text" id="name" placeholder="Mary White">
+        </div>
+        <div class="input">
+          <label for="surname">
+            Last Name
+          </label>
+          <input type="text" id="surname" placeholder="Mary White">
+        </div>
+        <div class="input invalid">
+          <label for="email">
+            Email
+          </label>
+          <input type="email" id="email" placeholder="Mary White">
+          <p>
+            The email is not valid
+          </p>
+        </div>
+        <div class="input valid">
+          <label for="phone">
+            Phone Number
+          </label>
+          <input type="number" id="phone" placeholder="+1 234 5678901">
+          <p>
+            The phone number is not valid
+          </p>
+        </div>
+        <div class="addUser__inner-check">
+          <div class="checkbox">
+            <input type="checkbox">
+            <span>
+              <img src="./images/icons/check.svg" alt="">
+            </span>
+          </div>
+          Active
+        </div>
+        <div class="addUser__inner-buttons">
+          <button type="button" class="button previous" id="addConfirm">
+            Cancel
+          </button>
+          <button type="submit" class="button next" id="addCancel">
+            Confirm
+          </button>
+        </div>
+      </form>
     </div>
+    <div class="importUser" id="importUser">
+      <form action="" class="importUser__inner">
+        <h2>
+          Import Users from CSV
+        </h2>
+        <p class="sm">
+          Here you can import users from a CSV. You can download the template here.
+        </p>
+        <h3>
+          Delimiter
+        </h3>
+        <div class="importUser__inner-deviders">
+          <label for="comma">
+            <input type="radio" name="delimiter" id="comma">
+            Comma  “,”
+          </label>
+          <label for="semicolon" class="importUser__inner-deviders-item">
+            <input type="radio" name="delimiter" id="semicolon">
+            Semicolon “;”
+          </label>
+          <label for="tab" class="importUser__inner-deviders-item">
+            <input type="radio" name="delimiter" id="tab">
+            Tab “    “
+          </label>
+        </div>
+        <h3>
+          File
+        </h3>
+        <div class="importUser__inner-file">
+          <input type="text" placeholder="file">
+          <input type="file">
+        </div>
+        <div class="importUser__inner-buttons">
+          <button type="button" class="button previous" id="importConfirm">
+            Cancel
+          </button>
+          <button type="submit" class="button next" id="importCancel">
+            Confirm
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- modals end
+     =========================================== -->
     <!-- Sprites
     =========================================== -->
         <!-- <svg>

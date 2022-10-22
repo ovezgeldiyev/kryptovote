@@ -1,9 +1,10 @@
 .sidebar {
     position: fixed;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 220px;
     height: 100%;
+    z-index: 5;
     font-family: $poppins;
     &__inner {
         background-color: $white;
@@ -15,7 +16,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: 56px;
+            margin-bottom: 50px;
             max-width: 180px;
             img {
                 width: 100%;
@@ -26,6 +27,7 @@
             display: flex;
             align-items: center;
             position: relative;
+            padding: 5px 0;
             span {
                 display: flex;
                 justify-content: center;
@@ -50,7 +52,7 @@
         }
         ul {
             li {
-                margin-bottom: 22px;
+                margin-bottom: 12px;
             }
         }
         &-user {
@@ -93,5 +95,79 @@
             }
         }
     }
+}
+.burger {
+    display: none;
+    cursor: pointer;
+    @include transition;
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 4;
+    width: 26px;
+    height: 26px;
+    &:hover {
+        opacity: .8;
+    }
+    &::before {
+        top: 10%;
+        width: 100%;
+        height: 3px;
+        background-color: #0fb920;
+        transition: all 0.3s ease;
+        content: "";
+        position: absolute;
+        left: 0;
+    }
+    span {
+        top: 50%;
+        width: 75%;
+        height: 3px;
+        background-color: #0fb920;
+        transition: all 0.3s ease;
+        position: absolute;
+        left: 0;
+        @include transformY;
+        @include transition;
+    }
+    &::after {
+        bottom: 10%;
+        width: 50%;
+        height: 3px;
+        background-color: #0fb920;
+        transition: all 0.3s ease;
+        content: "";
+        position: absolute;
+        left: 0;
+    }
+}
+// 1180px
+@mixin sidebar-xlg-xxlg {
+    .sidebar {
 
+    }
+}
+// 1024px
+@mixin sidebar-lg-xlg {
+    .sidebar {
+        transform: translateX(-100%);
+        width: 100%;
+        height: 100%;
+        transition: .4s ease;
+        &.active {
+            transform: translateX(0);
+        }
+        &__inner {
+            width: 220px;
+        }
+    }
+    .burger {
+        display: block;
+    }
+}
+// 930px
+@mixin sidebar-md-lg {
+    .sidebar {
+  
+    }
 }

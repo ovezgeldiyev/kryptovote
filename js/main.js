@@ -57,3 +57,61 @@
 
 
 
+// menu start
+const sidebarBtn = document.getElementById("sidebarBtn");
+const sidebar = document.getElementById("sidebar");
+
+const addBtn = document.getElementById("addBtn");
+const addUser = document.getElementById("addUser");
+const addConfirm = document.getElementById("addConfirm");
+const addCancel = document.getElementById("addCancel");
+
+const importBtn = document.getElementById("importBtn");
+const importUser = document.getElementById("importUser");
+const importConfirm = document.getElementById("importConfirm");
+const importCancel = document.getElementById("importCancel");
+
+let body = document.body;
+
+sidebarBtn.onclick = function () {
+    sidebar.classList.toggle("active");
+    body.classList.toggle("active");
+    window.onclick = function (e) {
+        if (e.target == sidebar) {
+            sidebar.classList.remove("active");
+            body.classList.remove("active");
+        }
+    };
+};
+
+const addRemoveFunc = ()=> {
+    addUser.classList.remove("active");
+    body.classList.remove("active");
+}
+const importRemoveFunc = ()=> {
+    importUser.classList.remove("active");
+    body.classList.remove("active");
+}
+if(addBtn) {
+    addBtn.onclick = function () {
+        addUser.classList.toggle("active");
+        body.classList.toggle("active");
+    };
+    addConfirm.onclick = () => addRemoveFunc();
+    addCancel.onclick = () => addRemoveFunc();
+}
+
+if(importBtn) {
+    importBtn.onclick = function () {
+        importUser.classList.toggle("active");
+        body.classList.toggle("active");
+    };
+    importConfirm.onclick = () => importRemoveFunc();
+    importCancel.onclick = () => importRemoveFunc();
+}
+window.onclick = function (event) {
+    if (event.target == importUser || event.target == addUser) {
+        importRemoveFunc();
+        addRemoveFunc();
+    }
+};

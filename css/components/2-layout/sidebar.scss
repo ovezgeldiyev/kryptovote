@@ -1,0 +1,97 @@
+.sidebar {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 220px;
+    height: 100%;
+    font-family: $poppins;
+    &__inner {
+        background-color: $white;
+        padding: 18px 12px 18px 18px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        &-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 56px;
+            max-width: 180px;
+            img {
+                width: 100%;
+            }
+        }
+        &-link {
+            color: $violet;
+            display: flex;
+            align-items: center;
+            position: relative;
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    width: 100%;
+                }
+            }
+            &-icon {
+                width: 21px;
+                height: 21px;
+                margin-right: 8px;
+            }
+            &-arrow {
+                position: absolute;
+                top: 50%;
+                right: 5px;
+                width: 7px;
+                height: 10px;
+                transform: translateY(-50%);
+            }
+        }
+        ul {
+            li {
+                margin-bottom: 22px;
+            }
+        }
+        &-user {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            line-height: 18px;
+            color: $black3;
+            padding: 12px 13px;
+            box-shadow: 0px 3.5px 5.5px 0px #0000000D;
+            border: 1px solid #E9E9E9;
+            border-radius: 8px;
+            background-color: $white;
+            max-width: 180px;
+            margin: auto 0 0 0;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: "";
+                width: 6px;
+                height: 6px;
+                border-top: 1.5px solid #A0AEC0;
+                border-right: 1.5px solid #A0AEC0;
+                top: 50%;
+                right: 12px;
+                transform: translateY(-50%) rotate(135deg);
+            }
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 5px;
+                img {
+                    width: 100%;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+}

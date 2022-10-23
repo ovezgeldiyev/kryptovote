@@ -12,11 +12,23 @@
   </head>
   <body>
     <main>
+    <!-- header start
+    =========================================== -->
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__inner-logo">
+          <img src="./images/logo-header.png" alt="">
+        </div>
+        <div class="burger" id="sidebarBtn">
+          <span></span>
+        </div>
+      </div>
+    </header>
+    <!-- header end
+    =========================================== -->
     <!-- sidebar start
     =========================================== -->
-    <div class="burger" id="sidebarBtn">
-      <img src="./images/logo-icon.svg" alt="">
-    </div>
+
     <section class="sidebar" id="sidebar">
         <div class="sidebar__inner">
           <a href="#" class="sidebar__inner-logo">
@@ -94,22 +106,6 @@
     =========================================== -->
     <section class="intro">
         <div class="intro__inner">
-          <!-- when no users are selected
-              =========================================== -->
-          <!-- <div class="voter">
-            <div class="voter__inner">
-              <div class="voter__inner-image">
-                <img src="./images/voter.png" alt="">
-              </div>
-              <div class="voter__inner-content">
-                <h1>
-                  Add your first Voter
-                </h1>
-                <p class="big">
-                  Create your first voter, select from existing users and groups, or import them from a CSV.
-                </p>
-              </div>
-            </div> -->
             <div class="intro__inner-header">
               <h4>
                 <svg>
@@ -666,6 +662,24 @@
                   </td>
                 </tfoot>
               </table>
+                <!-- when no users are selected
+              =========================================== -->
+              <!-- <div class="voter">
+                <div class="voter__inner">
+                  <div class="voter__inner-image">
+                    <img src="./images/voter.png" alt="">
+                  </div>
+                  <div class="voter__inner-content">
+                    <h1>
+                      Add your first Voter
+                    </h1>
+                    <p class="big">
+                      Create your first voter, select from existing users and groups, or import them from a CSV.
+                    </p>
+                  </div>
+                </div>
+              </div> -->
+
             </div>
             <div class="intro__inner-footer">
               <a href="#" class="button cancel">
@@ -680,7 +694,6 @@
                 </a>
               </div>
             </div>
-          </div>
         </div>
     </section>
     <!-- intro end

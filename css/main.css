@@ -430,7 +430,8 @@ main {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 4;
+  background-color: #fff;
 }
 .header.sticky {
   position: fixed;
@@ -443,7 +444,7 @@ main {
           animation-duration: 0.4s;
 }
 .header__inner {
-  padding: 30px 0;
+  padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -464,7 +465,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 320px;
+  width: 180px;
 }
 .header__inner-logo img {
   width: 100%;
@@ -637,19 +638,72 @@ main {
   -webkit-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
-  position: fixed;
-  top: 30px;
-  left: 18px;
-  z-index: 4;
   width: 26px;
   height: 26px;
+  position: relative;
 }
 .burger:hover {
   opacity: 0.8;
 }
+.burger::before {
+  top: 10%;
+  width: 100%;
+  height: 3px;
+  background-color: #0fb920;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  content: "";
+  position: absolute;
+  right: 0;
+}
+.burger span {
+  top: 50%;
+  width: 75%;
+  height: 3px;
+  background-color: #0fb920;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: absolute;
+  right: 0;
+  transform: translateY(-50%);
+  -moz-ransform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+.burger::after {
+  bottom: 10%;
+  width: 50%;
+  height: 3px;
+  background-color: #0fb920;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  content: "";
+  position: absolute;
+  right: 0;
+}
+
+.intro__inner {
+  min-height: calc(100vh - 20px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.intro__inner-footer {
+  margin: auto 0 0 0;
+}
 
 .addUser {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
@@ -719,6 +773,8 @@ main {
 .importUser {
   z-index: 7;
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
@@ -923,8 +979,6 @@ h4.active span::before {
 .intro__inner {
   background-color: #fff;
   border: 1px solid rgba(138, 136, 136, 0.2);
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
   border-radius: 20px;
   padding: 20px;
 }
@@ -1389,6 +1443,8 @@ table tfoot td .pagination a.active {
 .selectUser {
   z-index: 7;
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
@@ -1526,12 +1582,8 @@ table tfoot td .pagination a.active {
 @media (max-width: 1180px) {
   .intro {
     width: 100%;
-    padding: 10px;
+    padding: 10px 40px;
   }
-  .intro__inner {
-    padding-left: 50px;
-  }
-
   .sidebar {
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);

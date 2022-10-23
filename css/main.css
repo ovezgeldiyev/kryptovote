@@ -368,8 +368,8 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 0px 4px 10px 0px #C5C5C540;
-          box-shadow: 0px 4px 10px 0px #C5C5C540;
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(197, 197, 197, 0.2509803922);
+          box-shadow: 0px 4px 10px 0px rgba(197, 197, 197, 0.2509803922);
   border: 1px solid #DEDEDE;
   padding: 10px 20px;
   border-radius: 10px;
@@ -592,8 +592,8 @@ main {
   line-height: 18px;
   color: #2d3748;
   padding: 12px 13px;
-  -webkit-box-shadow: 0px 3.5px 5.5px 0px #0000000D;
-          box-shadow: 0px 3.5px 5.5px 0px #0000000D;
+  -webkit-box-shadow: 0px 3.5px 5.5px 0px rgba(0, 0, 0, 0.0509803922);
+          box-shadow: 0px 3.5px 5.5px 0px rgba(0, 0, 0, 0.0509803922);
   border: 1px solid #E9E9E9;
   border-radius: 8px;
   background-color: #fff;
@@ -1086,10 +1086,6 @@ main {
 }
 .intro__inner-footer .buttons__row .button:last-child {
   margin: unset;
-}
-
-main {
-  margin: 0 auto;
 }
 
 .list {

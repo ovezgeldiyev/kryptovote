@@ -6,14 +6,6 @@
   width: 100%;
   z-index: 4;
   background-color: $white;
-  &.sticky  {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   animation-name: sticky;
-   animation-duration: .4s;
-  }
   &__inner {
     padding: 10px 20px;
     display: flex;
@@ -50,13 +42,3 @@
     
     }
 }
-@keyframes sticky {
-    0% {
-      top: -60px;
-      opacity: 0;
-    }
-    100% {
-      top: 0;
-      opacity: 1;
-    }
-  }

@@ -70,6 +70,17 @@ main {
     &:hover {
         opacity: .8;
     }
+    &__row {
+        display: flex;
+        justify-content: flex-end;
+        .button {
+          margin-right: 8px;
+          box-shadow: 0px 1px 2px rgba(55, 65, 81, 0.08);
+          &:last-child {
+            margin: 0;
+          }
+        }
+    }
     &.primary {
         background-color: $primary;
         color: $white;
@@ -80,6 +91,7 @@ main {
         &:hover {
             background-color: $white;
             color: $primary;
+            opacity: 1;
             svg {
                 fill: $primary;
             }
@@ -95,6 +107,7 @@ main {
         &:hover {
             background-color: $primary;
             color: $white;
+            opacity: 1;
             svg {
                 fill: $white;
             }
@@ -112,6 +125,7 @@ main {
         }
         &:hover {
             background-color: $white;
+            opacity: 1;
             svg {
                 fill: $red;
             }
@@ -143,6 +157,7 @@ main {
         margin-right: 8px;
     }
 }
+
 .input {
     max-width: 340px;
     transition: .2s ease;

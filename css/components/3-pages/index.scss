@@ -65,6 +65,8 @@
     background-color: rgba($black, .4);
     display: none;
     overflow-y: auto;
+    z-index: 7;
+
     &.active {
         display: block;
         .addUser {
@@ -95,9 +97,11 @@
         &-check {
             display: flex;
             align-items: center;
-            color: #080808;
             margin: 10px 0 70px;
-            font-family: $montserrat;
+            label {
+                font-family: $montserrat;
+                color: #080808;
+            }
         }
         &-buttons {
             display: flex;
@@ -148,6 +152,7 @@
     }
 }
 .importUser {
+    z-index: 7;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -192,6 +197,7 @@
                 display: flex;
                 align-items: center;
                 transition: .2s ease;
+                max-width: 130px;
                 &:hover {
                     opacity: .8;
                 }

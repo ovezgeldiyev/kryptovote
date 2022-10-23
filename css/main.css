@@ -368,8 +368,8 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 0px 4px 10px 0px #C5C5C540;
-          box-shadow: 0px 4px 10px 0px #C5C5C540;
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(197, 197, 197, 0.2509803922);
+          box-shadow: 0px 4px 10px 0px rgba(197, 197, 197, 0.2509803922);
   border: 1px solid #DEDEDE;
   padding: 10px 20px;
   border-radius: 10px;
@@ -590,8 +590,8 @@ main {
   line-height: 18px;
   color: #2d3748;
   padding: 12px 13px;
-  -webkit-box-shadow: 0px 3.5px 5.5px 0px #0000000D;
-          box-shadow: 0px 3.5px 5.5px 0px #0000000D;
+  -webkit-box-shadow: 0px 3.5px 5.5px 0px rgba(0, 0, 0, 0.0509803922);
+          box-shadow: 0px 3.5px 5.5px 0px rgba(0, 0, 0, 0.0509803922);
   border: 1px solid #E9E9E9;
   border-radius: 8px;
   background-color: #fff;
@@ -858,68 +858,6 @@ main {
   margin: 0;
 }
 
-h4 {
-  font-size: 12px;
-  line-height: 16px;
-  color: #3c4257;
-  font-family: "Inter", sans-serif;
-  position: relative;
-  padding-top: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-h4 svg {
-  width: 16px;
-  height: 16px;
-  fill: #6b7280;
-  margin-right: 4px;
-}
-h4 span {
-  display: block;
-  width: 16px;
-  height: 16px;
-  margin-right: 4px;
-  border-radius: 50%;
-  position: relative;
-  border: 2px solid #c1c9d2;
-}
-h4 span::before {
-  display: none;
-  content: "";
-  width: 5px;
-  height: 5px;
-  background-color: #fff;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 1;
-  position: absolute;
-}
-h4::before {
-  content: "";
-  width: 100%;
-  height: 4px;
-  border-radius: 4px;
-  background-color: #6b7280;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-h4.active::before {
-  background-color: #5469d4;
-}
-h4.active span {
-  background-color: #5469d4;
-  display: block;
-  border: unset;
-}
-h4.active span::before {
-  display: block;
-}
-
 .intro {
   padding: 15px 20px;
 }
@@ -936,10 +874,79 @@ h4.active span::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 }
-.intro__inner-header h4 {
+.intro__inner-header a {
   width: calc(14.2% - 2px);
+  font-size: 12px;
+  line-height: 16px;
+  color: #3c4257;
+  font-family: "Inter", sans-serif;
+  position: relative;
+  padding-top: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+.intro__inner-header a:hover {
+  opacity: 0.7;
+}
+.intro__inner-header a svg {
+  width: 16px;
+  height: 16px;
+  fill: #6b7280;
+  margin-right: 4px;
+}
+.intro__inner-header a span {
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  border-radius: 50%;
+  position: relative;
+  border: 2px solid #c1c9d2;
+}
+.intro__inner-header a span::before {
+  display: none;
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+  position: absolute;
+}
+.intro__inner-header a::before {
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #c1c9d2;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.intro__inner-header a.checked::before {
+  background-color: #6b7280;
+}
+.intro__inner-header a.active::before {
+  background-color: #5469d4;
+}
+.intro__inner-header a.active span {
+  background-color: #5469d4;
+  display: block;
+  border: unset;
+}
+.intro__inner-header a.active span::before {
+  display: block;
 }
 .intro__inner-info {
   margin-bottom: 24px;
@@ -1425,6 +1432,10 @@ table tfoot td .pagination a.active {
   padding: 6px 16px 8px;
   font-family: "Montserrat", sans-serif;
   position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
 }
 .UsersGroups__inner-tab p:after {
   display: none;
@@ -1460,6 +1471,18 @@ table tfoot td .pagination a.active {
           box-shadow: unset;
   -webkit-filter: unset;
           filter: unset;
+}
+.UsersGroups__inner .users {
+  display: none;
+}
+.UsersGroups__inner .users.active {
+  display: block;
+}
+.UsersGroups__inner .groups {
+  display: none;
+}
+.UsersGroups__inner .groups.active {
+  display: block;
 }
 .UsersGroups__inner .groups table td {
   width: 33.3%;

@@ -20,47 +20,47 @@
     <section class="intro">
       <div class="intro__inner">
         <div class="intro__inner-header">
-          <h4>
+          <a  href="#" class="checked">
             <svg>
               <use xlink:href="#check"></use>
             </svg>
             Template
 
-          </h4>
-          <h4>
+          </a>
+          <a  href="#" class="checked">
             <svg>
               <use xlink:href="#check"></use>
             </svg>
             Ballot Settings
 
-          </h4>
-          <h4>
+          </a>
+          <a  href="#" class="checked">
             <svg>
               <use xlink:href="#check"></use>
             </svg>
             Ballot Items
-          </h4>
-          <h4 class="active">
+          </a>
+          <a  href="#" class="active">
             <span>
             </span>
             Voters
-          </h4>
-          <h4>
+          </a>
+          <a href="#" > 
             <span>
             </span>
             Security
-          </h4>
-          <h4>
+          </a>
+          <a href="#" > 
             <span>
             </span>
             Notifications
 
-          </h4>
-          <h4>
+          </a>
+          <a href="#">  
             <span>
             </span>
             Review
-          </h4>
+          </a>
         </div>
         <div class="intro__inner-info">
           <h2>
@@ -603,14 +603,14 @@
           </p>
         </div>
         <div class="UsersGroups__inner-tab">
-          <p class="active">
+          <p class="active tabBtn" data-tab="#tab-1">
             Users
           </p>
-          <p>
+          <p class="tabBtn" data-tab="#tab-2">
             Groups
           </p>
         </div>
-        <div class="users">
+        <div class="users active tabEvent" id="tab-1">
           <div class="list">
             <div class="list__tools">
               <h2 class="strong">
@@ -1039,7 +1039,7 @@
             </table>
           </div>
         </div>
-        <div class="groups">
+        <div class="groups tabEvent" id="tab-2">
           <div class="list">
             <div class="list__tools">
               <h2 class="strong">
@@ -1388,7 +1388,7 @@
               </tfoot>
             </table>
           </div>
-          
+
         </div>
         <div class="buttons__row">
           <button class="button cancel">
@@ -1486,7 +1486,39 @@
     <!-- js
     =========================================== -->
 
-    <!-- <script src="./js/main.js"></script> -->
+    <script>
+      const tabBtn = document.querySelectorAll(".tabBtn");
+      const tabEvent = document.querySelectorAll(".tabEvent");
+      tabBtn.forEach((e) => {
+        onTabClick(tabBtn, tabEvent, e);
+      });
+
+      function onTabClick(tabBtns, tabItems, item) {
+        item.addEventListener("click", function (e) {
+          let currentBtn = item;
+          let tabId = currentBtn.getAttribute("data-tab");
+          let currentTab = document.querySelector(tabId);
+          if (currentBtn.classList.contains("active")) {
+            console.log("now active");
+            const faq = currentBtn.parentElement.querySelector(".tabEvent");
+            if (faq) {
+              faq.classList.remove("active");
+              currentBtn.classList.remove("active");
+            }
+          } else if (!currentBtn.classList.contains("active")) {
+            tabBtns.forEach(function (item) {
+              item.classList.remove("active");
+            });
+
+            tabItems.forEach(function (item) {
+              item.classList.remove("active");
+            });
+            currentBtn.classList.add("active");
+            currentTab.classList.add("active");
+          }
+        });
+      }
+    </script>
 </body>
 
 </html>

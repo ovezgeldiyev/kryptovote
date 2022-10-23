@@ -1234,7 +1234,7 @@ table tfoot td .pagination a:hover {
 }
 .intro__inner-footer::after {
   content: "";
-  width: calc(100% + 24px);
+  width: calc(100% + 30px);
   height: 100%;
   background-color: #fff;
   position: absolute;

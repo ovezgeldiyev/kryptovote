@@ -12,8 +12,12 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 28px;
+      overflow: auto;
+      margin: 0 -2px 28px;
       a {
         width: calc(14.2% - 2px);
+        margin: 0 2px;
+        min-width: 115px;
         font-size: 12px;
         line-height: 16px;
         color: #697386;
@@ -283,6 +287,7 @@ table {
   position: relative;
   background-color: $white;
   border-radius: 5px;
+  min-width: 800px;
   th {
     padding: 11px 0;
     h5 {
@@ -326,16 +331,16 @@ table {
   thead {
     position: sticky;
     z-index: 3;
-    top: 0;
+    top: 2px;
     left: 0;
     tr {
       position: relative;
       &::after {
         content: "";
         width: calc(100% + 26px);
-        height: 100%;
+        height: calc(100% + 2px);
         position: absolute;
-        top: -2px;
+        top: -3px;
         left: -13px;
         background: $gray5;
         border: 1px solid $gray6;
@@ -344,9 +349,14 @@ table {
     }
   }
   td {
-    padding: 7.5px 0;
     width: 25%;
     background: $white;
+    white-space: nowrap;
+    padding: 7.5px 15px 7.5px 0;
+    &:last-child{
+      padding-right: 0;
+      padding-left: 15px;
+    }
     h5 {
       display: flex;
       align-items: center;
@@ -440,6 +450,7 @@ table {
     }
     &.center {
       text-align: center;
+      padding: 7.5px 10px 7.5px 10px;
     }
     .checkbox__wrapper {
       display: flex;
@@ -555,7 +566,6 @@ table {
       }
     }
   }
-
   &__inner {
     background-color: $white;
     border: 1px solid $gray11;
@@ -630,6 +640,9 @@ table {
       &.active {
         display: block;
       }
+      table{
+        min-width: 700px;
+      }
     }
     .groups {
       display: none;
@@ -637,6 +650,7 @@ table {
         display: block;
       }
       table {
+        min-width: 600px;
         td {
           width: 33.3%;
           color: $gray16;
@@ -692,3 +706,5 @@ table {
     }
   }
 }
+
+

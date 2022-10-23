@@ -1,53 +1,131 @@
 // 1450px
 @include xxxxlg-xxxxxlg {
-    // @include intro-xxxxlg-xxxxxlg;
+  // @include intro-xxxxlg-xxxxxlg;
 }
 // 1380px
 @include xxxlg-xxxxlg {
-    @include intro-xxxlg-xxxxlg;
+  @include intro-xxxlg-xxxxlg;
 }
 // 1250px
 @include xlg-xxlg-extra {
-    @include intro-xlg-xxlg-extra;
+  @include intro-xlg-xxlg-extra;
 }
 // 1180px
 @include xlg-xxlg {
-    @include header-xlg-xxlg;
-    @include intro-xlg-xxlg;
-    @include sidebar-xlg-xxlg;
-
+  @include header-xlg-xxlg;
+  @include intro-xlg-xxlg;
+  @include sidebar-xlg-xxlg;
+  .list {
+    &__table {
+      height: calc(100vh - 322px);
+    }
+  }
 }
 // 1024px
 @include lg-xlg {
-    @include intro-lg-xlg;
-
+  @include intro-lg-xlg;
 }
 // 930px
 @include md-lg {
-    @include intro-md-lg;
+  @include intro-md-lg;
+  .list {
+    padding: 0;
+  }
 }
 // 750px
 @include sm-md {
-    @include intro-sm-md;
+  @include intro-sm-md;
+  table {
+    td {
+      font-size: 13px;
+      h5 {
+        font-size: 13px;
+        p {
+          span {
+            font-size: 11px;
+          }
+        }
+      }
+      h6 {
+        span {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+  .list {
+    &__tools {
+      margin-bottom: 15px;
+    }
+  }
 }
 // 650px
 @include sm-md-extra {
-    @include intro-sm-md-extra;
+  @include intro-sm-md-extra;
+  .list {
+    &__tools {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      h2 {
+        margin-bottom: 20px;
+      }
+    }
+  }
 }
 // 540px
-@include xsm-sm  {
-    @include intro-xsm-sm;
-    @include addUser-xsm-sm;
+@include xsm-sm {
+  @include intro-xsm-sm;
+  @include addUser-xsm-sm;
+  .list {
+    &__tools {
+      margin-bottom: 5px;
+      h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
 
+      &-buttons {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        .searchButton {
+          margin: 0 0 10px 0;
+          width: 100%;
+          max-width: 300px;
+        }
+        .selectButton {
+          width: 100%;
+          max-width: 300px;
+        }
+        .button {
+          margin: 0 10px 10px 0;
+        }
+      }
+    }
+  }
 }
 // 440px
-@include xxsm-xsm  {
-    @include intro-xxsm-xsm;
+@include xxsm-xsm {
+  @include intro-xxsm-xsm;
 }
 // 390px
-@include xxxsm-xxsm  {
-    @include addUser-xxxsm-xxsm;
-    @include importUser-xxxsm-xxsm;
+@include xxxsm-xxsm {
+  @include addUser-xxxsm-xxsm;
+  @include importUser-xxxsm-xxsm;
+  @include intro-xxxsm-xxsm;
 
+  .list {
+    &__tools {
+      &-buttons {
+        .button {
+            width: calc(50% - 5px);
+          &:nth-child(1) {
+            width: 100%;
+            margin-right: unset;
+          }
+        }
+      }
+    }
+  }
 }
-

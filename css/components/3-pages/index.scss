@@ -26,14 +26,25 @@
     .intro {
         width: 100%;
         padding-top: 66.79px;
+        min-height: calc(100vh - 96.79px);
+    }
+    .list {
+        &__table {
+            height: calc(100vh - 336.79px);
+        }
+    }
+    .selectUser {
         &__inner {
+            width: calc(100% - 40px);
+            max-width: unset;
+            margin: 20px;
         }
     }
 }
 // 1024px
 @mixin intro-lg-xlg {
     .intro {
-
+        padding: 66.79px 15px 15px;
     }
 }
 // 930px

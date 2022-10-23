@@ -71,15 +71,18 @@ const importUser = document.getElementById("importUser");
 const importConfirm = document.getElementById("importConfirm");
 const importCancel = document.getElementById("importCancel");
 
+const selectBtn = document.getElementById("selectBtn");
+const selectUser = document.getElementById("selectUser");
+const selectConfirm = document.getElementById("selectConfirm");
+const selectCancel = document.getElementById("selectCancel");
+
 let body = document.body;
 
 sidebarBtn.onclick = function () {
     sidebar.classList.toggle("active");
-    body.classList.toggle("active");
     window.onclick = function (e) {
         if (e.target == sidebar) {
             sidebar.classList.remove("active");
-            body.classList.remove("active");
         }
     };
 };
@@ -90,6 +93,10 @@ const addRemoveFunc = ()=> {
 }
 const importRemoveFunc = ()=> {
     importUser.classList.remove("active");
+    body.classList.remove("active");
+}
+const selectRemoveFunc = ()=> {
+    selectUser.classList.remove("active");
     body.classList.remove("active");
 }
 if(addBtn) {
@@ -109,10 +116,21 @@ if(importBtn) {
     importConfirm.onclick = () => importRemoveFunc();
     importCancel.onclick = () => importRemoveFunc();
 }
+
+if(selectBtn) {
+    selectBtn.onclick = function () {
+        selectUser.classList.toggle("active");
+        body.classList.toggle("active");
+    };
+    selectConfirm.onclick = () => selectRemoveFunc();
+    selectCancel.onclick = () => selectRemoveFunc();
+}
+
 window.onclick = function (event) {
     if (event.target == importUser || event.target == addUser) {
         importRemoveFunc();
         addRemoveFunc();
+        selectRemoveFunc();
     }
 };
 

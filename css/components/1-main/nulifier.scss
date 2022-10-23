@@ -78,5 +78,7 @@ ul {
   margin: 0 auto;
   padding: 0 40px;
 }
-
+::-webkit-scrollbar{
+  display: none;
+}
 

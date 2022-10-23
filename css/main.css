@@ -368,8 +368,8 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 0px 4px 10px 0px #C5C5C540;
-          box-shadow: 0px 4px 10px 0px #C5C5C540;
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(197, 197, 197, 0.2509803922);
+          box-shadow: 0px 4px 10px 0px rgba(197, 197, 197, 0.2509803922);
   border: 1px solid #DEDEDE;
   padding: 10px 20px;
   border-radius: 10px;
@@ -592,8 +592,8 @@ main {
   line-height: 18px;
   color: #2d3748;
   padding: 12px 13px;
-  -webkit-box-shadow: 0px 3.5px 5.5px 0px #0000000D;
-          box-shadow: 0px 3.5px 5.5px 0px #0000000D;
+  -webkit-box-shadow: 0px 3.5px 5.5px 0px rgba(0, 0, 0, 0.0509803922);
+          box-shadow: 0px 3.5px 5.5px 0px rgba(0, 0, 0, 0.0509803922);
   border: 1px solid #E9E9E9;
   border-radius: 8px;
   background-color: #fff;
@@ -1088,10 +1088,6 @@ main {
   margin: unset;
 }
 
-main {
-  margin: 0 auto;
-}
-
 .list {
   padding: 0 10px;
 }
@@ -1160,6 +1156,13 @@ main {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+.list__tools-buttons .searchButton svg:hover {
+  opacity: 0.8;
 }
 .list__tools-buttons .searchButton input {
   font-family: "Poppins", sans-serif;
@@ -1194,6 +1197,10 @@ main {
   border-radius: 30px;
   position: relative;
   padding: 10px 48px 10px 16px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
 }
 .list__tools-buttons .selectButton svg {
   fill: #fff;
@@ -1213,6 +1220,13 @@ main {
 .list__tools-buttons .selectButton p strong {
   font-weight: 600;
   color: #3d3c42;
+}
+.list__tools-buttons .selectButton:hover {
+  opacity: 0.8;
+}
+.list__table {
+  height: calc(100vh - 270px);
+  overflow: auto;
 }
 
 table {
@@ -1267,6 +1281,12 @@ table th h5 span img:nth-child(2) {
 table th h5.center {
   display: table;
   margin: 0 auto;
+}
+table thead {
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  left: 0;
 }
 table thead tr {
   position: relative;

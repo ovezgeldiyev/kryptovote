@@ -12,9 +12,12 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 28px;
-
+      overflow: auto;
+      margin: 0 -2px 28px;
       a {
         width: calc(14.2% - 2px);
+        margin: 0 2px;
+        min-width: 115px;
         font-size: 12px;
         line-height: 16px;
         color: #697386;
@@ -295,9 +298,7 @@
   &__table {
     height: calc(100vh - 280px);
     overflow: auto;
-    box-shadow: 0px 4px 20px 0px #0000001F;
-
-
+    box-shadow: 0px 4px 20px 0px #0000001f;
   }
 }
 
@@ -308,7 +309,7 @@ table {
   position: relative;
   background-color: $white;
   border-radius: 5px;
-
+  min-width: 800px;
   th {
     padding: 11px 0;
 
@@ -359,7 +360,7 @@ table {
   thead {
     position: sticky;
     z-index: 3;
-    top: 0;
+    top: 2px;
     left: 0;
 
     tr {
@@ -368,9 +369,9 @@ table {
       &::after {
         content: "";
         width: calc(100% + 26px);
-        height: 100%;
+        height: calc(100% + 2px);
         position: absolute;
-        top: -2px;
+        top: -3px;
         left: -13px;
         background: $gray5;
         border: 1px solid $gray6;
@@ -380,10 +381,14 @@ table {
   }
 
   td {
-    padding: 7.5px 0;
     width: 25%;
     background: $white;
-
+    white-space: nowrap;
+    padding: 7.5px 15px 7.5px 0;
+    &:last-child {
+      padding-right: 0;
+      padding-left: 15px;
+    }
     h5 {
       display: flex;
       align-items: center;
@@ -494,6 +499,7 @@ table {
 
     &.center {
       text-align: center;
+      padding: 7.5px 10px 7.5px 10px;
     }
 
     .checkbox__wrapper {
@@ -628,7 +634,6 @@ table {
       }
     }
   }
-
   &__inner {
     background-color: $white;
     border: 1px solid $gray11;
@@ -701,8 +706,7 @@ table {
       &__table {
         height: calc(100vh - 290px);
         max-height: 540px;
-        box-shadow: 0px 4px 20px 0px #0000001F;
-
+        box-shadow: 0px 4px 20px 0px #0000001f;
       }
     }
 
@@ -717,6 +721,9 @@ table {
       &.active {
         display: block;
       }
+      table {
+        min-width: 700px;
+      }
     }
 
     .groups {
@@ -727,6 +734,7 @@ table {
       }
 
       table {
+        min-width: 600px;
         td {
           width: 33.3%;
           color: $gray16;
@@ -781,6 +789,7 @@ table {
 //       background-color: $white;
 //     }
 
+<<<<<<< HEAD
 //     &.confirm {
 //       color: $white;
 //       background-color: $blue;
@@ -788,3 +797,34 @@ table {
 //     }
 //   }
 // }
+=======
+    &.confirm {
+      color: $white;
+      background-color: $blue;
+      filter: drop-shadow(0px 1px 2px rgba(55, 65, 81, 0.06))
+        drop-shadow(0px 1px 3px rgba(55, 65, 81, 0.1));
+    }
+  }
+}
+
+// 650px
+@mixin selectUser-sm-md-extra {
+  .selectUser {
+    &__inner {
+      &-wrapper {
+        padding: 20px 15px;
+      }
+    }
+  }
+}
+
+// 440px
+@mixin selectUser-xxsm-xsm {
+  .selectUser {
+    &__inner {
+      margin: 15px ;
+      width: calc(100% - 30px);
+    }
+  }
+}
+>>>>>>> e9d92919c73498b60b62d3e436a1a60d710a6037

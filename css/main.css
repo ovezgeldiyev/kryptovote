@@ -387,8 +387,8 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 0px 4px 10px 0px #C5C5C540;
-          box-shadow: 0px 4px 10px 0px #C5C5C540;
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(197, 197, 197, 0.2509803922);
+          box-shadow: 0px 4px 10px 0px rgba(197, 197, 197, 0.2509803922);
   border: 1px solid #DEDEDE;
   padding: 10px 20px;
   border-radius: 10px;
@@ -581,8 +581,8 @@ main {
   line-height: 18px;
   color: #2d3748;
   padding: 12px 13px;
-  -webkit-box-shadow: 0px 3.5px 5.5px 0px #0000000D;
-          box-shadow: 0px 3.5px 5.5px 0px #0000000D;
+  -webkit-box-shadow: 0px 3.5px 5.5px 0px rgba(0, 0, 0, 0.0509803922);
+          box-shadow: 0px 3.5px 5.5px 0px rgba(0, 0, 0, 0.0509803922);
   border: 1px solid #E9E9E9;
   border-radius: 8px;
   background-color: #fff;
@@ -718,7 +718,7 @@ main {
   padding: 40px 35px 40px 52px;
   border-radius: 10px;
   margin: 90px auto;
-  border: 1px solid #D0D0D0;
+  border: 1px solid #d0d0d0;
 }
 .addUser__inner h2 {
   margin-bottom: 10px;
@@ -788,7 +788,7 @@ main {
   padding: 30px 28px 20px 38px;
   border-radius: 10px;
   margin: 90px auto;
-  border: 1px solid #D0D0D0;
+  border: 1px solid #d0d0d0;
 }
 .importUser__inner h2 {
   margin-bottom: 10px;
@@ -827,7 +827,7 @@ main {
   width: 20px;
   height: 20px;
   margin-right: 8px;
-  border: 1px solid #C9C9C9;
+  border: 1px solid #c9c9c9;
   opacity: 0.6;
   background-color: #f9f9f9;
   -webkit-transition: 0.2s ease;
@@ -855,7 +855,7 @@ main {
   font-size: 16px;
   line-height: 20px;
   font-family: "Inter", sans-serif;
-  border: 1px solid #C4C7CF;
+  border: 1px solid #c4c7cf;
   margin-right: 10px;
   border-radius: 6px;
   width: 60%;
@@ -877,7 +877,7 @@ main {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  color: #4F566B;
+  color: #4f566b;
 }
 .importUser__inner-file input::-webkit-file-upload-button {
   visibility: hidden;
@@ -936,9 +936,13 @@ main {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 28px;
+  overflow: auto;
+  margin: 0 -2px 28px;
 }
 .intro__inner-header a {
   width: calc(14.2% - 2px);
+  margin: 0 2px;
+  min-width: 115px;
   font-size: 12px;
   line-height: 16px;
   color: #697386;
@@ -1217,8 +1221,8 @@ main {
 .list__table {
   height: calc(100vh - 280px);
   overflow: auto;
-  -webkit-box-shadow: 0px 4px 20px 0px #0000001F;
-          box-shadow: 0px 4px 20px 0px #0000001F;
+  -webkit-box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1215686275);
+          box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1215686275);
 }
 
 table {
@@ -1228,6 +1232,7 @@ table {
   position: relative;
   background-color: #fff;
   border-radius: 5px;
+  min-width: 800px;
 }
 table th {
   padding: 11px 0;
@@ -1275,7 +1280,7 @@ table th h5.center {
 table thead {
   position: sticky;
   z-index: 3;
-  top: 0;
+  top: 2px;
   left: 0;
 }
 table thead tr {
@@ -1284,18 +1289,23 @@ table thead tr {
 table thead tr::after {
   content: "";
   width: calc(100% + 26px);
-  height: 100%;
+  height: calc(100% + 2px);
   position: absolute;
-  top: -2px;
+  top: -3px;
   left: -13px;
   background: #fafafb;
   border: 1px solid #f3f3f3;
   border-radius: 5px 5px 0px 0px;
 }
 table td {
-  padding: 7.5px 0;
   width: 25%;
   background: #fff;
+  white-space: nowrap;
+  padding: 7.5px 15px 7.5px 0;
+}
+table td:last-child {
+  padding-right: 0;
+  padding-left: 15px;
 }
 table td h5 {
   display: -webkit-box;
@@ -1400,6 +1410,7 @@ table td h6::before {
 }
 table td.center {
   text-align: center;
+  padding: 7.5px 10px 7.5px 10px;
 }
 table td .checkbox__wrapper {
   display: -webkit-box;
@@ -1583,8 +1594,8 @@ table tfoot td .pagination a:hover {
 .selectUser__inner .list__table {
   height: calc(100vh - 290px);
   max-height: 540px;
-  -webkit-box-shadow: 0px 4px 20px 0px #0000001F;
-          box-shadow: 0px 4px 20px 0px #0000001F;
+  -webkit-box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1215686275);
+          box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1215686275);
 }
 .selectUser__inner table {
   -webkit-box-shadow: unset;
@@ -1598,11 +1609,17 @@ table tfoot td .pagination a:hover {
 .selectUser__inner .users.active {
   display: block;
 }
+.selectUser__inner .users table {
+  min-width: 700px;
+}
 .selectUser__inner .groups {
   display: none;
 }
 .selectUser__inner .groups.active {
   display: block;
+}
+.selectUser__inner .groups table {
+  min-width: 600px;
 }
 .selectUser__inner .groups table td {
   width: 33.3%;
@@ -1675,6 +1692,10 @@ table tfoot td .pagination a:hover {
   .burger {
     display: block;
   }
+
+  .list__table {
+    height: calc(100vh - 322px);
+  }
 }
 @media (max-width: 1024px) {
   .intro {
@@ -1685,7 +1706,69 @@ table tfoot td .pagination a:hover {
     padding: 10px 15px;
   }
 }
+@media (max-width: 930px) {
+  .intro__inner-header {
+    margin-bottom: 20px;
+  }
+  .intro__inner-info {
+    margin-bottom: 20px;
+  }
+  .intro__inner-info h2 {
+    margin-bottom: 7px;
+  }
+
+  .list {
+    padding: 0;
+  }
+}
+@media (max-width: 750px) {
+  table td {
+    font-size: 13px;
+  }
+  table td h5 {
+    font-size: 13px;
+  }
+  table td h5 p span {
+    font-size: 11px;
+  }
+  table td h6 span {
+    font-size: 11px;
+  }
+
+  .list__tools {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 650px) {
+  .selectUser__inner-wrapper {
+    padding: 20px 15px;
+  }
+
+  .list__tools {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .list__tools h2 {
+    margin-bottom: 20px;
+  }
+}
 @media (max-width: 540px) {
+  .intro__inner-info h2 {
+    font-size: 18px;
+  }
+  .intro__inner-info p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
   .addUser {
     padding: 0 16px;
   }
@@ -1703,6 +1786,42 @@ table tfoot td .pagination a:hover {
   }
   .addUser__inner .input {
     max-width: unset;
+  }
+
+  .list__tools {
+    margin-bottom: 5px;
+  }
+  .list__tools h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  .list__tools-buttons {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .list__tools-buttons .searchButton {
+    margin: 0 0 10px 0;
+    width: 100%;
+    max-width: 300px;
+  }
+  .list__tools-buttons .selectButton {
+    width: 100%;
+    max-width: 300px;
+  }
+  .list__tools-buttons .button {
+    margin: 0 10px 10px 0;
+  }
+}
+@media (max-width: 440px) {
+  .selectUser__inner {
+    margin: 15px;
+    width: calc(100% - 30px);
   }
 }
 @media (max-width: 390px) {
@@ -1730,5 +1849,18 @@ table tfoot td .pagination a:hover {
   }
   .importUser__inner > p {
     margin-bottom: 20px;
+  }
+
+  .intro__inner {
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .list__tools-buttons .button {
+    width: calc(50% - 5px);
+  }
+  .list__tools-buttons .button:nth-child(1) {
+    width: 100%;
+    margin-right: unset;
   }
 }

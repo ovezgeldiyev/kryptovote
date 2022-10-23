@@ -1156,6 +1156,13 @@ main {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+.list__tools-buttons .searchButton svg:hover {
+  opacity: 0.8;
 }
 .list__tools-buttons .searchButton input {
   font-family: "Poppins", sans-serif;
@@ -1190,6 +1197,10 @@ main {
   border-radius: 30px;
   position: relative;
   padding: 10px 48px 10px 16px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
 }
 .list__tools-buttons .selectButton svg {
   fill: #fff;
@@ -1209,6 +1220,13 @@ main {
 .list__tools-buttons .selectButton p strong {
   font-weight: 600;
   color: #3d3c42;
+}
+.list__tools-buttons .selectButton:hover {
+  opacity: 0.8;
+}
+.list__table {
+  height: calc(100vh - 270px);
+  overflow: auto;
 }
 
 table {
@@ -1263,6 +1281,12 @@ table th h5 span img:nth-child(2) {
 table th h5.center {
   display: table;
   margin: 0 auto;
+}
+table thead {
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  left: 0;
 }
 table thead tr {
   position: relative;

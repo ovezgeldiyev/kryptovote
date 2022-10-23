@@ -163,7 +163,6 @@
   }
 }
 
-
 .list {
   padding: 0 10px;
   &__tools {
@@ -211,7 +210,6 @@
         padding: 10px 20px 10px 41px;
         width: 229px;
         margin-right: 17px;
-
         svg {
           width: 26px;
           height: 24px;
@@ -220,6 +218,11 @@
           left: 8px;
           top: 50%;
           transform: translateY(-50%);
+          cursor: pointer;
+          @include transition;
+          &:hover {
+            opacity: 0.8;
+          }
         }
         input {
           font-family: $poppins;
@@ -257,8 +260,17 @@
             color: #3d3c42;
           }
         }
+        cursor: pointer;
+        @include transition;
+        &:hover {
+          opacity: 0.8;
+        }
       }
     }
+  }
+  &__table{
+    height: calc(100vh - 270px);
+    overflow: auto;
   }
 }
 table {
@@ -310,6 +322,10 @@ table {
     }
   }
   thead {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    left: 0;
     tr {
       position: relative;
       &::after {

@@ -122,12 +122,12 @@ if(selectBtn) {
         selectUser.classList.toggle("active");
         body.classList.toggle("active");
     };
-    selectConfirm.onclick = () => selectRemoveFunc();
-    selectCancel.onclick = () => selectRemoveFunc();
+    // selectConfirm.onclick = () => selectRemoveFunc();
+    // selectCancel.onclick = () => selectRemoveFunc();
 }
 
 window.onclick = function (event) {
-    if (event.target == importUser || event.target == addUser) {
+    if (event.target == addUser || event.target == importUser || event.target == selectUser) {
         importRemoveFunc();
         addRemoveFunc();
         selectRemoveFunc();

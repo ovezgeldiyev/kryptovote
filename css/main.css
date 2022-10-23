@@ -427,6 +427,7 @@ main {
 }
 .header {
   position: absolute;
+  display: none;
   top: 0;
   left: 0;
   width: 100%;
@@ -908,68 +909,6 @@ main {
   margin: 0;
 }
 
-h4 {
-  font-size: 12px;
-  line-height: 16px;
-  color: #3c4257;
-  font-family: "Inter", sans-serif;
-  position: relative;
-  padding-top: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-h4 svg {
-  width: 16px;
-  height: 16px;
-  fill: #6b7280;
-  margin-right: 4px;
-}
-h4 span {
-  display: block;
-  width: 16px;
-  height: 16px;
-  margin-right: 4px;
-  border-radius: 50%;
-  position: relative;
-  border: 2px solid #c1c9d2;
-}
-h4 span::before {
-  display: none;
-  content: "";
-  width: 5px;
-  height: 5px;
-  background-color: #fff;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 1;
-  position: absolute;
-}
-h4::before {
-  content: "";
-  width: 100%;
-  height: 4px;
-  border-radius: 4px;
-  background-color: #6b7280;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-h4.active::before {
-  background-color: #5469d4;
-}
-h4.active span {
-  background-color: #5469d4;
-  display: block;
-  border: unset;
-}
-h4.active span::before {
-  display: block;
-}
-
 .intro {
   padding: 15px 20px;
   width: calc(100% - 220px);
@@ -989,10 +928,99 @@ h4.active span::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 }
-.intro__inner-header h4 {
+.intro__inner-header a {
   width: calc(14.2% - 2px);
+  font-size: 12px;
+  line-height: 16px;
+  color: #697386;
+  font-family: "Inter", sans-serif;
+  position: relative;
+  padding-top: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+.intro__inner-header a:hover {
+  opacity: 0.7;
+}
+.intro__inner-header a svg {
+  width: 16px;
+  height: 16px;
+  fill: #6b7280;
+  margin-right: 4px;
+}
+.intro__inner-header a span {
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  border-radius: 50%;
+  position: relative;
+  border: 2px solid #c1c9d2;
+}
+.intro__inner-header a span::before {
+  display: none;
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+  position: absolute;
+}
+.intro__inner-header a span img {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.intro__inner-header a::before {
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #c1c9d2;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.intro__inner-header a.checked {
+  color: #3c4257;
+}
+.intro__inner-header a.checked::before {
+  background-color: #6b7280;
+}
+.intro__inner-header a.checked span {
+  background-color: #6b7280;
+  border: none;
+}
+.intro__inner-header a.checked span img {
+  opacity: 1;
+}
+.intro__inner-header a.active::before {
+  background-color: #5469d4;
+}
+.intro__inner-header a.active span {
+  background-color: #5469d4;
+  display: block;
+  border: unset;
+}
+.intro__inner-header a.active span::before {
+  display: block;
 }
 .intro__inner-info {
   margin-bottom: 24px;
@@ -1110,6 +1138,7 @@ main {
 .list__tools-buttons .button.secondary svg {
   fill: transparent;
   stroke: #5f8df8;
+  stroke-width: 2px;
 }
 .list__tools-buttons .button.secondary:hover svg {
   stroke: #fff;
@@ -1197,7 +1226,7 @@ table {
   border-radius: 5px;
 }
 table th {
-  padding: 13px 0 13px 0;
+  padding: 11px 0;
 }
 table th h5 {
   font-size: 13px;
@@ -1205,6 +1234,8 @@ table th h5 {
   color: #6d7490;
   padding-left: 12px;
   position: relative;
+  font-weight: 400;
+  z-index: 2;
 }
 table th h5 span {
   width: 7px;
@@ -1221,6 +1252,13 @@ table th h5 span img {
   position: absolute;
   top: 0;
   left: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+table th h5 span img:hover {
+  opacity: 0.8;
 }
 table th h5 span img:nth-child(2) {
   top: unset;
@@ -1243,7 +1281,6 @@ table thead tr::after {
   background: #fafafb;
   border: 1px solid #f3f3f3;
   border-radius: 5px 5px 0px 0px;
-  z-index: -1;
 }
 table td {
   padding: 7.5px 0;
@@ -1257,7 +1294,9 @@ table td h5 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
 }
 table td h5 p {
   margin-right: 10px;
@@ -1363,6 +1402,10 @@ table td .checkbox__wrapper {
 table td .checkbox__wrapper label {
   cursor: pointer;
 }
+table td .checkbox__wrapper span img {
+  width: 13px;
+  height: 10px;
+}
 table tbody tr {
   position: relative;
 }
@@ -1439,6 +1482,9 @@ table tfoot td .pagination a:last-child {
 table tfoot td .pagination a.active {
   background-color: #f1efef;
 }
+table tfoot td .pagination a:hover {
+  background-color: #f1efef;
+}
 
 .selectUser {
   z-index: 7;
@@ -1489,6 +1535,10 @@ table tfoot td .pagination a.active {
   padding: 6px 16px 8px;
   font-family: "Montserrat", sans-serif;
   position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
 }
 .selectUser__inner-tab p:after {
   display: none;
@@ -1513,6 +1563,7 @@ table tfoot td .pagination a.active {
           box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
   border-radius: 20px;
   margin-bottom: 12px;
+  padding: unset;
 }
 .selectUser__inner .list__tools {
   margin: unset;
@@ -1524,6 +1575,18 @@ table tfoot td .pagination a.active {
   -webkit-filter: unset;
           filter: unset;
 }
+.selectUser__inner .users {
+  display: none;
+}
+.selectUser__inner .users.active {
+  display: block;
+}
+.selectUser__inner .groups {
+  display: none;
+}
+.selectUser__inner .groups.active {
+  display: block;
+}
 .selectUser__inner .groups table td {
   width: 33.3%;
   color: #616161;
@@ -1533,6 +1596,7 @@ table tfoot td .pagination a.active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-weight: 400;
 }
 .selectUser__inner .groups table td h5.user svg {
   stroke: #5f8df8;
@@ -1540,6 +1604,7 @@ table tfoot td .pagination a.active {
   width: 13px;
   height: 13px;
   margin-right: 3px;
+  stroke-width: 1px;
 }
 .selectUser__inner .groups table td h5.user.empty {
   color: #616161;

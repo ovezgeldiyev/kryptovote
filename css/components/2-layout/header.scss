@@ -15,7 +15,7 @@
    animation-duration: .4s;
   }
   &__inner {
-    padding: 20px;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,6 +28,12 @@
         width: 100%;
       }
     }
+  }
+}
+// 1180px
+@mixin header-xlg-xxlg {
+  .header {
+    display: block;
   }
 }
 // 1024px

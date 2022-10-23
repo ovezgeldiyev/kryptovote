@@ -28,7 +28,6 @@
     =========================================== -->
     <!-- sidebar start
     =========================================== -->
-
     <section class="sidebar" id="sidebar">
         <div class="sidebar__inner">
           <a href="#" class="sidebar__inner-logo">
@@ -91,7 +90,7 @@
               </a>
             </li>
           </ul>
-          <a href="#" class="sidebar__inner-user" id="selectBtn">
+          <a href="#" class="sidebar__inner-user">
             <span>
               <img src="./images/sidebar/user.png" alt="">
             </span>
@@ -163,19 +162,19 @@
               Voters (20)
             </h2>
             <div class="list__tools-buttons">
-              <button class="button secondary">
+              <button class="button secondary" id="selectBtn">
                 <svg>
                   <use xlink:href="#users"></use>
                 </svg>
                 Existing Users/Groups
               </button>
-              <button class="button secondary">
+              <button class="button secondary" id="importBtn">
                 <svg>
                   <use xlink:href="#cloud"></use>
                 </svg>
                 Import
               </button>
-              <button class="button secondary">
+              <button class="button secondary" id="addBtn">
                 <svg>
                   <use xlink:href="#plus"></use>
                 </svg>
@@ -679,8 +678,8 @@
                     </div>
                   </div>
                 </div> -->
-          </div>
 
+          </div>
         </div>
         <div class="intro__inner-footer">
           <a href="#" class="button cancel">
@@ -1600,10 +1599,10 @@
   
           </div>
           <div class="buttons__row">
-            <button class="button cancel">
+            <button class="button cancel" id="selectCancel">
               Cancel
             </button>
-            <button class="button confirm">
+            <button class="button confirm" id="selectConfirm">
               Confirm
             </button>
           </div>

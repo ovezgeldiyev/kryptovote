@@ -12,6 +12,7 @@
 }
 // 1180px
 @include xlg-xxlg {
+    @include header-xlg-xxlg;
     @include intro-xlg-xxlg;
     @include sidebar-xlg-xxlg;
 

@@ -144,12 +144,18 @@
         transform: translateX(-100%);
         width: 100%;
         height: 100%;
+        top: 56.79px;
         transition: .4s ease;
+        background-color: rgba($black, .1);
         &.active {
             transform: translateX(0);
         }
         &__inner {
             width: 220px;
+            padding-top: 60px;
+            &-logo {
+               display: none;
+            }
         }
     }
     .burger {

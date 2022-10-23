@@ -1,6 +1,7 @@
 .intro {
+    min-height: calc(100vh - 20px);
+
     &__inner {
-        min-height: calc(100vh - 20px);
         display: flex;
         flex-direction: column;
         &-footer {

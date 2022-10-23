@@ -368,8 +368,8 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 0px 4px 10px 0px rgba(197, 197, 197, 0.2509803922);
-          box-shadow: 0px 4px 10px 0px rgba(197, 197, 197, 0.2509803922);
+  -webkit-box-shadow: 0px 4px 10px 0px #C5C5C540;
+          box-shadow: 0px 4px 10px 0px #C5C5C540;
   border: 1px solid #DEDEDE;
   padding: 10px 20px;
   border-radius: 10px;
@@ -592,8 +592,8 @@ main {
   line-height: 18px;
   color: #2d3748;
   padding: 12px 13px;
-  -webkit-box-shadow: 0px 3.5px 5.5px 0px rgba(0, 0, 0, 0.0509803922);
-          box-shadow: 0px 3.5px 5.5px 0px rgba(0, 0, 0, 0.0509803922);
+  -webkit-box-shadow: 0px 3.5px 5.5px 0px #0000000D;
+          box-shadow: 0px 3.5px 5.5px 0px #0000000D;
   border: 1px solid #E9E9E9;
   border-radius: 8px;
   background-color: #fff;
@@ -687,8 +687,10 @@ main {
   right: 0;
 }
 
-.intro__inner {
+.intro {
   min-height: calc(100vh - 20px);
+}
+.intro__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1225,8 +1227,10 @@ main {
   opacity: 0.8;
 }
 .list__table {
-  height: calc(100vh - 270px);
+  height: calc(100vh - 280px);
   overflow: auto;
+  -webkit-box-shadow: 0px 4px 20px 0px #0000001F;
+          box-shadow: 0px 4px 20px 0px #0000001F;
 }
 
 table {
@@ -1234,8 +1238,6 @@ table {
   text-align: left;
   padding: 0 10px;
   position: relative;
-  -webkit-filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.12));
-          filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.12));
   background-color: #fff;
   border-radius: 5px;
 }
@@ -1530,7 +1532,8 @@ table tfoot td .pagination a:hover {
   background-color: #fff;
   border: 1px solid #d0d0d0;
   border-radius: 10px;
-  margin: 50px auto;
+  margin: 20px auto;
+  max-width: 1024px;
 }
 .selectUser__inner-wrapper {
   padding: 20px 25px;
@@ -1588,6 +1591,12 @@ table tfoot td .pagination a:hover {
 .selectUser__inner .list__tools {
   margin: unset;
   padding: 18px 17px;
+}
+.selectUser__inner .list__table {
+  height: calc(100vh - 290px);
+  max-height: 540px;
+  -webkit-box-shadow: 0px 4px 20px 0px #0000001F;
+          box-shadow: 0px 4px 20px 0px #0000001F;
 }
 .selectUser__inner table {
   -webkit-box-shadow: unset;

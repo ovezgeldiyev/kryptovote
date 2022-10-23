@@ -4,6 +4,7 @@ h1 {
     font-weight: 600;
     font-family: $inter;
     color: #3D3D3D;
+    margin-bottom: 10px;
 }
 
 h2 {
@@ -301,7 +302,6 @@ main {
     margin: 25px auto;
     width: 100%;
     max-width: 620px;
-    padding-right: 20px;
 
     &__inner {
         display: flex;
@@ -330,9 +330,7 @@ main {
             max-width: 390px;
         }
 
-        h1 {
-            margin-bottom: 10px;
-        }
+
     }
 }
 
@@ -723,10 +721,12 @@ table {
             padding: 16px 0 16px 10px;
             color: $gray8;
             font-size: 12px;
+
             &:last-child {
                 padding-left: 0;
 
             }
+
             .pagination {
                 display: flex;
                 align-items: center;

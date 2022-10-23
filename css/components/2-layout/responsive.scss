@@ -1,136 +1,212 @@
-// 1450px
-@include xxxxlg-xxxxxlg {
-  // @include intro-xxxxlg-xxxxxlg;
-}
 // 1380px
 @include xxxlg-xxxxlg {
-  @include intro-xxxlg-xxxxlg;
+    @include intro-xxxlg-xxxxlg;
 }
+
 // 1250px
 @include xlg-xxlg-extra {
-  @include intro-xlg-xxlg-extra;
+    @include intro-xlg-xxlg-extra;
 }
+
 // 1180px
 @include xlg-xxlg {
-  @include header-xlg-xxlg;
-  @include intro-xlg-xxlg;
-  @include sidebar-xlg-xxlg;
-  .list {
-    &__table {
-      height: calc(100vh - 322px);
-    }
-  }
+    @include header-xlg-xxlg;
+    @include intro-xlg-xxlg;
+    @include sidebar-xlg-xxlg;
+
 }
+
 // 1024px
 @include lg-xlg {
     @include intro-lg-xlg;
     @include header-lg-xlg;
 
 }
+
 // 930px
 @include md-lg {
-  @include intro-md-lg;
-  .list {
-    padding: 0;
-  }
+    @include intro-md-lg;
+
+    .list {
+        padding: 0;
+
+    }
 }
+
 // 750px
 @include sm-md {
-  @include intro-sm-md;
-  table {
-    td {
-      font-size: 13px;
-      h5 {
-        font-size: 13px;
-        p {
-          span {
-            font-size: 11px;
-          }
+    @include intro-sm-md;
+
+    table {
+        td {
+            font-size: 13px;
+
+            h5 {
+                font-size: 13px;
+
+                p {
+                    span {
+                        font-size: 11px;
+                    }
+                }
+            }
+
+            h6 {
+                span {
+                    font-size: 11px;
+                }
+            }
         }
-      }
-      h6 {
-        span {
-          font-size: 11px;
+    }
+
+    .list {
+        &__tools {
+            margin-bottom: 15px;
         }
-      }
     }
-  }
-  .list {
-    &__tools {
-      margin-bottom: 15px;
-    }
-  }
 }
+
 // 650px
 @include sm-md-extra {
-  @include intro-sm-md-extra;
-  @include selectUser-sm-md-extra;
-
-  .list {
-    &__tools {
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-      h2 {
-        margin-bottom: 20px;
-      }
+    h1 {
+        font-size: 22px;
+        line-height: 24px;
+        margin-bottom: 5px;
     }
-  }
+    p {
+        &.big {
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+    @include intro-sm-md-extra;
+    @include selectUser-sm-md-extra;
+
+    .list {
+        &__tools {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            h2 {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__table {
+            height: calc(100vh - 380px);
+        }
+    }
+    .voter {
+        &__inner {
+            padding: 10px;
+
+        }
+    }
 }
+
 // 540px
 @include xsm-sm {
-  @include intro-xsm-sm;
-  @include addUser-xsm-sm;
-  .list {
-    &__tools {
-      margin-bottom: 5px;
-      h2 {
-        font-size: 18px;
-        margin-bottom: 15px;
-      }
-
-      &-buttons {
-        flex-wrap: wrap;
-        align-items: flex-start;
-        justify-content: flex-start;
-        .searchButton {
-          margin: 0 0 10px 0;
-          width: 100%;
-          max-width: 300px;
-        }
-        .selectButton {
-          width: 100%;
-          max-width: 300px;
-        }
-        .button {
-          margin: 0 10px 10px 0;
-        }
-      }
+    @include intro-xsm-sm;
+    @include addUser-xsm-sm;
+    h1 {
+        font-size: 20px;
+        line-height: 22px;
     }
-  }
+    p {
+        &.big {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+    .voter {
+        margin: 0 auto;
+        &__inner {
+            &-image {
+                margin-right: 5px;
+            }
+        }
+    }
+    .list {
+        &__tools {
+            margin-bottom: 5px;
+
+            h2 {
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+
+            &-buttons {
+                flex-wrap: wrap;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+                .searchButton {
+                    margin: 0 0 10px 0;
+                    width: 100%;
+                    max-width: 300px;
+                }
+
+                .selectButton {
+                    width: 100%;
+                    max-width: 300px;
+                }
+
+                .button {
+                    margin: 0 10px 10px 0;
+                }
+            }
+        }
+    }
 }
+
 // 440px
 @include xxsm-xsm {
-  @include intro-xxsm-xsm;
-  @include selectUser-xxsm-xsm;
+    @include intro-xxsm-xsm;
+    @include selectUser-xxsm-xsm;
+    h1 {
+        font-size: 17px;
+        line-height: 21px;
+    }
+    p {
+        &.big {
+            font-size: 10px;
+            line-height: 14px;
+        }
+    }
+    .list {
+        &__table {
+            height: calc(100vh - 425px);
 
+        }
+    }
 }
+
 // 390px
 @include xxxsm-xxsm {
-  @include addUser-xxxsm-xxsm;
-  @include importUser-xxxsm-xxsm;
-  @include intro-xxxsm-xxsm;
-  .list {
-    &__tools {
-      &-buttons {
-        .button {
-            width: calc(50% - 5px);
-          &:nth-child(1) {
-            width: 100%;
-            margin-right: unset;
-          }
+    @include addUser-xxxsm-xxsm;
+    @include importUser-xxxsm-xxsm;
+    @include intro-xxxsm-xxsm;
+
+    .list {
+        &__tools {
+            &-buttons {
+                .button {
+                    width: calc(50% - 5px);
+
+                    &:nth-child(1) {
+                        width: 100%;
+                        margin-right: unset;
+                    }
+                }
+            }
         }
-      }
+
+        &__table {
+            margin: 0;
+            padding:8px 0;
+            height: calc(100vh - 400px);
+
+        }
     }
-  }
 }

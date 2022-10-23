@@ -115,3 +115,7 @@ window.onclick = function (event) {
         addRemoveFunc();
     }
 };
+
+
+
+

@@ -958,8 +958,6 @@ h4.active span::before {
 .intro__inner {
   background-color: #fff;
   border: 1px solid rgba(138, 136, 136, 0.2);
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
   border-radius: 20px;
   padding: 20px;
 }
@@ -1092,6 +1090,7 @@ main {
 .list__tools-buttons .button.secondary svg {
   fill: transparent;
   stroke: #5f8df8;
+  stroke-width: 2px;
 }
 .list__tools-buttons .button.secondary:hover svg {
   stroke: #fff;
@@ -1179,7 +1178,7 @@ table {
   border-radius: 5px;
 }
 table th {
-  padding: 13px 0 13px 0;
+  padding: 11px 0;
 }
 table th h5 {
   font-size: 13px;
@@ -1187,6 +1186,8 @@ table th h5 {
   color: #6d7490;
   padding-left: 12px;
   position: relative;
+  font-weight: 400;
+  z-index: 2;
 }
 table th h5 span {
   width: 7px;
@@ -1225,7 +1226,6 @@ table thead tr::after {
   background: #fafafb;
   border: 1px solid #f3f3f3;
   border-radius: 5px 5px 0px 0px;
-  z-index: -1;
 }
 table td {
   padding: 7.5px 0;
@@ -1239,7 +1239,9 @@ table td h5 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
 }
 table td h5 p {
   margin-right: 10px;
@@ -1344,6 +1346,10 @@ table td .checkbox__wrapper {
 }
 table td .checkbox__wrapper label {
   cursor: pointer;
+}
+table td .checkbox__wrapper span img {
+  width: 10px;
+  height: 8px;
 }
 table tbody tr {
   position: relative;
@@ -1475,6 +1481,7 @@ table tfoot td .pagination a.active {
           box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
   border-radius: 20px;
   margin-bottom: 12px;
+  padding: unset;
 }
 .UsersGroups__inner .list__tools {
   margin: unset;
@@ -1495,6 +1502,7 @@ table tfoot td .pagination a.active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-weight: 400;
 }
 .UsersGroups__inner .groups table td h5.user svg {
   stroke: #5f8df8;
@@ -1502,6 +1510,7 @@ table tfoot td .pagination a.active {
   width: 13px;
   height: 13px;
   margin-right: 3px;
+  stroke-width: 1px;
 }
 .UsersGroups__inner .groups table td h5.user.empty {
   color: #616161;

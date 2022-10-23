@@ -14,7 +14,10 @@
     <main>
     <!-- sidebar start
     =========================================== -->
-    <section class="sidebar">
+    <div class="burger" id="sidebarBtn">
+      <span></span>
+    </div>
+    <section class="sidebar" id="sidebar">
         <div class="sidebar__inner">
           <a href="#" class="sidebar__inner-logo">
             <img src="./images/logo.png" alt="">
@@ -76,7 +79,7 @@
               </a>
             </li>
           </ul>
-          <a href="#" class="sidebar__inner-user">
+          <a href="#" class="sidebar__inner-user" id="importBtn">
             <span>
               <img src="./images/sidebar/user.png" alt="">
             </span>
@@ -91,25 +94,178 @@
     =========================================== -->
     <section class="intro">
         <div class="intro__inner">
-     
+          <!-- when no users are selected
+              =========================================== -->
+          <div class="voter">
+            <div class="voter__inner">
+              <div class="voter__inner-image">
+                <img src="./images/voter.png" alt="">
+              </div>
+              <div class="voter__inner-content">
+                <h1>
+                  Add your first Voter
+                </h1>
+                <p class="big">
+                  Create your first voter, select from existing users and groups, or import them from a CSV.
+                </p>
+              </div>
+            </div>
+
+          </div>
         </div>
     </section>
     <!-- intro end
     =========================================== -->
+    <!-- modals start
+     =========================================== -->
+    <div class="addUser" id="addUser">
+      <form action="" class="addUser__inner">
+        <h2>
+          Add User
+        </h2>
+        <p class="sm">
+          Enter the details below to create a new User
+        </p>
+        <div class="input">
+          <label for="name">
+            First Name
+          </label>
+          <input type="text" id="name" placeholder="Mary White">
+        </div>
+        <div class="input">
+          <label for="surname">
+            Last Name
+          </label>
+          <input type="text" id="surname" placeholder="Mary White">
+        </div>
+        <div class="input invalid">
+          <label for="email">
+            Email
+          </label>
+          <input type="email" id="email" placeholder="Mary White">
+          <p>
+            The email is not valid
+          </p>
+        </div>
+        <div class="input valid">
+          <label for="phone">
+            Phone Number
+          </label>
+          <input type="number" id="phone" placeholder="+1 234 5678901">
+          <p>
+            The phone number is not valid
+          </p>
+        </div>
+        <div class="addUser__inner-check">
+          <div class="checkbox">
+            <input type="checkbox">
+            <span>
+              <img src="./images/icons/check.svg" alt="">
+            </span>
+          </div>
+          Active
+        </div>
+        <div class="addUser__inner-buttons">
+          <button type="button" class="button previous" id="addConfirm">
+            Cancel
+          </button>
+          <button type="submit" class="button next" id="addCancel">
+            Confirm
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="importUser" id="importUser">
+      <form action="" class="importUser__inner">
+        <h2>
+          Import Users from CSV
+        </h2>
+        <p class="sm">
+          Here you can import users from a CSV. You can download the template here.
+        </p>
+        <h3>
+          Delimiter
+        </h3>
+        <div class="importUser__inner-deviders">
+          <label for="comma">
+            <input type="radio" name="delimiter" id="comma">
+            Comma  “,”
+          </label>
+          <label for="semicolon" class="importUser__inner-deviders-item">
+            <input type="radio" name="delimiter" id="semicolon">
+            Semicolon “;”
+          </label>
+          <label for="tab" class="importUser__inner-deviders-item">
+            <input type="radio" name="delimiter" id="tab">
+            Tab “    “
+          </label>
+        </div>
+        <h3>
+          File
+        </h3>
+        <div class="importUser__inner-file">
+          <input type="text" placeholder="file">
+          <input type="file">
+        </div>
+        <div class="importUser__inner-buttons">
+          <button type="button" class="button previous" id="importConfirm">
+            Cancel
+          </button>
+          <button type="submit" class="button next" id="importCancel">
+            Confirm
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- modals end
+     =========================================== -->
     <!-- Sprites
     =========================================== -->
         <!-- <svg>
       <use xlink:href="#voice"></use>
     </svg> -->
     <svg style="display: none">
-      <symbol id="voice" viewBox="0 0 27 25">
+      <symbol id="close" viewBox="0 0 11 12">
         <g>
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M13.2389 0.42627C13.5054 0.42627 13.761 0.532135 13.9495 0.720575C14.1379 0.909016 14.2438 1.1646 14.2438 1.43109V23.5372C14.2438 23.8037 14.1379 24.0592 13.9495 24.2477C13.761 24.4361 13.5054 24.542 13.2389 24.542C12.9725 24.542 12.7169 24.4361 12.5284 24.2477C12.34 24.0592 12.2341 23.8037 12.2341 23.5372V1.43109C12.2341 1.1646 12.34 0.909016 12.5284 0.720575C12.7169 0.532135 12.9725 0.42627 13.2389 0.42627ZM9.21966 4.44555C9.48616 4.44555 9.74174 4.55142 9.93018 4.73986C10.1186 4.9283 10.2245 5.18388 10.2245 5.45038V19.5179C10.2245 19.7844 10.1186 20.04 9.93018 20.2284C9.74174 20.4168 9.48616 20.5227 9.21966 20.5227C8.95317 20.5227 8.69759 20.4168 8.50915 20.2284C8.3207 20.04 8.21484 19.7844 8.21484 19.5179V5.45038C8.21484 5.18388 8.3207 4.9283 8.50915 4.73986C8.69759 4.55142 8.95317 4.44555 9.21966 4.44555ZM17.2582 4.44555C17.5247 4.44555 17.7803 4.55142 17.9687 4.73986C18.1572 4.9283 18.2631 5.18388 18.2631 5.45038V19.5179C18.2631 19.7844 18.1572 20.04 17.9687 20.2284C17.7803 20.4168 17.5247 20.5227 17.2582 20.5227C16.9917 20.5227 16.7362 20.4168 16.5477 20.2284C16.3593 20.04 16.2534 19.7844 16.2534 19.5179V5.45038C16.2534 5.18388 16.3593 4.9283 16.5477 4.73986C16.7362 4.55142 16.9917 4.44555 17.2582 4.44555ZM5.20038 7.46002C5.46687 7.46002 5.72245 7.56588 5.91089 7.75432C6.09933 7.94276 6.2052 8.19834 6.2052 8.46484V16.5034C6.2052 16.7699 6.09933 17.0255 5.91089 17.2139C5.72245 17.4024 5.46687 17.5082 5.20038 17.5082C4.93388 17.5082 4.6783 17.4024 4.48986 17.2139C4.30142 17.0255 4.19555 16.7699 4.19555 16.5034V8.46484C4.19555 8.19834 4.30142 7.94276 4.48986 7.75432C4.6783 7.56588 4.93388 7.46002 5.20038 7.46002ZM21.2775 7.46002C21.544 7.46002 21.7996 7.56588 21.988 7.75432C22.1765 7.94276 22.2823 8.19834 22.2823 8.46484V16.5034C22.2823 16.7699 22.1765 17.0255 21.988 17.2139C21.7996 17.4024 21.544 17.5082 21.2775 17.5082C21.011 17.5082 20.7554 17.4024 20.567 17.2139C20.3786 17.0255 20.2727 16.7699 20.2727 16.5034V8.46484C20.2727 8.19834 20.3786 7.94276 20.567 7.75432C20.7554 7.56588 21.011 7.46002 21.2775 7.46002ZM1.18109 9.46966C1.44759 9.46966 1.70317 9.57553 1.89161 9.76397C2.08005 9.95241 2.18591 10.208 2.18591 10.4745V14.4938C2.18591 14.7603 2.08005 15.0158 1.89161 15.2043C1.70317 15.3927 1.44759 15.4986 1.18109 15.4986C0.914596 15.4986 0.659016 15.3927 0.470575 15.2043C0.282135 15.0158 0.17627 14.7603 0.17627 14.4938V10.4745C0.17627 10.208 0.282135 9.95241 0.470575 9.76397C0.659016 9.57553 0.914596 9.46966 1.18109 9.46966ZM25.2968 9.46966C25.5633 9.46966 25.8189 9.57553 26.0073 9.76397C26.1958 9.95241 26.3016 10.208 26.3016 10.4745V14.4938C26.3016 14.7603 26.1958 15.0158 26.0073 15.2043C25.8189 15.3927 25.5633 15.4986 25.2968 15.4986C25.0303 15.4986 24.7747 15.3927 24.5863 15.2043C24.3978 15.0158 24.292 14.7603 24.292 14.4938V10.4745C24.292 10.208 24.3978 9.95241 24.5863 9.76397C24.7747 9.57553 25.0303 9.46966 25.2968 9.46966Z"
-          />
+          <path d="M7.13258 6L10.0732 2.87281C10.4341 2.48906 10.4341 1.86687 10.0732 1.48281L9.4197 0.787813C9.05884 0.404063 8.47376 0.404063 8.11261 0.787813L5.17195 3.915L2.23128 0.787813C1.87042 0.404063 1.28535 0.404063 0.924191 0.787813L0.270646 1.48281C-0.0902152 1.86656 -0.0902152 2.48875 0.270646 2.87281L3.21131 6L0.270646 9.12719C-0.0902152 9.51094 -0.0902152 10.1331 0.270646 10.5172L0.924191 11.2122C1.28505 11.5959 1.87042 11.5959 2.23128 11.2122L5.17195 8.085L8.11261 11.2122C8.47347 11.5959 9.05884 11.5959 9.4197 11.2122L10.0732 10.5172C10.4341 10.1334 10.4341 9.51125 10.0732 9.12719L7.13258 6Z" />
         </g>
+      </symbol>
+      <symbol id="edit" viewBox="0 0 13 14">
+        <g>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M8.28357 1.74202C8.4951 1.53049 8.83807 1.53049 9.0496 1.74202L11.7579 4.45036C11.9695 4.66189 11.9695 5.00486 11.7579 5.21639L4.71627 12.2581C4.61469 12.3596 4.47691 12.4167 4.33325 12.4167H1.62492C1.32576 12.4167 1.08325 12.1742 1.08325 11.875V9.16671C1.08325 9.02305 1.14032 8.88527 1.2419 8.78369L8.28357 1.74202ZM2.16659 9.39107V11.3334H4.10889L10.6089 4.83337L8.66659 2.89107L2.16659 9.39107Z"/>
+        </g>
+      </symbol>
+      <symbol id="import" viewBox="0 0 13 14">
+        <g clip-path="url(#clip0_5_34146)">
+          <path d="M8.66659 9.16667L6.49992 7L4.33325 9.16667" stroke="#5F8DF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M6.5 7V11.875" stroke="#5F8DF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M11.0446 10.4613C11.5729 10.1732 11.9903 9.71749 12.2308 9.16593C12.4713 8.61438 12.5213 7.99843 12.3729 7.4153C12.2245 6.83218 11.8861 6.31508 11.4112 5.94563C10.9362 5.57618 10.3518 5.37541 9.75004 5.37501H9.06754C8.90359 4.74085 8.598 4.15211 8.17376 3.65305C7.74952 3.15399 7.21766 2.7576 6.61818 2.49367C6.01869 2.22975 5.36717 2.10516 4.7126 2.12928C4.05803 2.1534 3.41745 2.32559 2.83901 2.63291C2.26057 2.94024 1.75932 3.37469 1.37296 3.90362C0.986595 4.43254 0.725163 5.04218 0.60832 5.68668C0.491477 6.33119 0.522263 6.9938 0.698363 7.62469C0.874464 8.25559 1.1913 8.83835 1.62504 9.32918" stroke="#5F8DF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8.66659 9.16667L6.49992 7L4.33325 9.16667" stroke="#5F8DF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_5_34146">
+          <rect width="13" height="13" fill="white" transform="translate(0 0.5)"/>
+          </clipPath>
+          </defs>
+      </symbol>
+      <symbol id="plus" viewBox="0 0 13 14">
+        <g>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.49992 2.66663C6.79907 2.66663 7.04158 2.90914 7.04158 3.20829V10.7916C7.04158 11.0908 6.79907 11.3333 6.49992 11.3333C6.20076 11.3333 5.95825 11.0908 5.95825 10.7916V3.20829C5.95825 2.90914 6.20076 2.66663 6.49992 2.66663Z"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M2.16675 7.00004C2.16675 6.70089 2.40926 6.45837 2.70841 6.45837H10.2917C10.5909 6.45837 10.8334 6.70089 10.8334 7.00004C10.8334 7.29919 10.5909 7.54171 10.2917 7.54171H2.70841C2.40926 7.54171 2.16675 7.29919 2.16675 7.00004Z"/>
+        </g>
+      </symbol>
+      <symbol id="users" viewBox="0 0 13 14">
+        <g clip-path="url(#clip0_5_34096)">
+          <path d="M12.4583 11.875V10.7917C12.4579 10.3116 12.2981 9.84527 12.004 9.46586C11.7099 9.08644 11.2981 8.81545 10.8333 8.69543" stroke="#5F8DF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9.20841 11.875V10.7917C9.20841 10.217 8.98014 9.66593 8.57381 9.2596C8.16748 8.85327 7.61638 8.625 7.04175 8.625H2.70841C2.13378 8.625 1.58268 8.85327 1.17635 9.2596C0.770021 9.66593 0.541748 10.217 0.541748 10.7917V11.875" stroke="#5F8DF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8.66675 2.19543C9.13281 2.31476 9.54589 2.58581 9.84089 2.96585C10.1359 3.34589 10.296 3.8133 10.296 4.29439C10.296 4.77549 10.1359 5.24289 9.84089 5.62293C9.54589 6.00297 9.13281 6.27402 8.66675 6.39335" stroke="#5F8DF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M4.87492 6.45833C6.07154 6.45833 7.04158 5.48828 7.04158 4.29167C7.04158 3.09505 6.07154 2.125 4.87492 2.125C3.6783 2.125 2.70825 3.09505 2.70825 4.29167C2.70825 5.48828 3.6783 6.45833 4.87492 6.45833Z" stroke="#5F8DF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_5_34096">
+          <rect width="13" height="13" fill="white" transform="translate(0 0.5)"/>
+          </clipPath>
+          </defs>
       </symbol>
     </svg>
     <!-- js

@@ -20,6 +20,8 @@
         display: none;
     }
     @include intro-lg-xlg;
+    @include sidebar-lg-xlg;
+
 }
 // 930px
 @include md-lg {
@@ -36,6 +38,8 @@
 // 540px
 @include xsm-sm  {
     @include intro-xsm-sm;
+    @include addUser-xsm-sm;
+
 }
 // 440px
 @include xxsm-xsm  {
@@ -43,6 +47,8 @@
 }
 // 390px
 @include xxxsm-xxsm  {
-    // @include intro-xxxsm-xxsm;
+    @include addUser-xxxsm-xxsm;
+    @include importUser-xxxsm-xxsm;
+
 }
 

@@ -1521,11 +1521,13 @@ table tfoot td .pagination a:hover {
 
 .selectUser {
   z-index: 7;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
+  display: none;
   overflow-y: auto;
 }
 .selectUser.active {
@@ -1696,16 +1698,27 @@ table tfoot td .pagination a:hover {
   .intro {
     width: 100%;
     padding-top: 66.79px;
+    min-height: calc(100vh - 96.79px);
   }
+
+  .list__table {
+    height: calc(100vh - 336.79px);
+  }
+
+  .selectUser__inner {
+    width: calc(100% - 40px);
+    max-width: unset;
+    margin: 20px;
+  }
+
   .sidebar {
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
     width: 100%;
-    height: 100%;
+    height: calc(100% - 56.79px);
     top: 56.79px;
     -webkit-transition: 0.4s ease;
     transition: 0.4s ease;
-    background-color: rgba(0, 0, 0, 0.1);
   }
   .sidebar.active {
     -webkit-transform: translateX(0);
@@ -1725,6 +1738,15 @@ table tfoot td .pagination a:hover {
 
   .list__table {
     height: calc(100vh - 322px);
+  }
+}
+@media (max-width: 1024px) {
+  .intro {
+    padding: 66.79px 15px 15px;
+  }
+
+  .header__inner {
+    padding: 10px 15px;
   }
 }
 @media (max-width: 930px) {
@@ -1761,6 +1783,10 @@ table tfoot td .pagination a:hover {
   }
 }
 @media (max-width: 650px) {
+  .selectUser__inner-wrapper {
+    padding: 20px 15px;
+  }
+
   .list__tools {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1833,6 +1859,12 @@ table tfoot td .pagination a:hover {
   }
   .list__tools-buttons .button {
     margin: 0 10px 10px 0;
+  }
+}
+@media (max-width: 440px) {
+  .selectUser__inner {
+    margin: 15px;
+    width: calc(100% - 30px);
   }
 }
 @media (max-width: 390px) {

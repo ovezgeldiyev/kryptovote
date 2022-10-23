@@ -23,7 +23,9 @@
 }
 // 1024px
 @include lg-xlg {
-  @include intro-lg-xlg;
+    @include intro-lg-xlg;
+    @include header-lg-xlg;
+
 }
 // 930px
 @include md-lg {
@@ -62,6 +64,8 @@
 // 650px
 @include sm-md-extra {
   @include intro-sm-md-extra;
+  @include selectUser-sm-md-extra;
+
   .list {
     &__tools {
       flex-direction: column;
@@ -108,6 +112,8 @@
 // 440px
 @include xxsm-xsm {
   @include intro-xxsm-xsm;
+  @include selectUser-xxsm-xsm;
+
 }
 // 390px
 @include xxxsm-xxsm {

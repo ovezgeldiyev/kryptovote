@@ -3,11 +3,13 @@
   width: calc(100% - 220px);
   margin: 0 0 0 auto;
   height: 100%;
+
   &__inner {
     background-color: $white;
     border: 1px solid rgba(138, 136, 136, 0.2);
     border-radius: 20px;
     padding: 20px;
+
     &-header {
       display: flex;
       justify-content: space-between;
@@ -27,15 +29,18 @@
         display: flex;
         cursor: pointer;
         @include transition;
+
         &:hover {
           opacity: 0.7;
         }
+
         svg {
           width: 16px;
           height: 16px;
           fill: $gray2;
           margin-right: 4px;
         }
+
         span {
           display: block;
           width: 16px;
@@ -44,6 +49,7 @@
           border-radius: 50%;
           position: relative;
           border: 2px solid $gray3;
+
           &::before {
             display: none;
             content: "";
@@ -57,6 +63,7 @@
             z-index: 1;
             position: absolute;
           }
+
           img {
             width: 15px;
             height: 15px;
@@ -67,6 +74,7 @@
             opacity: 0;
           }
         }
+
         &::before {
           content: "";
           width: 100%;
@@ -77,27 +85,34 @@
           top: 0;
           left: 0;
         }
+
         &.checked {
           color: #3c4257;
+
           &::before {
             background-color: $gray2;
           }
+
           span {
             background-color: $gray2;
             border: none;
+
             img {
               opacity: 1;
             }
           }
         }
+
         &.active {
           &::before {
             background-color: $blue;
           }
+
           span {
             background-color: $blue;
             display: block;
             border: unset;
+
             &::before {
               display: block;
             }
@@ -105,8 +120,10 @@
         }
       }
     }
+
     &-info {
       margin-bottom: 24px;
+
       h2 {
         font-weight: 600;
         font-family: $poppins;
@@ -115,17 +132,20 @@
         margin-bottom: 10px;
         color: $black;
       }
+
       p {
         color: $black;
         font-family: $poppins;
       }
     }
+
     &-footer {
       display: flex;
       justify-content: space-between;
       background-color: $white;
       position: relative;
       padding-top: 5px;
+
       &::after {
         content: "";
         width: calc(100% + 40px);
@@ -136,28 +156,35 @@
         left: -20px;
         border-top: 1px solid $gray12;
       }
+
       .button {
         padding: 5px 16px;
         font-family: $inter;
         border-radius: 4px;
         position: relative;
         z-index: 2;
+
         &.cancel {
           color: $blue2;
           background-color: $lightBlue;
         }
+
         &.previous {
           color: $blue2;
         }
+
         &.next {
           color: $white;
           background-color: $blue;
         }
       }
+
       .buttons__row {
         display: flex;
+
         .button {
           margin-right: 8px;
+
           &:last-child {
             margin: unset;
           }
@@ -169,11 +196,13 @@
 
 .list {
   padding: 0 10px;
+
   &__tools {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+
     h2 {
       font-size: 20px;
       line-height: 20px;
@@ -181,25 +210,32 @@
       color: $black;
       font-family: $poppins;
       font-weight: 500;
+
       &.strong {
         font-weight: 600;
       }
     }
+
     &-buttons {
       display: flex;
       justify-content: space-between;
+
       .button {
         margin-right: 10px;
+
         &:last-child {
           margin-right: unset;
         }
+
         &.secondary {
           letter-spacing: 0.5px;
+
           svg {
             fill: transparent;
             stroke: $primary;
             stroke-width: 2px;
           }
+
           &:hover {
             svg {
               stroke: $white;
@@ -207,6 +243,7 @@
           }
         }
       }
+
       .searchButton {
         position: relative;
         background: $gray13;
@@ -214,6 +251,7 @@
         padding: 10px 20px 10px 41px;
         width: 229px;
         margin-right: 17px;
+
         svg {
           width: 26px;
           height: 24px;
@@ -224,21 +262,25 @@
           transform: translateY(-50%);
           cursor: pointer;
           @include transition;
+
           &:hover {
             opacity: 0.8;
           }
         }
+
         input {
           font-family: $poppins;
           line-height: 18px;
           font-size: 12px;
           background: $gray13;
+
           &::placeholder {
             font-size: 12px;
             color: $gray14;
           }
         }
       }
+
       .selectButton {
         width: 163px;
         font-family: $poppins;
@@ -246,6 +288,7 @@
         border-radius: 30px;
         position: relative;
         padding: 10px 48px 10px 16px;
+
         svg {
           fill: $white;
           width: 10px;
@@ -255,31 +298,35 @@
           top: 50%;
           transform: translateY(-50%);
         }
+
         p {
           font-family: $poppins;
           color: $gray15;
           line-height: 18px;
+
           strong {
             font-weight: 600;
             color: #3d3c42;
           }
         }
+
         cursor: pointer;
         @include transition;
+
         &:hover {
           opacity: 0.8;
         }
       }
     }
   }
-  &__table{
+
+  &__table {
     height: calc(100vh - 280px);
     overflow: auto;
-    box-shadow: 0px 4px 20px 0px #0000001F;
-
-
+    box-shadow: 0px 4px 20px 0px #0000001f;
   }
 }
+
 table {
   width: 100%;
   text-align: left;
@@ -290,6 +337,7 @@ table {
   min-width: 800px;
   th {
     padding: 11px 0;
+
     h5 {
       font-size: 13px;
       line-height: 14px;
@@ -298,6 +346,7 @@ table {
       position: relative;
       font-weight: 400;
       z-index: 2;
+
       span {
         width: 7px;
         height: 10px;
@@ -305,6 +354,7 @@ table {
         left: 0;
         top: 48%;
         transform: translateY(-50%);
+
         img {
           width: 100%;
           height: 4px;
@@ -313,28 +363,34 @@ table {
           left: 0;
           cursor: pointer;
           @include transition;
+
           &:hover {
             opacity: 0.8;
           }
+
           &:nth-child(2) {
             top: unset;
             bottom: 0;
           }
         }
       }
+
       &.center {
         display: table;
         margin: 0 auto;
       }
     }
   }
+
   thead {
     position: sticky;
     z-index: 3;
     top: 2px;
     left: 0;
+
     tr {
       position: relative;
+
       &::after {
         content: "";
         width: calc(100% + 26px);
@@ -348,12 +404,13 @@ table {
       }
     }
   }
+
   td {
     width: 25%;
     background: $white;
     white-space: nowrap;
     padding: 7.5px 15px 7.5px 0;
-    &:last-child{
+    &:last-child {
       padding-right: 0;
       padding-left: 15px;
     }
@@ -363,6 +420,7 @@ table {
       font-size: 14px;
       font-weight: 400;
       line-height: 16px;
+
       p {
         margin-right: 10px;
         width: 26px;
@@ -370,6 +428,7 @@ table {
         border-radius: 50%;
         background-color: $green;
         position: relative;
+
         span {
           font-size: 12px;
           line-height: 14px;
@@ -383,42 +442,53 @@ table {
           left: 50%;
           transform: translate(-50%, -50%);
         }
+
         &.blue {
           background-color: $blue;
         }
+
         &.red {
           background-color: $red2;
         }
+
         &.yellow {
           background-color: $yellow;
         }
       }
     }
+
     a {
       font-size: 14px;
       line-height: 16px;
       color: $black2;
       font-weight: 400;
     }
+
     .button__row {
       display: flex;
       justify-content: flex-end;
+
       .button {
         margin-right: 5px;
+
         &:last-child {
           margin: unset;
         }
+
         &.edit {
           background: $white;
           border: 1px solid $primary;
           border-radius: 3px;
           color: $primary;
+
           svg {
             fill: $primary;
           }
+
           &:hover {
             color: $white;
             background-color: $primary;
+
             svg {
               fill: $white;
             }
@@ -426,6 +496,7 @@ table {
         }
       }
     }
+
     h6 {
       color: $greenDark;
       border-radius: 4px;
@@ -433,9 +504,11 @@ table {
       font-weight: 500;
       position: relative;
       padding: 3px 0;
+
       span {
         position: relative;
       }
+
       &::before {
         content: "";
         width: 100%;
@@ -448,16 +521,20 @@ table {
         transform: translateX(-50%);
       }
     }
+
     &.center {
       text-align: center;
       padding: 7.5px 10px 7.5px 10px;
     }
+
     .checkbox__wrapper {
       display: flex;
       align-items: center;
+
       label {
         cursor: pointer;
       }
+
       span {
         img {
           width: 13px;
@@ -466,9 +543,11 @@ table {
       }
     }
   }
+
   tbody {
     tr {
       position: relative;
+
       &:after {
         content: "";
         width: calc(100% + 20px);
@@ -478,6 +557,7 @@ table {
         bottom: 0;
         left: -10px;
       }
+
       &:last-child {
         &::after {
           display: none;
@@ -485,11 +565,14 @@ table {
       }
     }
   }
+
   tfoot {
     display: table-footer-group;
     position: relative;
+
     tr {
       position: relative;
+
       &:after {
         content: "";
         width: calc(100% + 20px);
@@ -500,10 +583,12 @@ table {
         left: -10px;
       }
     }
+
     td {
       padding: 16px 0 16px 10px;
       color: $gray8;
       font-size: 12px;
+
       .pagination {
         display: flex;
         align-items: center;
@@ -511,6 +596,7 @@ table {
         top: 50%;
         right: 0;
         transform: translateY(-50%);
+
         .button {
           padding: unset;
           background-color: unset;
@@ -521,10 +607,12 @@ table {
           &:last-child {
             margin-right: unset;
           }
+
           &.active {
             color: $gray9;
           }
         }
+
         a {
           font-size: 12px;
           line-height: 14px;
@@ -532,12 +620,15 @@ table {
           margin-right: 6px;
           border-radius: 3px;
           padding: 0 4px;
+
           &:last-child {
             margin-right: 10px;
           }
+
           &.active {
             background-color: $gray10;
           }
+
           &:hover {
             background-color: $gray10;
           }
@@ -549,16 +640,18 @@ table {
 
 .selectUser {
   z-index: 7;
-  // position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba($black, 0.4);
-  // display: none;
+  display: none;
   overflow-y: auto;
+
   &.active {
     display: block;
+
     .selectUser {
       &__inner {
         animation-name: fadeInUp;
@@ -572,22 +665,27 @@ table {
     border-radius: 10px;
     margin: 20px auto;
     max-width: 1024px;
+
     &-wrapper {
       padding: 20px 25px;
     }
+
     &-info {
       margin-bottom: 5px;
 
       h2 {
         margin-bottom: 5px;
       }
+
       p {
         font-size: 12px;
       }
     }
+
     &-tab {
       display: flex;
       margin-bottom: 10px;
+
       p {
         margin-right: 10px;
         padding: 6px 16px 8px;
@@ -595,6 +693,7 @@ table {
         position: relative;
         cursor: pointer;
         @include transition;
+
         &:after {
           display: none;
           content: "";
@@ -605,14 +704,17 @@ table {
           bottom: 0;
           left: 0;
         }
+
         &.active {
           color: $blue;
+
           &:after {
             display: block;
           }
         }
       }
     }
+
     .list {
       background: #ffffff;
       border: 1px solid rgba(138, 136, 136, 0.2);
@@ -620,45 +722,54 @@ table {
       border-radius: 20px;
       margin-bottom: 12px;
       padding: unset;
+
       &__tools {
         margin: unset;
         padding: 18px 17px;
       }
+
       &__table {
         height: calc(100vh - 290px);
         max-height: 540px;
-        box-shadow: 0px 4px 20px 0px #0000001F;
-
+        box-shadow: 0px 4px 20px 0px #0000001f;
       }
     }
+
     table {
       box-shadow: unset;
       filter: unset;
     }
+
     .users {
       display: none;
+
       &.active {
         display: block;
       }
-      table{
+      table {
         min-width: 700px;
       }
     }
+
     .groups {
       display: none;
+
       &.active {
         display: block;
       }
+
       table {
         min-width: 600px;
         td {
           width: 33.3%;
           color: $gray16;
+
           h5 {
             &.user {
               color: $primary;
               justify-content: center;
               font-weight: 400;
+
               svg {
                 stroke: $primary;
                 fill: $white;
@@ -667,8 +778,10 @@ table {
                 margin-right: 3px;
                 stroke-width: 1px;
               }
+
               &.empty {
                 color: $gray16;
+
                 svg {
                   stroke: $gray16;
                 }
@@ -684,6 +797,7 @@ table {
 .buttons__row {
   display: flex;
   justify-content: flex-end;
+
   .button {
     margin-right: 8px;
     padding: 5px 18px;
@@ -691,6 +805,7 @@ table {
     border-radius: 4px;
     position: relative;
     z-index: 2;
+
     &.cancel {
       border: 1px solid #c1c9d2;
       box-shadow: 0px 1px 2px rgba(55, 65, 81, 0.08);
@@ -698,6 +813,7 @@ table {
       color: $blue2;
       background-color: $white;
     }
+
     &.confirm {
       color: $white;
       background-color: $blue;
@@ -707,4 +823,23 @@ table {
   }
 }
 
+// 650px
+@mixin selectUser-sm-md-extra {
+  .selectUser {
+    &__inner {
+      &-wrapper {
+        padding: 20px 15px;
+      }
+    }
+  }
+}
 
+// 440px
+@mixin selectUser-xxsm-xsm {
+  .selectUser {
+    &__inner {
+      margin: 15px ;
+      width: calc(100% - 30px);
+    }
+  }
+}

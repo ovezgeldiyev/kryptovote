@@ -39,7 +39,9 @@
 // 1024px
 @mixin header-lg-xlg {
     .header {
-    
+      &__inner {
+        padding: 10px 15px;
+      }
     }
 }
 // 540px

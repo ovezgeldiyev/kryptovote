@@ -126,13 +126,13 @@ if(selectBtn) {
     selectCancel.onclick = () => selectRemoveFunc();
 }
 
-window.onclick = function (event) {
+window.addEventListener("click", function (event) {
     if (event.target == addUser || event.target == importUser || event.target == selectUser) {
         importRemoveFunc();
         addRemoveFunc();
         selectRemoveFunc();
-    }
-};
+    };
+});
 
 
 

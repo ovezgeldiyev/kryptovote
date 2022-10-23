@@ -90,47 +90,6 @@ h4 {
         font-family: $poppins;
       }
     }
-    &-list {
-      padding: 0 10px;
-      .introList {
-        &__tools {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 20px;
-          h2 {
-            font-size: 20px;
-            line-height: 20px;
-            font-weight: 500;
-            color: $black;
-            font-family: $poppins;
-            font-weight: 500;
-          }
-          &-buttons {
-            display: flex;
-            justify-content: space-between;
-            .button {
-              margin-right: 10px;
-              &:last-child {
-                margin-right: unset;
-              }
-              &.secondary {
-                letter-spacing: 0.5px;
-                svg {
-                  fill: transparent;
-                  stroke: $primary;
-                }
-                &:hover {
-                  svg {
-                    stroke: $white;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
     &-footer {
       display: flex;
       justify-content: space-between;
@@ -145,7 +104,7 @@ h4 {
         position: absolute;
         top: 0;
         left: -20px;
-        border-top: 1px solid $gray12
+        border-top: 1px solid $gray12;
       }
       .button {
         padding: 5px 16px;
@@ -182,6 +141,102 @@ main {
   margin: 0 auto;
 }
 
+.list {
+  padding: 0 10px;
+  &__tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    h2 {
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: 500;
+      color: $black;
+      font-family: $poppins;
+      font-weight: 500;
+      &.strong {
+        font-weight: 600;
+      }
+    }
+    &-buttons {
+      display: flex;
+      justify-content: space-between;
+      .button {
+        margin-right: 10px;
+        &:last-child {
+          margin-right: unset;
+        }
+        &.secondary {
+          letter-spacing: 0.5px;
+          svg {
+            fill: transparent;
+            stroke: $primary;
+          }
+          &:hover {
+            svg {
+              stroke: $white;
+            }
+          }
+        }
+      }
+      .searchButton {
+        position: relative;
+        background: $gray13;
+        border-radius: 30px;
+        padding: 10px 20px 10px 41px;
+        width: 229px;
+        margin-right: 17px;
+
+        svg {
+          width: 26px;
+          height: 24px;
+          fill: $white;
+          position: absolute;
+          left: 8px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        input {
+          font-family: $poppins;
+          line-height: 18px;
+          font-size: 12px;
+          background: $gray13;
+          &::placeholder {
+            font-size: 12px;
+            color: $gray14;
+          }
+        }
+      }
+      .selectButton {
+        width: 163px;
+        font-family: $poppins;
+        background: $gray13;
+        border-radius: 30px;
+        position: relative;
+        padding: 10px 48px 10px 16px;
+        svg {
+          fill: $white;
+          width: 10px;
+          height: 6px;
+          position: absolute;
+          right: 16px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        p {
+          font-family: $poppins;
+          color: $gray15;
+          line-height: 18px;
+          strong {
+            font-weight: 600;
+            color: #3d3c42;
+          }
+        }
+      }
+    }
+  }
+}
 table {
   width: 100%;
   text-align: left;
@@ -247,6 +302,7 @@ table {
     h5 {
       display: flex;
       align-items: center;
+      font-size: 15px;
       p {
         margin-right: 10px;
         width: 26px;
@@ -335,6 +391,13 @@ table {
     &.center {
       text-align: center;
     }
+    .checkbox__wrapper {
+      display: flex;
+      align-items: center;
+      label {
+        cursor: pointer;
+      }
+    }
   }
   tbody {
     tr {
@@ -410,6 +473,122 @@ table {
           }
         }
       }
+    }
+  }
+}
+
+.UsersGroups {
+  background-color: $white;
+  border: 1px solid $gray11;
+  border-radius: 10px;
+  margin: 50px;
+  &__inner {
+    padding: 20px 25px;
+    &-info {
+      margin-bottom: 5px;
+
+      h2 {
+        margin-bottom: 5px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+    &-tab {
+      display: flex;
+      margin-bottom: 10px;
+      p {
+        margin-right: 10px;
+        padding: 6px 16px 8px;
+        font-family: $montserrat;
+        position: relative;
+        &:after {
+          display: none;
+          content: "";
+          width: 100%;
+          height: 4px;
+          background-color: $darkBlue;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+        &.active {
+          color: $blue;
+          &:after {
+            display: block;
+          }
+        }
+      }
+    }
+    .list {
+      background: #ffffff;
+      border: 1px solid rgba(138, 136, 136, 0.2);
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+      border-radius: 20px;
+      margin-bottom: 12px;
+
+      &__tools {
+        margin: unset;
+        padding: 18px 17px;
+      }
+    }
+    table {
+      box-shadow: unset;
+      filter: unset;
+    }
+    .groups {
+      table {
+        td {
+          width: 33.3%;
+          color: $gray16;
+          h5 {
+            &.user {
+              color: $primary;
+              justify-content: center;
+
+              svg {
+                stroke: $primary;
+                fill: $white;
+                width: 13px;
+                height: 13px;
+                margin-right: 3px;
+              }
+              &.empty {
+                color: $gray16;
+                svg {
+                  stroke: $gray16;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.buttons__row {
+  display: flex;
+  justify-content: flex-end;
+  .button {
+    margin-right: 8px;
+    padding: 5px 18px;
+    font-family: $inter;
+    border-radius: 4px;
+    position: relative;
+    z-index: 2;
+    &.cancel {
+      border: 1px solid #c1c9d2;
+      box-shadow: 0px 1px 2px rgba(55, 65, 81, 0.08);
+      border-radius: 4px;
+      color: $blue2;
+      background-color: $white;
+    }
+    &.confirm {
+      color: $white;
+      background-color: $blue;
+      filter: drop-shadow(0px 1px 2px rgba(55, 65, 81, 0.06))
+        drop-shadow(0px 1px 3px rgba(55, 65, 81, 0.1));
     }
   }
 }

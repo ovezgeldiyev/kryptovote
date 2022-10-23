@@ -71,12 +71,12 @@
             Select the users and groups manually or import them from a spreadsheet.
           </p>
         </div>
-        <div class="intro__inner-list">
-          <div class="introList__tools">
+        <div class="listt">
+          <div class="list__tools">
             <h2>
               Voters (20)
             </h2>
-            <div class="introList__tools-buttons">
+            <div class="list__tools-buttons">
               <button class="button secondary">
                 <svg>
                   <use xlink:href="#users"></use>
@@ -577,20 +577,882 @@
           </table>
         </div>
         <div class="intro__inner-footer">
-          <button class="button cancel">
+          <a href="#" class="button cancel">
             Cancel
-          </button>
+          </a>
           <div class="buttons__row">
-            <button class="button previous">
+            <a href="#" class="button previous">
               Previous
-            </button>
-            <button class="button next">
+            </a>
+            <a href="#" class="button next">
               Next
-            </button>
+            </a>
           </div>
         </div>
       </div>
     </section>
+
+
+    <div class="UsersGroups">
+      <div class="UsersGroups__inner">
+        <div class="UsersGroups__inner-info">
+          <h2>
+            Select Users or groups
+          </h2>
+          <p>
+            Here you can select existing users or groups to be added as voters to the ballot
+          </p>
+        </div>
+        <div class="UsersGroups__inner-tab">
+          <p class="active">
+            Users
+          </p>
+          <p>
+            Groups
+          </p>
+        </div>
+        <div class="users">
+          <div class="list">
+            <div class="list__tools">
+              <h2 class="strong">
+                Users
+              </h2>
+              <div class="list__tools-buttons">
+                <div class="searchButton">
+                  <svg>
+                    <use xlink:href="#search"></use>
+                  </svg>
+                  <input type="text" placeholder="Search">
+                </div>
+                <div class="selectButton">
+                  <svg>
+                    <use xlink:href="#arrowBottom"></use>
+                  </svg>
+                  <p class="sm">
+                    Sort by : <strong> Newest</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <table>
+              <thead>
+                <th>
+                  <h5>
+                    <span>
+                      <img src="images/icons/chevron-top.png" alt="">
+                      <img src="images/icons/chevron-bottom.png" alt="">
+                    </span>
+                    Full name
+                  </h5>
+                </th>
+                <th>
+                  <h5>
+                    <span>
+                      <img src="images/icons/chevron-top.png" alt="">
+                      <img src="images/icons/chevron-bottom.png" alt="">
+                    </span>
+                    Email
+                  </h5>
+                </th>
+                <th>
+                  <h5 class="center">
+                    <span>
+                      <img src="images/icons/chevron-top.png" alt="">
+                      <img src="images/icons/chevron-bottom.png" alt="">
+                    </span>
+                    Last Login
+                  </h5>
+                </th>
+                <th>
+                  <h5 class="center">
+                    <span>
+                      <img src="images/icons/chevron-top.png" alt="">
+                      <img src="images/icons/chevron-bottom.png" alt="">
+                    </span>
+                    Status
+                  </h5>
+                </th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="checkbox__wrapper">
+                      <div class="checkbox table">
+                        <input type="checkbox" id="check-1">
+                        <span>
+                          <img src="images/icons/tick.png" alt="">
+                        </span>
+                      </div>
+                      <label for="check-1">
+                        <h5>
+                          <p>
+                            <span>
+                              G
+                            </span>
+                          </p>
+                          Gabriele Serra
+                        </h5>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="#">gabriele.serra@nexial.io</a>
+                  </td>
+                  <td class="center">
+                    2022-09-02
+                  </td>
+                  <td class="center">
+                    <h6>
+                      <span>
+                        ACTIVE
+                      </span>
+                    </h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="checkbox__wrapper">
+                      <div class="checkbox table">
+                        <input type="checkbox" id="check-3">
+                        <span>
+                          <img src="images/icons/tick.png" alt="">
+                        </span>
+                      </div>
+                      <label for="check-3">
+                        <h5>
+                          <p class="red">
+                            <span>
+                              L
+                            </span>
+                          </p>
+                          Larry Benavides
+                        </h5>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="#">larry.benavides@gmail.com</a>
+                  </td>
+                  <td class="center">
+                    -
+                  </td>
+                  <td class="center">
+                    <h6>
+                      <span>
+                        ACTIVE
+                      </span>
+                    </h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="checkbox__wrapper">
+                      <div class="checkbox table">
+                        <input type="checkbox" id="check-4">
+                        <span>
+                          <img src="images/icons/tick.png" alt="">
+                        </span>
+                      </div>
+                      <label for="check-4">
+                        <h5>
+                          <p class="yellow">
+                            <span>
+                              C
+                            </span>
+                          </p>
+                          Cheryl Dixon
+                        </h5>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="#">cdixon@live.com</a>
+                  </td>
+                  <td class="center">
+                    2022-08-24
+                  </td>
+                  <td class="center">
+                    <h6>
+                      <span>
+                        ACTIVE
+                      </span>
+                    </h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="checkbox__wrapper">
+                      <div class="checkbox table">
+                        <input type="checkbox" id="check-5">
+                        <span>
+                          <img src="images/icons/tick.png" alt="">
+                        </span>
+                      </div>
+                      <label for="check-5">
+                        <h5>
+                          <p class="blue">
+                            <span>
+                              S
+                            </span>
+                          </p>
+                          Scotty Boyd
+                        </h5>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="#">scottyb73@gmail.com</a>
+                  </td>
+                  <td class="center">
+                    2022-09-06
+                  </td>
+                  <td class="center">
+                    <h6>
+                      <span>
+                        ACTIVE
+                      </span>
+                    </h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="checkbox__wrapper">
+                      <div class="checkbox table">
+                        <input type="checkbox" id="check-6">
+                        <span>
+                          <img src="images/icons/tick.png" alt="">
+                        </span>
+                      </div>
+                      <label for="check-6">
+                        <h5>
+                          <p class="green">
+                            <span>
+                              T
+                            </span>
+                          </p>
+                          Terry Welker
+                        </h5>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="#">terrywelk@teleworm.us</a>
+                  </td>
+                  <td class="center">
+                    -
+                  </td>
+                  <td class="center">
+                    <h6>
+                      <span>
+                        ACTIVE
+                      </span>
+                    </h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="checkbox__wrapper">
+                      <div class="checkbox table">
+                        <input type="checkbox" id="check-7">
+                        <span>
+                          <img src="images/icons/tick.png" alt="">
+                        </span>
+                      </div>
+                      <label for="check-7">
+                        <h5>
+                          <p class="red">
+                            <span>
+                              M
+                            </span>
+                          </p>
+                          Mckinley Ballou
+                        </h5>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="#">m.ballou@yahoo.com</a>
+                  </td>
+                  <td class="center">
+                    -
+                  </td>
+                  <td class="center">
+                    <h6>
+                      <span>
+                        ACTIVE
+                      </span>
+                    </h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="checkbox__wrapper">
+                      <div class="checkbox table">
+                        <input type="checkbox" id="check-8">
+                        <span>
+                          <img src="images/icons/tick.png" alt="">
+                        </span>
+                      </div>
+                      <label for="check-8">
+                        <h5>
+                          <p class="yellow">
+                            <span>
+                              H
+                            </span>
+                          </p>
+                          Heather McDonald
+                        </h5>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="#">heatherm@icloud.com</a>
+                  </td>
+                  <td class="center">
+                    2022-05-13
+                  </td>
+                  <td class="center">
+                    <h6>
+                      <span>
+                        ACTIVE
+                      </span>
+                    </h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="checkbox__wrapper">
+                      <div class="checkbox table">
+                        <input type="checkbox" id="check-9">
+                        <span>
+                          <img src="images/icons/tick.png" alt="">
+                        </span>
+                      </div>
+                      <label for="check-9">
+                        <h5>
+                          <p class="blue">
+                            <span>
+                              R
+                            </span>
+                          </p>
+                          Renee Duong
+                        </h5>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="#">duo.renee@aol.com</a>
+                  </td>
+                  <td class="center">
+                    2022-10-07
+                  </td>
+                  <td class="center">
+                    <h6>
+                      <span>
+                        ACTIVE
+                      </span>
+                    </h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="checkbox__wrapper">
+                      <div class="checkbox table">
+                        <input type="checkbox" id="check-10">
+                        <span>
+                          <img src="images/icons/tick.png" alt="">
+                        </span>
+                      </div>
+                      <label for="check-10">
+                        <h5>
+                          <p class="green">
+                            <span>
+                              R
+                            </span>
+                          </p>
+                          Sean Stapleton
+                        </h5>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="#">stapleton64@gmail.com</a>
+                  </td>
+                  <td class="center">
+                    -
+                  </td>
+                  <td class="center">
+                    <h6>
+                      <span>
+                        ACTIVE
+                      </span>
+                    </h6>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="checkbox__wrapper">
+                      <div class="checkbox table">
+                        <input type="checkbox" id="check-11">
+                        <span>
+                          <img src="images/icons/tick.png" alt="">
+                        </span>
+                      </div>
+                      <label for="check-11">
+                        <h5>
+                          <p class="red">
+                            <span>
+                              M
+                            </span>
+                          </p>
+                          Mary White
+                        </h5>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="#">mary.white@yahoo.com</a>
+                  </td>
+                  <td class="center">
+                    -
+                  </td>
+                  <td class="center">
+                    <h6>
+                      <span>
+                        ACTIVE
+                      </span>
+                    </h6>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <td>
+                  Showing 1 - 10 of 20
+                  <div class="pagination">
+                    <button class="button">
+                      «
+                    </button>
+                    <button class="button">
+                      < </button> <a href="#" class="active">
+                        1
+                        </a>
+                        <a href="#">
+                          2
+                        </a>
+                        <a href="#">
+                          3
+                        </a>
+                        <a href="#">
+                          4
+                        </a>
+                        <a href="#">
+                          5
+                        </a>
+                        <button class="button active">
+                          >
+                        </button>
+                        <button class="button active">
+                          »
+                        </button>
+                  </div>
+                </td>
+              </tfoot>
+            </table>
+          </div>
+          <div class="buttons__row">
+            <button class="button cancel">
+              Cancel
+            </button>
+            <button class="button confirm">
+              Confirm
+            </button>
+          </div>
+        </div>
+        <div class="groups">
+          <div class="list">
+            <div class="list__tools">
+              <h2 class="strong">
+                Groups
+              </h2>
+              <div class="list__tools-buttons">
+                <div class="searchButton">
+                  <svg>
+                    <use xlink:href="#search"></use>
+                  </svg>
+                  <input type="text" placeholder="Search">
+                </div>
+                <div class="selectButton">
+                  <svg>
+                    <use xlink:href="#arrowBottom"></use>
+                  </svg>
+                  <p class="sm">
+                    Sort by : <strong> Newest</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <table>
+              <thead>
+                <th>
+                  <h5>
+                    <span>
+                      <img src="images/icons/chevron-top.png" alt="">
+                      <img src="images/icons/chevron-bottom.png" alt="">
+                    </span>
+                    Name
+                  </h5>
+                </th>
+                <th>
+                  <h5>
+                    <span>
+                      <img src="images/icons/chevron-top.png" alt="">
+                      <img src="images/icons/chevron-bottom.png" alt="">
+                    </span>
+                    Description
+                  </h5>
+                </th>
+                <th>
+                  <h5 class="center">
+                    <span>
+                      <img src="images/icons/chevron-top.png" alt="">
+                      <img src="images/icons/chevron-bottom.png" alt="">
+                    </span>
+                    Users in group
+                  </h5>
+                </th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="checkbox__wrapper">
+                      <div class="checkbox table">
+                        <input type="checkbox" id="check-21">
+                        <span>
+                          <img src="images/icons/tick.png" alt="">
+                        </span>
+                      </div>
+                      <label for="check-21">
+                        <h5>
+                          Hr
+                        </h5>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    Employees of HR Department
+                  </td>
+                  <td class="center">
+                    <h5 class="user">
+                      <svg>
+                        <use xlink:href="#users"></use>
+                      </svg>
+                      15
+                    </h5>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="checkbox__wrapper">
+                      <div class="checkbox table">
+                        <input type="checkbox" id="check-22">
+                        <span>
+                          <img src="images/icons/tick.png" alt="">
+                        </span>
+                      </div>
+                      <label for="check-22">
+                        <h5>
+                          PT Employees
+                        </h5>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    All Employees hired in PT
+                  </td>
+                  <td class="center">
+                    <h5 class="user">
+                      <svg>
+                        <use xlink:href="#users"></use>
+                      </svg>
+                      412
+                    </h5>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="checkbox__wrapper">
+                      <div class="checkbox table">
+                        <input type="checkbox" id="check-23">
+                        <span>
+                          <img src="images/icons/tick.png" alt="">
+                        </span>
+                      </div>
+                      <label for="check-23">
+                        <h5>
+                          Board Members
+                        </h5>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    All board members
+                  </td>
+                  <td class="center">
+                    <h5 class="user">
+                      <svg>
+                        <use xlink:href="#users"></use>
+                      </svg>
+                      75
+                    </h5>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="checkbox__wrapper">
+                      <div class="checkbox table">
+                        <input type="checkbox" id="check-24">
+                        <span>
+                          <img src="images/icons/tick.png" alt="">
+                        </span>
+                      </div>
+                      <label for="check-24">
+                        <h5>
+                          Security
+                        </h5>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    Employees involved in security
+                  </td>
+                  <td class="center">
+                    <h5 class="user">
+                      <svg>
+                        <use xlink:href="#users"></use>
+                      </svg>
+                      31
+                    </h5>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="checkbox__wrapper">
+                      <div class="checkbox table">
+                        <input type="checkbox" id="check-25">
+                        <span>
+                          <img src="images/icons/tick.png" alt="">
+                        </span>
+                      </div>
+                      <label for="check-25">
+                        <h5>
+                          FR Employees
+                        </h5>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    All Employess hired in PT
+                  </td>
+                  <td class="center">
+                    <h5 class="user">
+                      <svg>
+                        <use xlink:href="#users"></use>
+                      </svg>
+                      325
+                    </h5>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="checkbox__wrapper">
+                      <div class="checkbox table">
+                        <input type="checkbox" id="check-26">
+                        <span>
+                          <img src="images/icons/tick.png" alt="">
+                        </span>
+                      </div>
+                      <label for="check-26">
+                        <h5>
+                          IT Employees
+                        </h5>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    All Employees in IT
+                  </td>
+                  <td class="center">
+                    <h5 class="user">
+                      <svg>
+                        <use xlink:href="#users"></use>
+                      </svg>
+                      154
+                    </h5>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="checkbox__wrapper">
+                      <div class="checkbox table">
+                        <input type="checkbox" id="check-27">
+                        <span>
+                          <img src="images/icons/tick.png" alt="">
+                        </span>
+                      </div>
+                      <label for="check-27">
+                        <h5>
+                          Tech
+                        </h5>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    Tech employees
+                  </td>
+                  <td class="center">
+                    <h5 class="user">
+                      <svg>
+                        <use xlink:href="#users"></use>
+                      </svg>
+                      91
+                    </h5>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="checkbox__wrapper">
+                      <div class="checkbox table">
+                        <input type="checkbox" id="check-28">
+                        <span>
+                          <img src="images/icons/tick.png" alt="">
+                        </span>
+                      </div>
+                      <label for="check-28">
+                        <h5>
+                          Sales
+                        </h5>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    Sales Employees
+                  </td>
+                  <td class="center">
+                    <h5 class="user">
+                      <svg>
+                        <use xlink:href="#users"></use>
+                      </svg>
+                      32
+                    </h5>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="checkbox__wrapper">
+                      <div class="checkbox table">
+                        <input type="checkbox" id="check-29">
+                        <span>
+                          <img src="images/icons/tick.png" alt="">
+                        </span>
+                      </div>
+                      <label for="check-29">
+                        <h5>
+                          Marketing
+                        </h5>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    Marketing Employees
+                  </td>
+                  <td class="center">
+                    <h5 class="user">
+                      <svg>
+                        <use xlink:href="#users"></use>
+                      </svg>
+                      15
+                    </h5>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="checkbox__wrapper">
+                      <div class="checkbox table">
+                        <input type="checkbox" id="check-30">
+                        <span>
+                          <img src="images/icons/tick.png" alt="">
+                        </span>
+                      </div>
+                      <label for="check-30">
+                        <h5>
+                          Operations
+                        </h5>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    Operations Employees
+                  </td>
+                  <td class="center">
+                    <h5 class="user empty">
+                      <svg>
+                        <use xlink:href="#users"></use>
+                      </svg>
+                   0
+                    </h5>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <td>
+                  Showing 1 - 10 of 20
+                  <div class="pagination">
+                    <button class="button">
+                      «
+                    </button>
+                    <button class="button">
+                      < </button> <a href="#" class="active">
+                        1
+                        </a>
+                        <a href="#">
+                          2
+                        </a>
+                        <a href="#">
+                          3
+                        </a>
+                        <a href="#">
+                          4
+                        </a>
+                        <a href="#">
+                          5
+                        </a>
+                        <button class="button active">
+                          >
+                        </button>
+                        <button class="button active">
+                          »
+                        </button>
+                  </div>
+                </td>
+              </tfoot>
+            </table>
+          </div>
+          <div class="buttons__row">
+            <button class="button cancel">
+              Cancel
+            </button>
+            <button class="button confirm">
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
 
     <!-- list end
     =========================================== -->
@@ -653,12 +1515,26 @@
             d="M7.78874 5.5L10.7294 2.37281C11.0903 1.98906 11.0903 1.36687 10.7294 0.982812L10.0759 0.287813C9.715 -0.0959375 9.12992 -0.0959375 8.76877 0.287813L5.8281 3.415L2.88744 0.287813C2.52658 -0.0959375 1.9415 -0.0959375 1.58035 0.287813L0.926804 0.982812C0.565943 1.36656 0.565943 1.98875 0.926804 2.37281L3.86747 5.5L0.926804 8.62719C0.565943 9.01094 0.565943 9.63312 0.926804 10.0172L1.58035 10.7122C1.94121 11.0959 2.52658 11.0959 2.88744 10.7122L5.8281 7.585L8.76877 10.7122C9.12963 11.0959 9.715 11.0959 10.0759 10.7122L10.7294 10.0172C11.0903 9.63344 11.0903 9.01125 10.7294 8.62719L7.78874 5.5Z" />
         </g>
       </symbol>
-
+      <symbol id="search" viewBox="0 0 27 24">
+        <g>
+          <path
+            d="M12.2176 19C16.9102 19 20.7142 15.4183 20.7142 11C20.7142 6.58172 16.9102 3 12.2176 3C7.52507 3 3.72101 6.58172 3.72101 11C3.72101 15.4183 7.52507 19 12.2176 19Z"
+            stroke="#7E7E7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M22.8384 21L18.2184 16.65" stroke="#7E7E7E" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </g>
+      </symbol>
+      <symbol id="arrowBottom" viewBox="0 0 12 6">
+        <g>
+          <path d="M0.916748 0.75L5.69609 5.25L10.4754 0.75" stroke="#3D3C42" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </g>
+      </symbol>
     </svg>
     <!-- js
     =========================================== -->
 
-    <script src="./js/main.js"></script>
+    <!-- <script src="./js/main.js"></script> -->
 </body>
 
 </html>

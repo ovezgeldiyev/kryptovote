@@ -648,12 +648,6 @@ main {
   opacity: 0.8;
 }
 
-.intro {
-  width: calc(100% - 240px);
-  margin: 0 0 0 auto;
-  height: 100%;
-}
-
 .addUser {
   position: fixed;
   width: 100%;
@@ -860,6 +854,9 @@ main {
 
 .intro {
   padding: 15px 20px;
+  width: calc(100% - 220px);
+  margin: 0 0 0 auto;
+  height: 100%;
 }
 .intro__inner {
   background-color: #fff;
@@ -880,7 +877,7 @@ main {
   width: calc(14.2% - 2px);
   font-size: 12px;
   line-height: 16px;
-  color: #3c4257;
+  color: #697386;
   font-family: "Inter", sans-serif;
   position: relative;
   padding-top: 12px;
@@ -924,6 +921,16 @@ main {
   z-index: 1;
   position: absolute;
 }
+.intro__inner-header a span img {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+}
 .intro__inner-header a::before {
   content: "";
   width: 100%;
@@ -934,8 +941,18 @@ main {
   top: 0;
   left: 0;
 }
+.intro__inner-header a.checked {
+  color: #3c4257;
+}
 .intro__inner-header a.checked::before {
   background-color: #6b7280;
+}
+.intro__inner-header a.checked span {
+  background-color: #6b7280;
+  border: none;
+}
+.intro__inner-header a.checked span img {
+  opacity: 1;
 }
 .intro__inner-header a.active::before {
   background-color: #5469d4;
@@ -1015,7 +1032,6 @@ main {
 }
 
 main {
-  max-width: 1370px;
   margin: 0 auto;
 }
 
@@ -1179,6 +1195,13 @@ table th h5 span img {
   position: absolute;
   top: 0;
   left: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+table th h5 span img:hover {
+  opacity: 0.8;
 }
 table th h5 span img:nth-child(2) {
   top: unset;
@@ -1402,32 +1425,53 @@ table tfoot td .pagination a:last-child {
 table tfoot td .pagination a.active {
   background-color: #f1efef;
 }
+table tfoot td .pagination a:hover {
+  background-color: #f1efef;
+}
 
-.UsersGroups {
+.selectUser {
+  z-index: 7;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  overflow-y: auto;
+}
+.selectUser.active {
+  display: block;
+}
+.selectUser.active .selectUser__inner {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+}
+.selectUser__inner {
   background-color: #fff;
   border: 1px solid #d0d0d0;
   border-radius: 10px;
-  margin: 50px;
+  margin: 50px auto;
 }
-.UsersGroups__inner {
+.selectUser__inner-wrapper {
   padding: 20px 25px;
 }
-.UsersGroups__inner-info {
+.selectUser__inner-info {
   margin-bottom: 5px;
 }
-.UsersGroups__inner-info h2 {
+.selectUser__inner-info h2 {
   margin-bottom: 5px;
 }
-.UsersGroups__inner-info p {
+.selectUser__inner-info p {
   font-size: 12px;
 }
-.UsersGroups__inner-tab {
+.selectUser__inner-tab {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 10px;
 }
-.UsersGroups__inner-tab p {
+.selectUser__inner-tab p {
   margin-right: 10px;
   padding: 6px 16px 8px;
   font-family: "Montserrat", sans-serif;
@@ -1437,7 +1481,7 @@ table tfoot td .pagination a.active {
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
 }
-.UsersGroups__inner-tab p:after {
+.selectUser__inner-tab p:after {
   display: none;
   content: "";
   width: 100%;
@@ -1447,13 +1491,13 @@ table tfoot td .pagination a.active {
   bottom: 0;
   left: 0;
 }
-.UsersGroups__inner-tab p.active {
+.selectUser__inner-tab p.active {
   color: #5469d4;
 }
-.UsersGroups__inner-tab p.active:after {
+.selectUser__inner-tab p.active:after {
   display: block;
 }
-.UsersGroups__inner .list {
+.selectUser__inner .list {
   background: #ffffff;
   border: 1px solid rgba(138, 136, 136, 0.2);
   -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
@@ -1462,40 +1506,40 @@ table tfoot td .pagination a.active {
   margin-bottom: 12px;
   padding: unset;
 }
-.UsersGroups__inner .list__tools {
+.selectUser__inner .list__tools {
   margin: unset;
   padding: 18px 17px;
 }
-.UsersGroups__inner table {
+.selectUser__inner table {
   -webkit-box-shadow: unset;
           box-shadow: unset;
   -webkit-filter: unset;
           filter: unset;
 }
-.UsersGroups__inner .users {
+.selectUser__inner .users {
   display: none;
 }
-.UsersGroups__inner .users.active {
+.selectUser__inner .users.active {
   display: block;
 }
-.UsersGroups__inner .groups {
+.selectUser__inner .groups {
   display: none;
 }
-.UsersGroups__inner .groups.active {
+.selectUser__inner .groups.active {
   display: block;
 }
-.UsersGroups__inner .groups table td {
+.selectUser__inner .groups table td {
   width: 33.3%;
   color: #616161;
 }
-.UsersGroups__inner .groups table td h5.user {
+.selectUser__inner .groups table td h5.user {
   color: #5f8df8;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   font-weight: 400;
 }
-.UsersGroups__inner .groups table td h5.user svg {
+.selectUser__inner .groups table td h5.user svg {
   stroke: #5f8df8;
   fill: #fff;
   width: 13px;
@@ -1503,10 +1547,10 @@ table tfoot td .pagination a.active {
   margin-right: 3px;
   stroke-width: 1px;
 }
-.UsersGroups__inner .groups table td h5.user.empty {
+.selectUser__inner .groups table td h5.user.empty {
   color: #616161;
 }
-.UsersGroups__inner .groups table td h5.user.empty svg {
+.selectUser__inner .groups table td h5.user.empty svg {
   stroke: #616161;
 }
 
@@ -1541,7 +1585,15 @@ table tfoot td .pagination a.active {
           filter: drop-shadow(0px 1px 2px rgba(55, 65, 81, 0.06)) drop-shadow(0px 1px 3px rgba(55, 65, 81, 0.1));
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1180px) {
+  .intro {
+    width: 100%;
+    padding: 10px;
+  }
+  .intro__inner {
+    padding-left: 50px;
+  }
+
   .sidebar {
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);

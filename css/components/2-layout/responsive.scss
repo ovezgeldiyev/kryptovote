@@ -13,11 +13,12 @@
 // 1180px
 @include xlg-xxlg {
     @include intro-xlg-xxlg;
+    @include sidebar-xlg-xxlg;
+
 }
 // 1024px
 @include lg-xlg {
     @include intro-lg-xlg;
-    @include sidebar-lg-xlg;
 
 }
 // 930px

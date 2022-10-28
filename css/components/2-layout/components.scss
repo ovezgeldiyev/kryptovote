@@ -149,7 +149,7 @@ main {
     &.previous {
         padding: 6px 16px;
         font-size: 14px;
-        line-height: 20px;
+        line-height: 18px;
         font-family: $inter;
         border: 1px solid #C1C9D2;
         border-radius: 4px;
@@ -160,7 +160,7 @@ main {
     &.next {
         padding: 6px 16px;
         font-size: 14px;
-        line-height: 20px;
+        line-height: 18px;
         font-family: $inter;
         border: 1px solid transparent;
         border-radius: 4px;
@@ -706,11 +706,9 @@ table {
     }
 
     td {
-        width: 25%;
         background: $white;
         white-space: nowrap;
         padding: 7.5px 15px 7.5px 0;
-
         &:last-child {
             padding-right: 0;
             padding-left: 15px;

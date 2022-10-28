@@ -1844,8 +1844,6 @@ table {
   background-color: #fff;
   border-radius: 5px;
   min-width: 800px;
-  -webkit-box-shadow: 0px 4px 20px 0px #0000001f;
-          box-shadow: 0px 4px 20px 0px #0000001f;
 }
 table.items {
   -webkit-box-shadow: unset;
@@ -1963,6 +1961,7 @@ table td {
   background: #fff;
   white-space: nowrap;
   padding: 7.5px 15px 7.5px 0;
+  min-width: 150px;
 }
 table td:last-child {
   padding-right: 0;
@@ -2204,7 +2203,7 @@ table tfoot td .pagination a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .list__tools h2 {
   font-size: 20px;
@@ -2483,12 +2482,17 @@ table tfoot td .pagination a:hover {
   }
 }
 @media (max-width: 540px) {
-  .intro__inner-info h2 {
-    font-size: 18px;
+  .intro__inner-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
-  .intro__inner-info p {
-    font-size: 13px;
-    line-height: 20px;
+  .intro__inner-footer .button__row {
+    margin-top: 10px;
   }
 
   .addUser {
@@ -2568,6 +2572,17 @@ table tfoot td .pagination a:hover {
   }
 }
 @media (max-width: 440px) {
+  .intro__inner-footer .cancel {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .intro__inner-footer .button__row .button {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 4px 12px;
+    margin-right: 5px;
+  }
+
   .selectUser__inner {
     margin: 15px;
     width: calc(100% - 30px);
@@ -2630,15 +2645,14 @@ table tfoot td .pagination a:hover {
   }
 
   .intro {
-    padding: 66.79px 10px 10px;
+    padding: 66.79px 10px 15px;
   }
   .intro__inner {
-    padding: 10px;
-    border-radius: 10px;
+    padding: 15px;
+    border-radius: 15px;
   }
-  .intro__inner-footer::after {
-    left: 0;
-    width: 100%;
+  .intro__inner-footer .button__row .button {
+    padding: 4px 10px;
   }
 
   .list__tools-buttons .button {

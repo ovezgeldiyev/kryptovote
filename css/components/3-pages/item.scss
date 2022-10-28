@@ -6,7 +6,6 @@ table {
   background-color: $white;
   border-radius: 5px;
   min-width: 800px;
-  box-shadow: 0px 4px 20px 0px #0000001f;
   &.items {
     box-shadow: unset;
     min-width: 400px;
@@ -41,7 +40,7 @@ table {
         padding: 5px 11px;
         svg {
           fill: transparent;
-          stroke:$gray18;
+          stroke: $gray18;
         }
 
         &:hover {
@@ -55,9 +54,9 @@ table {
         }
       }
     }
-    tbody{
-      tr{
-        &::after{
+    tbody {
+      tr {
+        &::after {
           left: 0;
           width: calc(100% + 15px);
         }
@@ -139,7 +138,7 @@ table {
     background: $white;
     white-space: nowrap;
     padding: 7.5px 15px 7.5px 0;
-
+    min-width: 150px;
     &:last-child {
       padding-right: 0;
       padding-left: 15px;
@@ -392,136 +391,135 @@ table {
 }
 .list {
   &__tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    h2 {
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: 500;
+      color: $black;
+      font-family: $poppins;
+      font-weight: 500;
+
+      &.strong {
+        font-weight: 600;
+      }
+    }
+
+    &-buttons {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10px;
 
-      h2 {
-          font-size: 20px;
-          line-height: 20px;
-          font-weight: 500;
-          color: $black;
+      .button {
+        margin-right: 10px;
+
+        &:last-child {
+          margin-right: unset;
+        }
+
+        &.secondary {
+          letter-spacing: 0.5px;
+
+          svg {
+            fill: transparent;
+            stroke: $primary;
+            stroke-width: 2px;
+          }
+
+          &:hover {
+            svg {
+              stroke: $white;
+            }
+          }
+        }
+      }
+
+      .searchButton {
+        position: relative;
+        background: $gray13;
+        border-radius: 30px;
+        padding: 10px 20px 10px 41px;
+        width: 229px;
+        margin-right: 17px;
+
+        svg {
+          width: 26px;
+          height: 24px;
+          fill: $white;
+          position: absolute;
+          left: 8px;
+          top: 50%;
+          transform: translateY(-50%);
+          cursor: pointer;
+          @include transition;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+
+        input {
           font-family: $poppins;
-          font-weight: 500;
+          line-height: 18px;
+          font-size: 12px;
+          background: $gray13;
 
-          &.strong {
-              font-weight: 600;
+          &::placeholder {
+            font-size: 12px;
+            color: $gray14;
           }
+        }
       }
 
-      &-buttons {
-          display: flex;
-          justify-content: space-between;
+      .selectButton {
+        width: 163px;
+        font-family: $poppins;
+        background: $gray13;
+        border-radius: 30px;
+        position: relative;
+        padding: 10px 48px 10px 16px;
 
-          .button {
-              margin-right: 10px;
+        svg {
+          fill: $white;
+          width: 10px;
+          height: 6px;
+          position: absolute;
+          right: 16px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
 
-              &:last-child {
-                  margin-right: unset;
-              }
+        p {
+          font-family: $poppins;
+          color: $gray15;
+          line-height: 18px;
 
-              &.secondary {
-                  letter-spacing: 0.5px;
-
-                  svg {
-                      fill: transparent;
-                      stroke: $primary;
-                      stroke-width: 2px;
-                  }
-
-                  &:hover {
-                      svg {
-                          stroke: $white;
-                      }
-                  }
-              }
+          strong {
+            font-weight: 600;
+            color: #3d3c42;
           }
+        }
 
-          .searchButton {
-              position: relative;
-              background: $gray13;
-              border-radius: 30px;
-              padding: 10px 20px 10px 41px;
-              width: 229px;
-              margin-right: 17px;
+        cursor: pointer;
+        @include transition;
 
-              svg {
-                  width: 26px;
-                  height: 24px;
-                  fill: $white;
-                  position: absolute;
-                  left: 8px;
-                  top: 50%;
-                  transform: translateY(-50%);
-                  cursor: pointer;
-                  @include transition;
-
-                  &:hover {
-                      opacity: 0.8;
-                  }
-              }
-
-              input {
-                  font-family: $poppins;
-                  line-height: 18px;
-                  font-size: 12px;
-                  background: $gray13;
-
-                  &::placeholder {
-                      font-size: 12px;
-                      color: $gray14;
-                  }
-              }
-          }
-
-          .selectButton {
-              width: 163px;
-              font-family: $poppins;
-              background: $gray13;
-              border-radius: 30px;
-              position: relative;
-              padding: 10px 48px 10px 16px;
-
-              svg {
-                  fill: $white;
-                  width: 10px;
-                  height: 6px;
-                  position: absolute;
-                  right: 16px;
-                  top: 50%;
-                  transform: translateY(-50%);
-              }
-
-              p {
-                  font-family: $poppins;
-                  color: $gray15;
-                  line-height: 18px;
-
-                  strong {
-                      font-weight: 600;
-                      color: #3d3c42;
-                  }
-              }
-
-              cursor: pointer;
-              @include transition;
-
-              &:hover {
-                  opacity: 0.8;
-              }
-          }
+        &:hover {
+          opacity: 0.8;
+        }
       }
+    }
   }
 
   &__table {
-      height: calc(100vh - 280px);
-      overflow: auto;
-      padding: 15px 15px 0 15px;
-      margin: 0 -5px;
+    height: calc(100vh - 280px);
+    overflow: auto;
+    padding: 15px 15px 0 15px;
+    margin: 0 -5px;
   }
 
-  &.sm{
+  &.sm {
     max-width: 680px;
     .list__tools {
       margin-bottom: 20px;
@@ -532,5 +530,56 @@ table {
     }
   }
 }
+// 540px
+@mixin intro-xsm-sm {
+  .intro {
+    &__inner {
+      &-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        .button__row {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+// 440px
+@mixin intro-xxsm-xsm {
+  .intro {
+    &__inner {
+      &-footer {
+        .cancel{
+          font-size:12px;
+          line-height: 16px;
+        }
+        .button__row {
+          .button{
+            font-size:12px;
+            line-height: 16px;
+            padding: 4px 12px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
 
+@mixin intro-xxxsm-xxsm{
+  .intro {
+        padding: 66.79px 10px 15px;
+    &__inner {
+      padding: 15px;
+      border-radius: 15px;
+      &-footer {
+        .button__row {
+          .button{
+            padding: 4px 10px;
+          }
+        }
+      }
+    }
+  }
 
+}

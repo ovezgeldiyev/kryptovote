@@ -9,8 +9,8 @@ table {
   box-shadow: 0px 4px 20px 0px #0000001f;
   &.items {
     box-shadow: unset;
-  min-width: 400px;
-
+    min-width: 400px;
+    padding: 0 15px 0 10px;
     .button {
       &.close {
         padding: 9px 11px;
@@ -523,6 +523,13 @@ table {
 
   &.sm{
     max-width: 680px;
+    .list__tools {
+      margin-bottom: 20px;
+    }
+    .list__table {
+      padding: 0;
+      margin: 0;
+    }
   }
 }
 

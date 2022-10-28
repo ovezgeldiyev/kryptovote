@@ -326,7 +326,12 @@
             }
         }
     }
-
+    &.item {
+        .addUser__inner {
+            padding: 23px 20px 20px 30px;
+            width: 427px;
+        }
+    }
     &__inner {
         background-color: $white;
         width: 455px;
@@ -347,6 +352,9 @@
 
         .input {
             margin-bottom: 10px;
+            &.avatar {
+                margin-bottom: 23px;
+            }
         }
 
         &-check {
@@ -380,7 +388,14 @@
 @mixin addUser-xsm-sm {
     .addUser {
         padding: 0 16px;
-
+        &.item {
+            .addUser__inner {
+                width: 100%;
+                max-width: 427px;
+                margin: 50px auto;
+                padding: 20px;
+            }
+        }
         &__inner {
             width: 100%;
             max-width: 455px;
@@ -405,6 +420,22 @@
 // 390px
 @mixin addUser-xxxsm-xxsm {
     .addUser {
+        &.item {
+            .addUser__inner {
+                .input {
+                    &.textarea {
+                        label {
+                            flex-wrap: wrap;
+                            p {
+                                width: 100%;
+                                text-align: end;
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         &__inner {
             padding: 22px;
 
@@ -440,7 +471,20 @@
             }
         }
     }
-
+    &.order{ 
+        .importUser__inner {
+            width: 312px;
+            padding: 20px 22px;
+            &-deviders {
+                label {
+                    max-width: 150px;
+                }
+            }
+            p {
+                margin-bottom: 18px;
+            }
+        }
+    }
     &__inner {
         background-color: $white;
         width: 366px;
@@ -564,7 +608,14 @@
 @mixin importUser-xxxsm-xxsm {
     .importUser {
         padding: 0 16px;
-
+        &.order {
+            .importUser__inner {
+                margin: 50px auto;
+                width: 100%;
+                max-width: 312px;
+                padding: 18px;
+            }
+        }
         &__inner {
             padding: 22px;
             margin: 50px auto;

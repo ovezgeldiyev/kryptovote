@@ -9,7 +9,7 @@ table {
   &.items {
     box-shadow: unset;
     min-width: 400px;
-
+    padding: 0 15px 0 10px;
     .button {
       &.close {
         padding: 9px 11px;
@@ -138,7 +138,7 @@ table {
     background: $white;
     white-space: nowrap;
     padding: 7.5px 15px 7.5px 0;
-
+    min-width: 150px;
     &:last-child {
       padding-right: 0;
       padding-left: 15px;
@@ -515,12 +515,71 @@ table {
   &__table {
     height: calc(100vh - 280px);
     overflow: auto;
-    padding: unset;
-    margin: unset;
-    box-shadow: 0px 4px 20px 0px #0000001f;
+    padding: 15px 15px 0 15px;
+    margin: 0 -5px;
   }
 
   &.sm {
     max-width: 680px;
+    .list__tools {
+      margin-bottom: 20px;
+    }
+    .list__table {
+      padding: 0;
+      margin: 0;
+    }
   }
+}
+// 540px
+@mixin intro-xsm-sm {
+  .intro {
+    &__inner {
+      &-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        .button__row {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+// 440px
+@mixin intro-xxsm-xsm {
+  .intro {
+    &__inner {
+      &-footer {
+        .cancel{
+          font-size:12px;
+          line-height: 16px;
+        }
+        .button__row {
+          .button{
+            font-size:12px;
+            line-height: 16px;
+            padding: 4px 12px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin intro-xxxsm-xxsm{
+  .intro {
+        padding: 66.79px 10px 15px;
+    &__inner {
+      padding: 15px;
+      border-radius: 15px;
+      &-footer {
+        .button__row {
+          .button{
+            padding: 4px 10px;
+          }
+        }
+      }
+    }
+  }
+
 }

@@ -17,7 +17,25 @@ const selectUser = document.getElementById("selectUser");
 const selectConfirm = document.getElementById("selectConfirm");
 const selectCancel = document.getElementById("selectCancel");
 
+const orderItemsBtn = document.getElementById("orderItemsBtn");
+const orderItems = document.getElementById("orderItems");
+const orderItemsConfirm = document.getElementById("orderItemsConfirm");
+const orderItemsCancel = document.getElementById("orderItemsCancel");
+
 let body = document.body;
+
+const changeAvatar = document.getElementById("changeAvatar");
+const imageInput = document.getElementById("imageInput");
+
+if(changeAvatar) {
+  changeAvatar.onchange = e => {
+    const [file] = changeAvatar.files;
+    if (file) {
+      myAvatar.src = URL.createObjectURL(file);
+      imageInput.classList.add("active");
+    }
+  }
+}
 
 sidebarBtn.onclick = function () {
     sidebar.classList.toggle("active");
@@ -39,6 +57,10 @@ const importRemoveFunc = ()=> {
 const selectRemoveFunc = ()=> {
     selectUser.classList.remove("active");
     body.classList.remove("active");
+}
+const orderRemoveFunc = ()=> {
+  orderItems.classList.remove("active");
+  body.classList.remove("active");
 }
 if(addBtn) {
     addBtn.onclick = function () {
@@ -67,6 +89,14 @@ if(selectBtn) {
     selectCancel.onclick = () => selectRemoveFunc();
 }
 
+if(orderItemsBtn) {
+  orderItemsBtn.onclick = function () {
+    orderItems.classList.toggle("active");
+      body.classList.toggle("active");
+  };
+  orderItemsConfirm.onclick = () => orderRemoveFunc();
+  orderItemsCancel.onclick = () => orderRemoveFunc();
+}
 window.addEventListener("click", function (event) {
     if (event.target == addUser || event.target == importUser || event.target == selectUser) {
         importRemoveFunc();

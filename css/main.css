@@ -583,7 +583,7 @@ main {
   max-width: 600px;
 }
 .voter.item {
-  margin: 27px 20px;
+  margin: 17px 20px 17px 50px;
 }
 .voter__inner {
   display: -webkit-box;
@@ -2438,6 +2438,10 @@ table tfoot td .pagination a:hover {
   .list__tools {
     margin-bottom: 15px;
   }
+
+  .voter.item {
+    margin: 10px auto;
+  }
 }
 @media (max-width: 650px) {
   h1 {
@@ -2529,6 +2533,9 @@ table tfoot td .pagination a:hover {
     margin-right: 5px;
   }
 
+  .list.sm .list__tools {
+    margin-bottom: 10px;
+  }
   .list__tools {
     margin-bottom: 5px;
   }

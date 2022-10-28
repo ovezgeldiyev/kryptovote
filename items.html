@@ -184,7 +184,7 @@
             </div>
           </div>
           <div class="list__table">
-            <table class="items">
+            <table class="items" id="sortlist">
                 <tbody>
                   <tr>
                     <td>
@@ -202,7 +202,7 @@
                     </td>
                     <td>
                       <div class="button__row">
-                        <button class="button secondary">
+                        <button class="button secondary" id="editItemBtn">
                           <svg>
                             <use xlink:href="#pen"></use>
                           </svg>
@@ -520,7 +520,55 @@
         </div>
       </form>
     </div>
-     <div class="importUser order" id="selectUser">
+    <div class="addUser item " id="editItem">
+        <form action="" class="addUser__inner">
+          <h2>
+            Edit Item
+          </h2>
+          <p class="sm">
+              Fill the form below to create a new Item
+          </p>
+          <div class="input">
+            <label for="itemName">
+              Item Name
+            </label>
+            <input type="text" id="itemName" placeholder="Mary White" value="Richard Burr">
+          </div>
+          <div class="input textarea">
+            <label for="description">
+              Description <span>33</span> <p>(optional - max 150 chars)</p>
+            </label>
+            <textarea name="description" id="description" placeholder="Short bio">This is an example of description</textarea>
+          </div>
+          <div class="input avatar">
+              <label for="changeAvatar">
+                  Image
+              </label>
+             <div class="input__avatar active" id="imageInput">
+              <div class="input__avatar-image">
+                  <img src="./images/avatar.png" alt="" id="myAvatar">
+              </div>
+              <div class="input__avatar-overlay">
+                  <span>
+                      <img src="./images/icons/edit-black.png" alt="">
+                  </span>
+                  Edit
+              </div>
+              <input type="file" id="changeAvatar">
+              <span>+</span>
+             </div>
+            </div>
+          <div class="addUser__inner-buttons">
+            <button type="button" class="button previous" id="editItemConfirm">
+              Cancel
+            </button>
+            <button type="submit" class="button next" id="editItemCancel">
+              Confirm
+            </button>
+          </div>
+        </form>
+      </div>
+    <div class="importUser order" id="selectUser">
         <form action="" class="importUser__inner">
           <h2>
             Order positions
@@ -550,7 +598,7 @@
             </button>
           </div>
         </form>
-      </div>
+    </div>
     <div class="importUser" id="importUser">
       <form action="" class="importUser__inner">
         <h2>

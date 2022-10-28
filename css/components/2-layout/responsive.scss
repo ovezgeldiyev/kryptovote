@@ -64,6 +64,11 @@
             margin-bottom: 15px;
         }
     }
+    .voter {
+        &.item {
+            margin: 10px auto;
+        }
+    }
 }
 
 // 650px
@@ -128,6 +133,11 @@
         }
     }
     .list {
+        &.sm {
+            .list__tools {
+                margin-bottom: 10px;
+            }
+        }
         &__tools {
             margin-bottom: 5px;
 

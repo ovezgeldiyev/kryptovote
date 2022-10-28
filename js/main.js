@@ -110,3 +110,33 @@ function onTabClick(tabBtns, tabItems, item) {
   });
 }
 
+
+
+
+
+
+
+function FirstJob(){
+  myPic = document.getElementById('refImage');
+  myPic.addEventListener("dragstart", startDrag, false);
+  cloRef1 = document.getElementById('tr1_1');
+//  cloRef2 = document.getElementByID('tr1_2');
+//  cloRef3 = document.getElementByID('tr2_1');
+//  cloRef4 = document.getElementByID('tr2_2');
+
+  cloRef1.addEventListener("dragenter", function(e){e.preventDefault();}, false);
+  cloRef1.addEventListener("dragover", function(e){e.preventDefault();} , false);
+  cloRef1.addEventListener("drop", dropped , false);
+}
+
+function startDrag(e){
+  // save information about our element over the event startDrag
+  var varImg = '<center><img id="refImage" src="http://media.idownloadblog.com/wp-content/uploads/2014/11/Google-Maps-4.0-for-iOS-app-icon-small.png"></center>';
+  e.dataTransfer.setData('myImg', varImg);
+}
+
+function dropped(e){
+  e.preventDefault();
+  cloRef1.innerHTML = e.dataTransfer.getData('myImg');
+}
+window.addEventListener("load", FirstJob, false);

@@ -180,3 +180,17 @@ function onTabClick(tabBtns, tabItems, item) {
     }
   });
 }
+
+
+const questionItems = document.querySelectorAll(".questionItem");
+
+questionItems.forEach((questionItem) => {
+  const addBtns = questionItem.querySelectorAll(".button.primary");
+  const myTable = questionItem.querySelector(".questionItem__content-table");
+
+  addBtns[0].addEventListener("click", ()=>{
+    myTable.classList.add("active");
+    addBtns[1].classList.remove("disabled");
+  }) 
+
+})

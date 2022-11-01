@@ -550,13 +550,100 @@
                 </label>
                 <textarea name="question" id="question1" placeholder="Which color do you prefer? Choose one of the options below"></textarea>
               </div>
-              <div class="check__outer">
-                <div class="check">
-                  <input type="checkbox" id="checkTab">
-                  <span></span>
+              <div class="questionItem__content-check">
+                <div class="check__outer">
+                  <div class="check">
+                    <input type="checkbox" id="checkTab1" checked>
+                    <div class="check__box"></div>
+                  </div>
+                  <label for="checkTab1">
+                    Mandatory
+                  </label>
+                </div>
+                <div class="check__outer">
+                  <div class="check">
+                    <input type="checkbox" id="checkTab2" checked>
+                    <div class="check__box"></div>
+                  </div>
+                  <label for="checkTab2">
+                    Order the options randomly
+                  </label>
                 </div>
               </div>
-            
+              <div class="questionItem__content-options">
+                <h4>
+                  Answers Options
+                </h4>
+                <p class="sm">
+                  Add all the possible choices below. Users will be able to select only one option.
+                </p>
+                <div class="questionItem__content-row">
+                  <div class="input file">
+                    <input type="file">
+                    <span>
+                      <img src="./images/icons/img.png" alt="">
+                    </span>
+                  </div>
+                  <input type="text" placeholder="red">
+                  <button class="button primary" >
+                    <svg>
+                      <use xlink:href="#plus"></use>
+                    </svg>
+                     Add
+                  </button>
+                </div>
+                <div class="questionItem__content-table ">
+                  <table class="scoring">
+                    <tbody>
+                      <tr>
+                        <td class="draggable">
+                          <svg>
+                            <use xlink:href="#drag"></use>
+                          </svg>
+                        </td>
+                        <td>
+                          <h3>
+                            <span>
+                              <img src="./images/pizza.png" alt="">
+                            </span>
+                            Pizza
+                          </h3>
+                        </td>
+                        <td>
+                          <button class="button close">
+                            <svg>
+                              <use xlink:href="#delete"></use>
+                            </svg>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="draggable">
+                          <svg>
+                            <use xlink:href="#drag"></use>
+                          </svg>
+                        </td>
+                        <td>
+                          <h3>
+                            <span>
+                              <img src="./images/hamburger.png" alt="">
+                            </span>
+                            Pizza
+                          </h3>
+                        </td>
+                        <td>
+                          <button class="button close">
+                            <svg>
+                              <use xlink:href="#delete"></use>
+                            </svg>
+                          </button>
+                        </td>
+                      </tr>
+              
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
             <div class="questionItem__footer">
               <button class="button previous">
@@ -566,7 +653,7 @@
                 <button class="button previous">
                   Previous
                 </button>
-                <button class="button primary">
+                <button class="button primary disabled">
                   Add
                 </button>
               </div>

@@ -271,6 +271,52 @@ main {
   transition: 0.2s ease;
   font-family: "Inter", sans-serif;
 }
+.input.file {
+  width: 32px;
+  height: 32px;
+  margin-right: 14px;
+  position: relative;
+  border: 1px solid #ADA7A7;
+  padding: 4px;
+  background-color: #EAEAEA;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.input.file:hover {
+  opacity: 0.8;
+}
+.input.file input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+.input.file input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.input.file span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.input.file span img {
+  width: 100%;
+}
 .input__avatar {
   width: 72px;
   height: 66px;
@@ -1215,8 +1261,25 @@ table tfoot td .pagination a:hover {
   height: 16px;
   position: relative;
   cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
-.check span {
+.check:hover {
+  opacity: 0.9;
+}
+.check__outer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 11px;
+}
+.check__outer:last-child {
+  margin-bottom: 0;
+}
+.check__box {
   position: relative;
   width: 100%;
   height: 100%;
@@ -1225,11 +1288,11 @@ table tfoot td .pagination a:hover {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-.check span::before {
+.check__box::before {
   content: "";
   position: absolute;
   top: 50%;
-  right: 2px;
+  left: 2px;
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -1249,12 +1312,12 @@ table tfoot td .pagination a:hover {
   z-index: 3;
   cursor: pointer;
 }
-.check input:checked ~ span {
-  background-color: #008ff8;
+.check input:checked ~ .check__box {
+  background-color: #008FF8;
 }
-.check input:checked ~ span::before {
-  -webkit-transform: translate(20px, -50%);
-          transform: translate(20px, -50%);
+.check input:checked ~ .check__box::before {
+  -webkit-transform: translate(13.5px, -50%);
+          transform: translate(13.5px, -50%);
 }
 
 @-webkit-keyframes fadeInUp {
@@ -2269,6 +2332,64 @@ table tfoot td .pagination a:hover {
   -webkit-box-shadow: 0px 1px 20px 0px #0000000D;
           box-shadow: 0px 1px 20px 0px #0000000D;
 }
+.questionItem__content-check {
+  margin-bottom: 30px;
+}
+.questionItem__content-options h4 {
+  margin-bottom: 5px;
+}
+.questionItem__content-options p {
+  margin-bottom: 11px;
+}
+.questionItem__content-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+.questionItem__content-row > input {
+  padding: 4px 8px;
+  border-radius: 6px;
+  width: calc(100% - 130px);
+  max-width: 220px;
+  border: 1px solid #C4C7CF;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+}
+.questionItem__content-row > input::-webkit-input-placeholder {
+  color: #A9ABB6;
+}
+.questionItem__content-row > input::-moz-placeholder {
+  color: #A9ABB6;
+}
+.questionItem__content-row > input:-ms-input-placeholder {
+  color: #A9ABB6;
+}
+.questionItem__content-row > input::-ms-input-placeholder {
+  color: #A9ABB6;
+}
+.questionItem__content-row > input::placeholder {
+  color: #A9ABB6;
+}
+.questionItem__content-row .button {
+  margin: 0 0 0 auto;
+}
+.questionItem__content-table {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.questionItem__content-table.active {
+  max-height: 400px;
+  opacity: 1;
+}
 .questionItem__footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2292,6 +2413,9 @@ table tfoot td .pagination a:hover {
 }
 .questionItem .input textarea {
   height: 58px;
+}
+.questionItem .input.textarea {
+  margin-bottom: 30px;
 }
 .questionItem h4 {
   margin-bottom: 3px;
@@ -2447,6 +2571,7 @@ table.questions td:nth-child(4) {
 table.scoring {
   background-color: unset;
   min-width: 200px;
+  padding: 0;
 }
 table.scoring tbody tr::after {
   background-color: #eeeeee;
@@ -2454,6 +2579,12 @@ table.scoring tbody tr::after {
 table.scoring td {
   background-color: unset;
   padding: 7.5px 10px;
+}
+table.scoring td:last-child {
+  padding-right: 18px;
+}
+table.scoring td:last-child .button {
+  margin-left: auto;
 }
 table.scoring td .button.close {
   padding: 5px 7px;
@@ -2473,6 +2604,7 @@ table.scoring td h3 {
   font-size: 14px;
   line-height: 20px;
   color: #000;
+  margin-bottom: 0;
 }
 table.scoring td h3 span {
   width: 41px;

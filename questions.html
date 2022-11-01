@@ -16,7 +16,7 @@
 
 <body>
   <main>
-    <!-- header start
+<!-- header start
     =========================================== -->
     <header class="header">
       <div class="header__inner">
@@ -167,19 +167,19 @@
               Items
             </h2>
             <div class="list__tools-buttons">
-              <button class="button secondary" id="selectBtn">
+              <button class="button secondary" >
                 <svg>
                   <use xlink:href="#swap"></use>
                 </svg>
                 Order
               </button>
-              <button class="button secondary" id="importBtn">
+              <button class="button secondary" >
                 <svg>
                   <use xlink:href="#cloud"></use>
                 </svg>
                 Import
               </button>
-              <button class="button primary" id="addBtn">
+              <button class="button primary" >
                 <svg>
                   <use xlink:href="#plus"></use>
                 </svg>
@@ -211,7 +211,7 @@
                   </td>
                   <td>
                     <div class="button__row">
-                      <button class="button secondary" id="editItemBtn">
+                      <button class="button secondary" >
                         <svg>
                           <use xlink:href="#pen"></use>
                         </svg>
@@ -243,7 +243,7 @@
                   </td>
                   <td>
                     <div class="button__row">
-                      <button class="button secondary">
+                      <button class="button secondary" >
                         <svg>
                           <use xlink:href="#pen"></use>
                         </svg>
@@ -275,7 +275,7 @@
                   </td>
                   <td>
                     <div class="button__row">
-                      <button class="button secondary">
+                      <button class="button secondary" >
                         <svg>
                           <use xlink:href="#pen"></use>
                         </svg>
@@ -307,7 +307,7 @@
                   </td>
                   <td>
                     <div class="button__row">
-                      <button class="button secondary">
+                      <button class="button secondary" >
                         <svg>
                           <use xlink:href="#pen"></use>
                         </svg>
@@ -339,7 +339,7 @@
                   </td>
                   <td>
                     <div class="button__row">
-                      <button class="button secondary">
+                      <button class="button secondary" >
                         <svg>
                           <use xlink:href="#pen"></use>
                         </svg>
@@ -371,7 +371,7 @@
                   </td>
                   <td>
                     <div class="button__row">
-                      <button class="button secondary">
+                      <button class="button secondary" >
                         <svg>
                           <use xlink:href="#pen"></use>
                         </svg>
@@ -403,7 +403,7 @@
                   </td>
                   <td>
                     <div class="button__row">
-                      <button class="button secondary">
+                      <button class="button secondary" >
                         <svg>
                           <use xlink:href="#pen"></use>
                         </svg>
@@ -435,7 +435,7 @@
                   </td>
                   <td>
                     <div class="button__row">
-                      <button class="button secondary">
+                      <button class="button secondary" >
                         <svg>
                           <use xlink:href="#pen"></use>
                         </svg>
@@ -498,179 +498,6 @@
     =========================================== -->
     <!-- modals start
      =========================================== -->
-    <div class="addUser item" id="addUser">
-      <form action="" class="addUser__inner">
-        <h2>
-          Add Item
-        </h2>
-        <p class="sm">
-          Fill the form below to create a new Item
-        </p>
-        <div class="input">
-          <label for="itemName">
-            Item Name
-          </label>
-          <input type="text" id="itemName" placeholder="Mary White">
-        </div>
-        <div class="input textarea">
-          <label for="description">
-            Description <span>0</span>
-            <p>(optional - max 150 chars)</p>
-          </label>
-          <textarea name="description" id="description" placeholder="Short bio"></textarea>
-        </div>
-        <div class="input avatar">
-          <label for="changeAvatar">
-            Image
-          </label>
-          <div class="input__avatar" id="imageInput">
-            <div class="input__avatar-image">
-              <img src="#" alt="" id="myAvatar">
-            </div>
-            <div class="input__avatar-overlay">
-              <span>
-                <img src="./images/icons/edit-black.png" alt="">
-              </span>
-              Edit
-            </div>
-            <input type="file" id="changeAvatar">
-            <span>+</span>
-          </div>
-        </div>
-        <div class="addUser__inner-buttons">
-          <button type="button" class="button previous" id="addConfirm">
-            Cancel
-          </button>
-          <button type="submit" class="button next" id="addCancel">
-            Confirm
-          </button>
-        </div>
-      </form>
-    </div>
-    <div class="addUser item " id="editItem">
-      <form action="" class="addUser__inner">
-        <h2>
-          Edit Item
-        </h2>
-        <p class="sm">
-          Fill the form below to create a new Item
-        </p>
-        <div class="input">
-          <label for="eItemName">
-            Item Name
-          </label>
-          <input type="text" id="eItemName" placeholder="Mary White" value="Richard Burr">
-        </div>
-        <div class="input textarea">
-          <label for="description">
-            Description <span>33</span>
-            <p>(optional - max 150 chars)</p>
-          </label>
-          <textarea name="description" id="eDescription"
-            placeholder="Short bio">This is an example of description</textarea>
-        </div>
-        <div class="input avatar">
-          <label for="eChangeAvatar">
-            Image
-          </label>
-          <div class="input__avatar active" id="eImageInput">
-            <div class="input__avatar-image">
-              <img src="./images/avatar.png" alt="" id="eMyAvatar">
-            </div>
-            <div class="input__avatar-overlay">
-              <span>
-                <img src="./images/icons/edit-black.png" alt="">
-              </span>
-              Edit
-            </div>
-            <input type="file" id="eChangeAvatar">
-            <span>+</span>
-          </div>
-        </div>
-        <div class="addUser__inner-buttons">
-          <button type="button" class="button previous" id="editItemConfirm">
-            Cancel
-          </button>
-          <button type="submit" class="button next" id="editItemCancel">
-            Confirm
-          </button>
-        </div>
-      </form>
-    </div>
-    <div class="importUser order" id="selectUser">
-      <form action="" class="importUser__inner">
-        <h2>
-          Order positions
-        </h2>
-        <p class="sm">
-          In this section you can re-order the current list by the criterias below. The operation is irreversible and it
-          applies only to the current candidates, but you will be able to re-apply it any time.
-        </p>
-        <h3>
-          Order positions by Name
-        </h3>
-        <div class="importUser__inner-deviders">
-          <label for="a-z">
-            <input type="radio" name="order" id="a-z">
-            Ascending (A-Z)
-          </label>
-          <label for="z-a" class="importUser__inner-deviders-item">
-            <input type="radio" name="order" id="z-a">
-            Descending (Z-A)
-          </label>
-        </div>
-        <div class="importUser__inner-buttons">
-          <button type="button" class="button previous" id="selectConfirm">
-            Cancel
-          </button>
-          <button type="submit" class="button next" id="selectCancel">
-            Confirm
-          </button>
-        </div>
-      </form>
-    </div>
-    <div class="importUser" id="importUser">
-      <form action="" class="importUser__inner">
-        <h2>
-          Import Users from CSV
-        </h2>
-        <p class="sm">
-          Here you can import users from a CSV. You can download the template here.
-        </p>
-        <h3>
-          Delimiter
-        </h3>
-        <div class="importUser__inner-deviders">
-          <label for="comma">
-            <input type="radio" name="delimiter" id="comma">
-            Comma “,”
-          </label>
-          <label for="semicolon" class="importUser__inner-deviders-item">
-            <input type="radio" name="delimiter" id="semicolon">
-            Semicolon “;”
-          </label>
-          <label for="tab" class="importUser__inner-deviders-item">
-            <input type="radio" name="delimiter" id="tab">
-            Tab “ “
-          </label>
-        </div>
-        <h3>
-          File
-        </h3>
-        <div class="importUser__inner-file">
-          <input type="text" placeholder="file">
-          <input type="file">
-        </div>
-        <div class="importUser__inner-buttons">
-          <button type="button" class="button previous" id="importConfirm">
-            Cancel
-          </button>
-          <button type="submit" class="button next" id="importCancel">
-            Confirm
-          </button>
-        </div>
-      </form>
-    </div>
     <div class="previewBallot" id="previewBallot">
       <div class="previewBallot__inner">
         <div class="previewBallot__inner-header">
@@ -691,8 +518,168 @@
         </div>
       </div>
     </div>
+    <div class="question" id="addQuestion">
+      <div class="question__inner">
+        <div class="question__inner-header">
+          <h3>
+            Add new question
+          </h3>
+          <p class="sm">
+            Select the type of question that you want to add to your survey/poll
+          </p>
+        </div>
+        <div class="question__inner-list">
+          <div class="questionItem">
+            <div class="questionItem__button tabBtn active" data-tab="#tab-3">
+              <div class="questionItem__button-icon">
+                <img src="./images/question-list/question-1.png" alt="">
+              </div>
+              <div class="questionItem__button-text">
+                <h4>
+                    Single Choice
+                </h4>
+                <p class="sm">
+                    Users can choose a single item among a list of options
+                </p>
+              </div>
+            </div>
+            <div class="questionItem__content tabEvent active" id="tab-3">
+              <div class="input textarea">
+                <label for="description">
+                  Question <span>155</span>
+                </label>
+                <textarea name="question" id="question1" placeholder="Which color do you prefer? Choose one of the options below"></textarea>
+              </div>
+              <div class="check__outer">
+                <div class="check">
+                  <input type="checkbox" id="checkTab">
+                  <span></span>
+                </div>
+              </div>
+            
+            </div>
+            <div class="questionItem__footer">
+              <button class="button previous">
+                Cancel
+              </button>
+              <div class="button__row">
+                <button class="button previous">
+                  Previous
+                </button>
+                <button class="button primary">
+                  Add
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="questionItem">
+            <div class="questionItem__button">
+              <div class="questionItem__button-icon">
+                <img src="./images/question-list/question-2.png" alt="">
+            </div>
+            <div class="questionItem__button-text">
+                <h4>
+                  Multiple Choice
+                </h4>
+                <p class="sm">
+                  Users can choose more than one item among a list of options
+                </p>
+            </div>
+            </div>
+            <div class="questionItem__content">
+
+            </div>
+          </div>
+          <div class="questionItem">
+            <div class="questionItem__icon">
+                <img src="./images/question-list/question-3.png" alt="">
+            </div>
+            <div class="questionItem__text">
+                <h4>
+                  Scoring
+                </h4>
+                <p class="sm">
+                  Users can apply the score for one or more items. The total score is configurable.
+                </p>
+            </div>
+          </div>
+          <div class="questionItem">
+            <div class="questionItem__icon">
+                <img src="./images/question-list/question-4.png" alt="">
+            </div>
+            <div class="questionItem__text">
+                <h4>
+                  Cumulative Scoring
+                </h4>
+                <p class="sm">
+                  Users can spread the available points among a list of options
+                </p>
+            </div>
+          </div>
+          <div class="questionItem">
+            <div class="questionItem__icon">
+                <img src="./images/question-list/question-5.png" alt="">
+            </div>
+            <div class="questionItem__text">
+                <h4>
+                  Input text
+                </h4>
+                <p class="sm">
+                  User can enter a custom text
+                </p>
+            </div>
+          </div>
+          <div class="questionItem">
+            <div class="questionItem__icon">
+                <img src="./images/question-list/question-6.png" alt="">
+            </div>
+            <div class="questionItem__text">
+                <h4>
+                  Ranking
+                </h4>
+                <p class="sm">
+                  Users can decide the rank of a given list of options
+                </p>
+            </div>
+          </div>
+          <div class="questionItem">
+            <div class="questionItem__icon">
+                <img src="./images/question-list/question-7.png" alt="">
+            </div>
+            <div class="questionItem__text">
+                <h4>
+                  Yes/No
+                </h4>
+                <p class="sm">
+                  Users can answer yes or no to a specific question
+                </p>
+            </div>
+          </div>
+          <div class="questionItem">
+            <div class="questionItem__icon">
+                <img src="./images/question-list/question-8.png" alt="">
+            </div>
+            <div class="questionItem__text">
+                <h4>
+                  Simple text
+                </h4>
+                <p class="sm">
+                  Simple text to add titles or explainations
+                </p>
+            </div>
+          </div>
+        </div>
+        <div class="question__inner-footer">
+          <button class="button previous">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
     <!-- modals end
      =========================================== -->
+  </main>
+    
     <!-- Sprites
     =========================================== -->
     <svg style="display: none">

@@ -1233,9 +1233,19 @@ table tfoot td .pagination a:hover {
   padding-left: 15px;
 }
 
-.placeholder {
+.shadow {
   background-color: #e3e8f1;
+  position: relative;
+}
+.shadow:after {
+  content: "";
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
   border: 2px dashed #AC9D9D;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  z-index: 10;
 }
 
 .dragging {
@@ -2474,6 +2484,9 @@ table.questions {
   min-width: 380px !important;
   padding: unset;
 }
+table.questions td {
+  padding: 15px 10px !important;
+}
 table.questions td:nth-child(2) {
   width: 115px;
   min-width: 115px;
@@ -3103,6 +3116,13 @@ table tfoot td .pagination a:hover {
 .list.sm table td:nth-child(2) {
   padding-left: 15px;
 }
+.list.sm table td .button.secondary svg {
+  fill: transparent;
+  stroke: #5f8df8;
+}
+.list.sm table td .button.secondary:hover svg {
+  stroke: #fff;
+}
 
 .confirm {
   z-index: 7;
@@ -3112,16 +3132,6 @@ table tfoot td .pagination a:hover {
   width: 100%;
   height: 100%;
   overflow-y: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: none;
 }
 .confirm__inner {
   padding: 30px;
@@ -3130,15 +3140,20 @@ table tfoot td .pagination a:hover {
           box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   background-color: #fff;
-  width: 100%;
+  width: calc(100% - 30px);
   max-width: 500px;
-  margin: 0 auto;
   text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 .confirm__inner h3 {
   color: #3d3d3d;
   margin-bottom: 17px;
   font-family: "Inter", sans-serif;
+  font-size: 18px;
 }
 .confirm__inner p {
   font-size: 14px;
@@ -3478,6 +3493,20 @@ table tfoot td .pagination a:hover {
   .selectUser__inner {
     margin: 15px;
     width: calc(100% - 30px);
+  }
+
+  .confirm__inner {
+    padding: 20px;
+    border-radius: 15px;
+  }
+  .confirm__inner h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .confirm__inner p {
+    font-size: 13px;
+    line-height: 21px;
+    margin-bottom: 35px;
   }
 
   h1 {

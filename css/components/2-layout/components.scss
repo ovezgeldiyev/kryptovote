@@ -1115,17 +1115,25 @@ table {
   }
 }
 
-.placeholder {
+.shadow {
   background-color: #e3e8f1;
-  border: 2px dashed $gray20;
+  position: relative;
+  &:after {
+    content: "";
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border: 2px dashed $gray20;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    z-index: 10;
+  }
 }
 .dragging {
   border: 1px solid #9e9a9a;
   box-shadow: 0px 4px 10px 0px #00000040;
   z-index: 10;
 }
-
-
 
 .check {
   margin-right: 12px;

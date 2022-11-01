@@ -1011,7 +1011,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba($black, 0.4);
-    display: block;
+    display: none;
     overflow-y: auto;
 
     &.active {
@@ -1033,6 +1033,7 @@
         border: 1px solid #DDDADA;
         color: #353535;
         position: relative;
+        min-height: 720px;
         &-header {
             padding: 25px 18px 18px;
             border-bottom: 1px solid #DDDADA;
@@ -1077,6 +1078,9 @@
             &:last-child {
                 border-bottom: unset;
             }
+            h4 {
+                margin-bottom: 3px;
+            }
             &-icon {
                 width: 40px;
                 height: 40px;
@@ -1107,7 +1111,8 @@
                 height: calc(100% - 70px);
                 max-height: unset;
                 opacity: 1;
-                padding: 20px 15px;
+                padding: 20px 15px 60px;
+                overflow-y: auto;
                 & ~ .questionItem__footer  {
                     position: absolute;
                     bottom: 0;
@@ -1118,6 +1123,36 @@
                     padding: 8px 11px 10px;
                     box-shadow: 0px 1px 20px 0px #0000000D;
 
+                }
+            }
+            &-select{ 
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 30px;
+                label {
+                    font-size: 14px;
+                    line-height: 16px;
+                    font-weight: 400;
+                    font-family: $inter;
+                    color: #191B23;
+                    margin-bottom: 8px;
+                    display: inline-block;
+                }
+                input {
+                    width: 100%;
+                    max-width: 135px;
+                }
+            }
+            &-scale{ 
+                margin-bottom: 30px;
+                h4 {
+                    color: #191B23;
+                    margin-bottom: 7px;
+                }
+                label {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 12px;
                 }
             }
             &-check {
@@ -1136,18 +1171,8 @@
                 align-items: center;
                 margin-bottom: 10px;
                 & > input {
-                    padding: 4px 8px;
-                    border-radius: 6px;
                     width: calc(100% - 130px);
                     max-width: 220px;
-                    border: 1px solid #C4C7CF;
-                    font-size: 14px;
-                    line-height: 20px;
-                    font-weight: 400;
-                    font-family: $inter;
-                    &::placeholder {
-                        color: #A9ABB6;
-                    }
                 }   
                 .button {
                     margin: 0 0 0 auto;
@@ -1161,7 +1186,7 @@
                 &.active {
                     max-height: 400px;
                     opacity: 1;
-                    
+
                 }
             }
 
@@ -1190,8 +1215,6 @@
                 margin-bottom: 30px;
             }
         }
-        h4 {
-            margin-bottom: 3px;
-        }
+   
     }
 }

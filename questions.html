@@ -116,13 +116,13 @@
             </span>
             Template
           </a>
-          <a href="#" class="checked">
+          <a href="questions.html" class="active">
             <span>
               <img src="images/icons/check-white.png" alt="">
             </span>
             Ballot Settings
           </a>
-          <a href="items.html" class="active">
+          <a href="items.html">
             <span>
               <img src="images/icons/check-white.png" alt="">
             </span>
@@ -155,59 +155,49 @@
         </div>
         <div class="intro__inner-info">
           <h2>
-            New Ballot - Select Items
+            New Ballot - Survey questions
           </h2>
           <p>
-            Define the items to vote for your ballot. The voters will see the same order defined below.
+            Configure the questions for your survey/poll..
           </p>
         </div>
         <div class="list sm">
           <div class="list__tools">
             <h2>
-              Items
+              Questions
             </h2>
             <div class="list__tools-buttons">
-              <button class="button secondary" >
-                <svg>
-                  <use xlink:href="#swap"></use>
-                </svg>
-                Order
-              </button>
-              <button class="button secondary" >
-                <svg>
-                  <use xlink:href="#cloud"></use>
-                </svg>
-                Import
-              </button>
-              <button class="button primary" >
+              <button class="button primary" id="addQuestionBtn">
                 <svg>
                   <use xlink:href="#plus"></use>
                 </svg>
-                New Item
+                New question
               </button>
             </div>
           </div>
           <div class="list__table">
-            <table id="table" class="table">
+            <table id="table" class="table questions">
               <thead>
                 <th style="display: none;"></th>
               </thead>
               <tbody>
-                <tr >
+                <tr>
                   <td class="draggable">
                     <svg>
                       <use xlink:href="#drag"></use>
                     </svg>
                   </td>
-                  <td >
-                    <div class="listItems">
+                  <td>
+                    <p>
                       <span>
-                        <img src="images/items/1.png" alt="">
+                        <strong>Single Choice</strong>
                       </span>
-                      <h3>
-                        Richard Burr
-                      </h3>
-                    </div>
+                    </p>
+                  </td>
+                  <td>
+                    <h3>
+                      Whay’s your favourite food?
+                    </h3>
                   </td>
                   <td>
                     <div class="button__row">
@@ -232,14 +222,16 @@
                     </svg>
                   </td>
                   <td>
-                    <div class="listItems">
-                      <span>
-                        <img src="images/items/2.png" alt="">
+                    <p>
+                      <span class="blue">
+                        <strong>Multiple Choice</strong>
                       </span>
-                      <h3>
-                        Bill Nelson
-                      </h3>
-                    </div>
+                    </p>
+                  </td>
+                  <td>
+                    <h3>
+                      Who are your three preferred singers?
+                    </h3>
                   </td>
                   <td>
                     <div class="button__row">
@@ -264,14 +256,16 @@
                     </svg>
                   </td>
                   <td>
-                    <div class="listItems">
-                      <span>
-                        <img src="images/items/3.png" alt="">
+                    <p>
+                      <span class="green">
+                        <strong>Scoring</strong>
                       </span>
-                      <h3>
-                        Kamala Harris
-                      </h3>
-                    </div>
+                    </p>
+                  </td>
+                  <td>
+                    <h3>
+                      The text will be truncated if we have a very long qu
+                    </h3>
                   </td>
                   <td>
                     <div class="button__row">
@@ -296,14 +290,16 @@
                     </svg>
                   </td>
                   <td>
-                    <div class="listItems">
-                      <span>
-                        <img src="images/items/4.png" alt="">
+                    <p>
+                      <span class="orange">
+                        <strong>Cumulative <br> Scoring</strong>
                       </span>
-                      <h3>
-                        Lloyd Austin
-                      </h3>
-                    </div>
+                    </p>
+                  </td>
+                  <td>
+                    <h3>
+                      Assign your 5 points to one or more items
+                    </h3>
                   </td>
                   <td>
                     <div class="button__row">
@@ -328,14 +324,16 @@
                     </svg>
                   </td>
                   <td>
-                    <div class="listItems">
-                      <span>
-                        <img src="images/items/5.png" alt="">
+                    <p>
+                      <span class="violet">
+                        <strong>Ranking</strong>
                       </span>
-                      <h3>
-                        Roy Blunt
-                      </h3>
-                    </div>
+                    </p>
+                  </td>
+                  <td>
+                    <h3>
+                      Whay’s your favourite color?
+                    </h3>
                   </td>
                   <td>
                     <div class="button__row">
@@ -360,14 +358,16 @@
                     </svg>
                   </td>
                   <td>
-                    <div class="listItems">
-                      <span>
-                        <img src="images/items/6.png" alt="">
+                    <p>
+                      <span class="yellow">
+                        <strong>Input</strong>
                       </span>
-                      <h3>
-                        Claire McCaskill
-                      </h3>
-                    </div>
+                    </p>
+                  </td>
+                  <td>
+                    <h3>
+                      What can be the next company name?
+                    </h3>
                   </td>
                   <td>
                     <div class="button__row">
@@ -392,14 +392,16 @@
                     </svg>
                   </td>
                   <td>
-                    <div class="listItems">
-                      <span>
-                        <img src="images/items/7.png" alt="">
+                    <p>
+                      <span class="gray">
+                        <strong>Separator</strong>
                       </span>
-                      <h3>
-                        Craig O'Dear
-                      </h3>
-                    </div>
+                    </p>
+                  </td>
+                  <td>
+                    <h3>
+                      Whay’s your favourite color?
+                    </h3>
                   </td>
                   <td>
                     <div class="button__row">
@@ -424,14 +426,16 @@
                     </svg>
                   </td>
                   <td>
-                    <div class="listItems">
-                      <span>
-                        <img src="images/items/8.png" alt="">
+                    <p>
+                      <span class="lightViolet">
+                        <strong>Title</strong>
                       </span>
-                      <h3>
-                        Angelica Earl
-                      </h3>
-                    </div>
+                    </p>
+                  </td>
+                  <td>
+                    <h3>
+                      Feedback section
+                    </h3>
                   </td>
                   <td>
                     <div class="button__row">
@@ -449,26 +453,24 @@
                     </div>
                   </td>
                 </tr>
-
               </tbody>
             </table>
 
 
 
-            <!-- when no items are selected
+            <!-- when no questions are selected
               =========================================== -->
             <div class="voter item" style="display: none;">
               <div class="voter__inner">
                 <div class="voter__inner-image">
-                  <img src="./images/item.png" alt="">
+                  <img src="./images/question.png" alt="">
                 </div>
                 <div class="voter__inner-content">
                   <h1>
-                    Add your first item
+                    Add your first question
                   </h1>
                   <p class="big">
-                    Add your first item. You can add a candidate,
-                    list or any item
+                    Add your first question to create your survey or poll.
                   </p>
                 </div>
               </div>
@@ -530,7 +532,7 @@
         </div>
         <div class="question__inner-list">
           <div class="questionItem">
-            <div class="questionItem__button tabBtn active" data-tab="#tab-3">
+            <div class="questionItem__button tabBtn " data-tab="#tab-3">
               <div class="questionItem__button-icon">
                 <img src="./images/question-list/question-1.png" alt="">
               </div>
@@ -543,7 +545,7 @@
                 </p>
               </div>
             </div>
-            <div class="questionItem__content tabEvent active" id="tab-3">
+            <div class="questionItem__content tabEvent " id="tab-3">
               <div class="input textarea">
                 <label for="description">
                   Question <span>155</span>
@@ -584,7 +586,10 @@
                       <img src="./images/icons/img.png" alt="">
                     </span>
                   </div>
-                  <input type="text" placeholder="red">
+                  <div class="input text">
+                    <input type="text" placeholder="red">
+
+                  </div>
                   <button class="button primary" >
                     <svg>
                       <use xlink:href="#plus"></use>
@@ -660,7 +665,7 @@
             </div>
           </div>
           <div class="questionItem">
-            <div class="questionItem__button">
+            <div class="questionItem__button tabBtn" data-tab="#tab-4">
               <div class="questionItem__button-icon">
                 <img src="./images/question-list/question-2.png" alt="">
             </div>
@@ -673,22 +678,302 @@
                 </p>
             </div>
             </div>
-            <div class="questionItem__content">
+            <div class="questionItem__content tabEvent" id="tab-4">
+              <div class="input textarea">
+                <label for="description">
+                  Question <span>0</span>
+                </label>
+                <textarea name="question" id="question1" placeholder="Which color do you prefer? Choose one of the options below"></textarea>
+              </div>
+              <div class="questionItem__content-check">
+                <div class="check__outer">
+                  <div class="check">
+                    <input type="checkbox" id="checkTab1" checked>
+                    <div class="check__box"></div>
+                  </div>
+                  <label for="checkTab1">
+                    Mandatory
+                  </label>
+                </div>
+                <div class="check__outer">
+                  <div class="check">
+                    <input type="checkbox" id="checkTab2" checked>
+                    <div class="check__box"></div>
+                  </div>
+                  <label for="checkTab2">
+                    Order the options randomly
+                  </label>
+                </div>
+              </div>
+              <div class="questionItem__content-select">
+                <label for="num1">
+                  Maximum selections
+                </label>
+                <div class="input text">
+                  <input type="number" class="text" id="num1" value="2" min="0">
 
+                </div>
+              </div>
+              <div class="questionItem__content-options">
+                <h4>
+                  Answers Options
+                </h4>
+                <p class="sm">
+                  Add all the possible choices below. Users will be able to select only one option.
+                </p>
+                <div class="questionItem__content-row">
+                  <div class="input file">
+                    <input type="file">
+                    <span>
+                      <img src="./images/icons/img.png" alt="">
+                    </span>
+                  </div>
+                  <div class="input text">
+                    <input type="text" placeholder="red">
+
+                  </div>
+                  <button class="button primary" >
+                    <svg>
+                      <use xlink:href="#plus"></use>
+                    </svg>
+                     Add
+                  </button>
+                </div>
+                <div class="questionItem__content-table ">
+                  <table class="scoring">
+                    <tbody>
+                      <tr>
+                        <td class="draggable">
+                          <svg>
+                            <use xlink:href="#drag"></use>
+                          </svg>
+                        </td>
+                        <td>
+                          <h3>
+                            <span>
+                              <img src="./images/pizza.png" alt="">
+                            </span>
+                            Pizza
+                          </h3>
+                        </td>
+                        <td>
+                          <button class="button close">
+                            <svg>
+                              <use xlink:href="#delete"></use>
+                            </svg>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="draggable">
+                          <svg>
+                            <use xlink:href="#drag"></use>
+                          </svg>
+                        </td>
+                        <td>
+                          <h3>
+                            <span>
+                              <img src="./images/hamburger.png" alt="">
+                            </span>
+                            Pizza
+                          </h3>
+                        </td>
+                        <td>
+                          <button class="button close">
+                            <svg>
+                              <use xlink:href="#delete"></use>
+                            </svg>
+                          </button>
+                        </td>
+                      </tr>
+              
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="questionItem__footer">
+              <button class="button previous">
+                Cancel
+              </button>
+              <div class="button__row">
+                <button class="button previous">
+                  Previous
+                </button>
+                <button class="button primary disabled">
+                  Add
+                </button>
+              </div>
             </div>
           </div>
+
           <div class="questionItem">
-            <div class="questionItem__icon">
+            <div class="questionItem__button tabBtn active" data-tab="#tab-5">
+              <div class="questionItem__button-icon">
                 <img src="./images/question-list/question-3.png" alt="">
-            </div>
-            <div class="questionItem__text">
+              </div>
+              <div class="questionItem__button-text">
                 <h4>
                   Scoring
                 </h4>
                 <p class="sm">
                   Users can apply the score for one or more items. The total score is configurable.
                 </p>
+              </div>
             </div>
+            <div class="questionItem__content tabEvent active" id="tab-5">
+              <div class="input textarea">
+                <label for="description">
+                  Question <span>0</span>
+                </label>
+                <textarea name="question" id="question1" placeholder="Which color do you prefer? Choose one of the options below"></textarea>
+              </div>
+              <div class="questionItem__content-check">
+                <div class="check__outer">
+                  <div class="check">
+                    <input type="checkbox" id="checkTab1" checked>
+                    <div class="check__box"></div>
+                  </div>
+                  <label for="checkTab1">
+                    Mandatory
+                  </label>
+                </div>
+                <div class="check__outer">
+                  <div class="check">
+                    <input type="checkbox" id="checkTab2" checked>
+                    <div class="check__box"></div>
+                  </div>
+                  <label for="checkTab2">
+                    Order the options randomly
+                  </label>
+                </div>
+              </div>
+              <div class="questionItem__content-scale">
+                  <h4>
+                    Scale type
+                  </h4>
+                  <label for="scale1">
+                    <div class="input radio">
+                      <input type="radio" name="scale" id="scale1">
+                      <span></span>
+                    </div>
+                    5 points scale (1-5)
+                  </label>
+                  <label for="scale2">
+                    <div class="input radio">
+                      <input type="radio" name="scale" id="scale2">
+                      <span></span>
+                    </div>
+                    7 points scale (1-7)
+                  </label>
+                  <label for="scale3">
+                    <div class="input radio">
+                      <input type="radio" name="scale" id="scale3">
+                      <span></span>
+                    </div>
+                    10 points scale
+                  </label>
+                  <label for="scale4">
+                    <div class="input radio">
+                      <input type="radio" name="scale" id="scale4">
+                      <span></span>
+                    </div>
+                    NPS (0-10 scale)
+                  </label>
+              </div>
+              <div class="questionItem__content-options">
+                <h4>
+                  Answers Options
+                </h4>
+                <p class="sm">
+                  Add all the possible choices below. Users will be able to select only one option.
+                </p>
+                <div class="questionItem__content-row">
+                  <div class="input file">
+                    <input type="file">
+                    <span>
+                      <img src="./images/icons/img.png" alt="">
+                    </span>
+                  </div>
+                  <div class="input text">
+                    <input type="text" placeholder="red">
+
+                  </div>
+                  <button class="button primary" >
+                    <svg>
+                      <use xlink:href="#plus"></use>
+                    </svg>
+                     Add
+                  </button>
+                </div>
+                
+                <div class="questionItem__content-table">
+                  <table class="scoring">
+                    <tbody>
+                      <tr>
+                        <td class="draggable">
+                          <svg>
+                            <use xlink:href="#drag"></use>
+                          </svg>
+                        </td>
+                        <td>
+                          <h3>
+                            <span>
+                              <img src="./images/pizza.png" alt="">
+                            </span>
+                            Pizza
+                          </h3>
+                        </td>
+                        <td>
+                          <button class="button close">
+                            <svg>
+                              <use xlink:href="#delete"></use>
+                            </svg>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="draggable">
+                          <svg>
+                            <use xlink:href="#drag"></use>
+                          </svg>
+                        </td>
+                        <td>
+                          <h3>
+                            <span>
+                              <img src="./images/hamburger.png" alt="">
+                            </span>
+                            Pizza
+                          </h3>
+                        </td>
+                        <td>
+                          <button class="button close">
+                            <svg>
+                              <use xlink:href="#delete"></use>
+                            </svg>
+                          </button>
+                        </td>
+                      </tr>
+              
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="questionItem__footer">
+              <button class="button previous">
+                Cancel
+              </button>
+              <div class="button__row">
+                <button class="button previous">
+                  Previous
+                </button>
+                <button class="button primary disabled">
+                  Add
+                </button>
+              </div>
+            </div>
+        
           </div>
           <div class="questionItem">
             <div class="questionItem__icon">

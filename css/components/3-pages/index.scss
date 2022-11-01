@@ -1120,6 +1120,50 @@
 
                 }
             }
+            &-check {
+                margin-bottom: 30px;
+            }
+            &-options {
+                h4 {
+                    margin-bottom: 5px;
+                }
+                p {
+                    margin-bottom: 11px;
+                }
+            }
+            &-row {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                & > input {
+                    padding: 4px 8px;
+                    border-radius: 6px;
+                    width: calc(100% - 130px);
+                    max-width: 220px;
+                    border: 1px solid #C4C7CF;
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-weight: 400;
+                    font-family: $inter;
+                    &::placeholder {
+                        color: #A9ABB6;
+                    }
+                }   
+                .button {
+                    margin: 0 0 0 auto;
+                }
+            }
+            &-table {
+                max-height: 0;
+                opacity: 0;
+                overflow: hidden;
+                transition: .3s ease;
+                &.active {
+                    max-height: 400px;
+                    opacity: 1;
+                    
+                }
+            }
 
         }
         &__footer {
@@ -1141,6 +1185,9 @@
             }
             textarea {
                 height: 58px;
+            }
+            &.textarea {
+                margin-bottom: 30px;
             }
         }
         h4 {

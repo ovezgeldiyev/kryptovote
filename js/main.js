@@ -181,16 +181,16 @@ function onTabClick(tabBtns, tabItems, item) {
   });
 }
 
-
 const questionItems = document.querySelectorAll(".questionItem");
 
 questionItems.forEach((questionItem) => {
-  const addBtns = questionItem.querySelectorAll(".button.primary");
+  const addBtn = questionItem.querySelectorAll(".button.primary")[0];
+  const addBtn2 = questionItem.querySelectorAll(".button.primary")[1];
   const myTable = questionItem.querySelector(".questionItem__content-table");
-
-  addBtns[0].addEventListener("click", ()=>{
-    myTable.classList.add("active");
-    addBtns[1].classList.remove("disabled");
-  }) 
-
-})
+  if (addBtn) {
+    addBtn.addEventListener("click", () => {
+      myTable.classList.add("active");
+      addBtn2.classList.remove("disabled");
+    });
+  }
+});

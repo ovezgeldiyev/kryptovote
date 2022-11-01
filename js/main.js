@@ -22,95 +22,131 @@ const editItem = document.getElementById("editItem");
 const editItemConfirm = document.getElementById("editItemConfirm");
 const editItemCancel = document.getElementById("editItemCancel");
 
+const previewBallotBtn = document.getElementById("previewBallotBtn");
+const previewBallot = document.getElementById("previewBallot");
+const ballotClose = document.getElementById("ballotClose");
+const ballotRemove = document.getElementById("ballotRemove");
+
 let body = document.body;
 
 const changeAvatar = document.getElementById("changeAvatar");
 const imageInput = document.getElementById("imageInput");
 
-if(changeAvatar) {
-  changeAvatar.onchange = e => {
+if (changeAvatar) {
+  changeAvatar.onchange = (e) => {
     const [file] = changeAvatar.files;
     if (file) {
       myAvatar.src = URL.createObjectURL(file);
       imageInput.classList.add("active");
     }
-  }
+  };
+}
+const eChangeAvatar = document.getElementById("eChangeAvatar");
+const eImageInput = document.getElementById("eImageInput");
+
+if (eChangeAvatar) {
+  eChangeAvatar.onchange = (e) => {
+    const [file] = eChangeAvatar.files;
+    if (file) {
+      eMyAvatar.src = URL.createObjectURL(file);
+      eImageInput.classList.add("active");
+    }
+  };
 }
 
 sidebarBtn.onclick = function () {
-    sidebar.classList.toggle("active");
-    window.onclick = function (e) {
-        if (e.target == sidebar) {
-            sidebar.classList.remove("active");
-        }
-    };
+  sidebar.classList.toggle("active");
+  window.onclick = function (e) {
+    if (e.target == sidebar) {
+      sidebar.classList.remove("active");
+    }
+  };
 };
 
-const addRemoveFunc = ()=> {
-    addUser.classList.remove("active");
-    body.classList.remove("active");
-}
-const importRemoveFunc = ()=> {
-    importUser.classList.remove("active");
-    body.classList.remove("active");
-}
-const selectRemoveFunc = ()=> {
-    selectUser.classList.remove("active");
-    body.classList.remove("active");
-}
-const editItemRemoveFunc = ()=> {
+const addRemoveFunc = () => {
+  addUser.classList.remove("active");
+  body.classList.remove("active");
+};
+const importRemoveFunc = () => {
+  importUser.classList.remove("active");
+  body.classList.remove("active");
+};
+const selectRemoveFunc = () => {
+  selectUser.classList.remove("active");
+  body.classList.remove("active");
+};
+const editItemRemoveFunc = () => {
   editItem.classList.remove("active");
   body.classList.remove("active");
-}
-if(addBtn) {
-    addBtn.onclick = function () {
-        addUser.classList.toggle("active");
-        body.classList.toggle("active");
-    };
-    addConfirm.onclick = () => addRemoveFunc();
-    addCancel.onclick = () => addRemoveFunc();
-}
-
-if(importBtn) {
-    importBtn.onclick = function () {
-        importUser.classList.toggle("active");
-        body.classList.toggle("active");
-    };
-    importConfirm.onclick = () => importRemoveFunc();
-    importCancel.onclick = () => importRemoveFunc();
+};
+const previewBallotRemoveFunc = () => {
+  previewBallot.classList.remove("active");
+  body.classList.remove("active");
+};
+if (addBtn) {
+  addBtn.onclick = function () {
+    addUser.classList.toggle("active");
+    body.classList.toggle("active");
+  };
+  addConfirm.onclick = () => addRemoveFunc();
+  addCancel.onclick = () => addRemoveFunc();
 }
 
-if(selectBtn) {
-    selectBtn.onclick = function () {
-        selectUser.classList.toggle("active");
-        body.classList.toggle("active");
-    };
-    selectConfirm.onclick = () => selectRemoveFunc();
-    selectCancel.onclick = () => selectRemoveFunc();
+if (importBtn) {
+  importBtn.onclick = function () {
+    importUser.classList.toggle("active");
+    body.classList.toggle("active");
+  };
+  importConfirm.onclick = () => importRemoveFunc();
+  importCancel.onclick = () => importRemoveFunc();
 }
 
-if(editItemBtn) {
+if (selectBtn) {
+  selectBtn.onclick = function () {
+    selectUser.classList.toggle("active");
+    body.classList.toggle("active");
+  };
+  selectConfirm.onclick = () => selectRemoveFunc();
+  selectCancel.onclick = () => selectRemoveFunc();
+}
+
+if (editItemBtn) {
   editItemBtn.onclick = function () {
     editItem.classList.toggle("active");
-      body.classList.toggle("active");
+    body.classList.toggle("active");
   };
   editItemConfirm.onclick = () => editItemRemoveFunc();
   editItemCancel.onclick = () => editItemRemoveFunc();
   window.addEventListener("click", function (e) {
     if (e.target == editItem) {
-        editItemRemoveFunc();
-    };
-});
+      editItemRemoveFunc();
+    }
+  });
+}
+if (previewBallotBtn) {
+  previewBallotBtn.onclick = function () {
+    previewBallot.classList.toggle("active");
+    body.classList.toggle("active");
+  };
+  ballotClose.onclick = () => previewBallotRemoveFunc();
+  ballotRemove.onclick = () => previewBallotRemoveFunc();
+  window.addEventListener("click", function (e) {
+    if (e.target == previewBallot) {
+      previewBallotRemoveFunc();
+    }
+  });
 }
 window.addEventListener("click", function (event) {
-    if (event.target == addUser || event.target == importUser || event.target == selectUser) {
-        importRemoveFunc();
-        addRemoveFunc();
-        selectRemoveFunc();
-    };
+  if (
+    event.target == addUser ||
+    event.target == importUser ||
+    event.target == selectUser
+  ) {
+    importRemoveFunc();
+    addRemoveFunc();
+    selectRemoveFunc();
+  }
 });
-
-
 
 // users groups tab
 
@@ -144,68 +180,3 @@ function onTabClick(tabBtns, tabItems, item) {
     }
   });
 }
-
-
-
-
-function slist (target) {
-  // (A) SET CSS + GET ALL LIST ITEMS
-  target.classList.add("slist");
-  let items = target.getElementsByTagName("tr"), current = null;
-
-  // (B) MAKE ITEMS DRAGGABLE + SORTABLE
-  for (let i of items) {
-    // (B1) ATTACH DRAGGABLE
-    i.draggable = true;
-    
-    // (B2) DRAG START - YELLOW HIGHLIGHT DROPZONES
-    i.ondragstart = (ev) => {
-      current = i;
-      for (let it of items) {
-        if (it != current) { it.classList.add("hint"); }
-      }
-    };
-    
-    // (B3) DRAG ENTER - RED HIGHLIGHT DROPZONE
-    i.ondragenter = (ev) => {
-      if (i != current) { i.classList.add("active"); }
-    };
-
-    // (B4) DRAG LEAVE - REMOVE RED HIGHLIGHT
-    i.ondragleave = () => {
-      i.classList.remove("active");
-    };
-
-    // (B5) DRAG END - REMOVE ALL HIGHLIGHTS
-    i.ondragend = () => { for (let it of items) {
-        it.classList.remove("hint");
-        it.classList.remove("active");
-    }};
- 
-    // (B6) DRAG OVER - PREVENT THE DEFAULT "DROP", SO WE CAN DO OUR OWN
-    i.ondragover = (evt) => { evt.preventDefault(); };
- 
-    // (B7) ON DROP - DO SOMETHING
-    i.ondrop = (evt) => {
-      evt.preventDefault();
-      if (i != current) {
-        let currentpos = 0, droppedpos = 0;
-        for (let it=0; it<items.length; it++) {
-          if (current == items[it]) { currentpos = it; }
-          if (i == items[it]) { droppedpos = it; }
-        }
-        if (currentpos < droppedpos) {
-          i.parentNode.insertBefore(current, i.nextSibling);
-        } else {
-          i.parentNode.insertBefore(current, i);
-        }
-      }
-    };
-  }
-}
-
-
-window.addEventListener("DOMContentLoaded", () => {
-  slist(document.getElementById("sortlist"));
-});
-

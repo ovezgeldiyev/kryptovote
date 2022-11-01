@@ -201,6 +201,8 @@
 @include xxsm-xsm {
   @include intro-xxsm-xsm;
   @include selectUser-xxsm-xsm;
+  @include confirm-xxsm-xsm;
+
   h1 {
     font-size: 17px;
     line-height: 21px;

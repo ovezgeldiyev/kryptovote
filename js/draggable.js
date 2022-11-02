@@ -8,7 +8,6 @@ const draggableTable = (table) => {
   let copyItem = null;
   const mouseDownHandler = (event, row) => {
     if (copyItem) copyItem.remove();
-    console.log("mouseDownHandler");
     dragginElement = row;
     dragginElement.classList.add("shadow");
     position = [event.clientX, event.clientY];
@@ -100,7 +99,6 @@ questionItems.forEach((questionItem) => {
     const table = questionItem.querySelector(".table");
     
     addBtn.addEventListener("click", () => {
-      console.log(table);
       myTable.classList.add("active");
       addBtn2.classList.remove("disabled");
       draggableTable(table);

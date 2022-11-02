@@ -217,7 +217,6 @@ function onTabClick(tabBtns, tabItems, item) {
     let tabId = currentBtn.getAttribute("data-tab");
     let currentTab = document.querySelector(tabId);
     if (currentBtn.classList.contains("active")) {
-      console.log("now active");
       const faq = currentBtn.parentElement.querySelector(".tabEvent");
       if (faq) {
         faq.classList.remove("active");

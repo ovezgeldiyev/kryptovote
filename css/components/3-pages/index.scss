@@ -1003,6 +1003,7 @@
     }
 }
 
+
 .question {
     z-index: 7;
     position: fixed;
@@ -1011,7 +1012,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba($black, 0.4);
-    // display: none;
+    display: none;
     overflow-y: auto;
 
     &.active {
@@ -1034,6 +1035,7 @@
         color: #353535;
         position: relative;
         min-height: 720px;
+
         &-header {
             padding: 25px 18px 18px;
             border-bottom: 1px solid #DDDADA;
@@ -1063,6 +1065,7 @@
             cursor: pointer;
             transition: .3s ease;
             background-color: $white;
+
             &.active {
                 position: absolute;
                 top: 0;
@@ -1071,16 +1074,19 @@
                 box-shadow: 0px 1px 20px 0px #0000001A;
 
             }
+
             &:hover {
                 background-color: #F1FFFE;
             }
-    
+
             &:last-child {
                 border-bottom: unset;
             }
+
             h4 {
                 margin-bottom: 3px;
             }
+
             &-icon {
                 width: 40px;
                 height: 40px;
@@ -1088,21 +1094,24 @@
                 justify-content: center;
                 align-items: center;
                 margin-right: 15px;
-    
+
                 img {
                     width: 100%;
                 }
             }
+
             &-text {
                 max-width: 280px;
             }
         }
+
         &__content {
             max-height: 0;
             opacity: 0;
             overflow: hidden;
             background-color: $white;
             padding: 0 15px;
+
             &.active {
                 position: absolute;
                 top: 70px;
@@ -1113,7 +1122,8 @@
                 opacity: 1;
                 padding: 20px 15px 60px;
                 overflow-y: auto;
-                & ~ .questionItem__footer  {
+
+                &~.questionItem__footer {
                     position: absolute;
                     bottom: 0;
                     left: 0;
@@ -1125,10 +1135,12 @@
 
                 }
             }
-            &-select{ 
+
+            &-select {
                 display: flex;
                 flex-direction: column;
                 margin-bottom: 30px;
+
                 label {
                     font-size: 14px;
                     line-height: 16px;
@@ -1138,59 +1150,75 @@
                     margin-bottom: 8px;
                     display: inline-block;
                 }
+
                 input {
                     width: 100%;
                     max-width: 135px;
                 }
             }
-            &-scale{ 
+
+            &-scale {
                 margin-bottom: 30px;
+
                 h4 {
                     color: #191B23;
                     margin-bottom: 7px;
                 }
+
                 label {
+                    cursor: pointer;
+
                     display: flex;
                     align-items: center;
                     margin-bottom: 12px;
                 }
             }
+
             &-check {
                 margin-bottom: 30px;
+                cursor: pointer;
             }
+
             &-options {
                 h4 {
                     margin-bottom: 5px;
                 }
+
                 p {
                     margin-bottom: 11px;
                 }
             }
+
             &-row {
                 display: flex;
                 align-items: center;
                 margin-bottom: 10px;
-                & > input {
+
+                &>input {
                     width: calc(100% - 130px);
                     max-width: 220px;
-                }   
+                }
+
                 .button {
                     margin: 0 0 0 auto;
                 }
             }
+
             &-table {
                 max-height: 0;
                 opacity: 0;
                 overflow: hidden;
                 transition: .3s ease;
+                padding: 2px;
+
                 &.active {
                     max-height: 400px;
                     opacity: 1;
-
                 }
             }
 
         }
+
         &__footer {
             display: flex;
             align-items: center;
@@ -1203,18 +1231,121 @@
             border-top: 1px solid #DDDADA;
 
         }
+
         .input {
             label {
                 font-size: 14px;
                 line-height: 20px;
             }
+
             textarea {
                 height: 58px;
             }
+
             &.textarea {
                 margin-bottom: 30px;
             }
         }
-   
+
     }
 }
+
+.confirm {
+    z-index: 7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    display: none;
+    background-color: rgba($black, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    &__inner {
+        padding: 30px;
+        border: 1px solid #dadada;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        background-color: $white;
+        width: calc(100% - 30px);
+        max-width: 500px;
+        text-align: center;
+
+        h3 {
+            color: #3d3d3d;
+            margin-bottom: 17px;
+            font-family: $inter;
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 14px;
+            font-family: $inter;
+            font-weight: 300;
+            line-height: 23px;
+            margin-bottom: 45px;
+        }
+
+        &-buttons {
+            display: flex;
+            justify-content: center;
+
+            .button {
+                &.secondary {
+                    margin-right: 15px;
+                }
+
+                &.primary {
+                    background-color: $red5;
+                    border-color: $red5;
+
+                    svg {
+                        fill: transparent;
+                        stroke: $white;
+                    }
+
+                    &:hover {
+                        color: $red5;
+                        background-color: $white;
+
+                        svg {
+                            stroke: $red5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.active {
+        display: flex;
+
+        .confirm {
+            &__inner {
+                animation-name: fadeInUp;
+                animation-duration: 0.4s;
+            }
+        }
+    }
+}
+// 440px
+@mixin confirm-xxsm-xsm{
+    .confirm{
+      &__inner{
+        padding: 20px;
+        border-radius: 15px;
+        h3{
+          font-size: 16px;
+          margin-bottom:15px;
+        }
+        p{
+          font-size: 13px;
+          line-height: 21px;
+          margin-bottom: 35px;
+        }
+      }
+    }
+  }

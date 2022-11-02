@@ -1017,6 +1017,9 @@ table td {
   padding: 7.5px 15px 7.5px 0;
   min-width: 190px;
 }
+table td:first-child {
+  min-width: 190px;
+}
 table td:last-child {
   padding-right: 0;
   padding-left: 15px;
@@ -1432,7 +1435,7 @@ table tfoot td .pagination a:hover {
   margin: 0;
 }
 .list.sm table {
-  min-width: 460px;
+  min-width: 500px;
   -webkit-box-shadow: unset;
           box-shadow: unset;
   overflow: hidden;

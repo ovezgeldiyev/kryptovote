@@ -812,6 +812,22 @@ table.items tbody tr::after {
   left: 0;
   width: calc(100% + 15px);
 }
+table.items .shadow {
+  background-color: #e3e8f1;
+  position: relative;
+  -webkit-animation: none !important;
+          animation: none !important;
+}
+table.items .shadow:after {
+  content: "";
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border: 2px dashed #AC9D9D;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  z-index: 10;
+}
 table.questions {
   max-width: 680px;
   min-width: 380px !important;

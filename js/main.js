@@ -36,8 +36,6 @@ const confirm = document.getElementById("confirm");
 const confirmClose = document.getElementById("confirmClose");
 const confirmChange = document.getElementById("confirmChange");
 
-
-
 let body = document.body;
 
 const changeAvatar = document.getElementById("changeAvatar");
@@ -56,6 +54,7 @@ const eChangeAvatar = document.getElementById("eChangeAvatar");
 const eImageInput = document.getElementById("eImageInput");
 
 if (eChangeAvatar) {
+  
   eChangeAvatar.onchange = (e) => {
     const [file] = eChangeAvatar.files;
     if (file) {
@@ -233,7 +232,16 @@ function onTabClick(tabBtns, tabItems, item) {
       currentBtn.classList.add("active");
       currentTab.classList.add("active");
     }
+
+
+    const questionItems = document.querySelectorAll(".questionItem");
+    questionItems.forEach((questionItem) => {
+      const previousBtns = questionItem.querySelectorAll(".button.previous");
+      previousBtns[1].onclick = () => {
+        currentBtn.classList.remove("active");
+        currentTab.classList.remove("active");
+      };
+
+    });
   });
 }
-
-

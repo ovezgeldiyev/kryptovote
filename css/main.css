@@ -1015,7 +1015,7 @@ table thead tr::after {
 table td {
   background: #fff;
   padding: 7.5px 15px 7.5px 0;
-  min-width: 150px;
+  min-width: 190px;
 }
 table td:last-child {
   padding-right: 0;

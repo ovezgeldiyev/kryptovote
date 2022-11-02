@@ -27,6 +27,17 @@ const previewBallot = document.getElementById("previewBallot");
 const ballotClose = document.getElementById("ballotClose");
 const ballotRemove = document.getElementById("ballotRemove");
 
+const questionBtn = document.getElementById("questionBtn");
+const addQuestion = document.getElementById("addQuestion");
+const questionClose = document.getElementById("questionClose");
+
+const alertBtn = document.getElementById("alertBtn");
+const confirm = document.getElementById("confirm");
+const confirmClose = document.getElementById("confirmClose");
+const confirmChange = document.getElementById("confirmChange");
+
+
+
 let body = document.body;
 
 const changeAvatar = document.getElementById("changeAvatar");
@@ -83,6 +94,14 @@ const previewBallotRemoveFunc = () => {
   previewBallot.classList.remove("active");
   body.classList.remove("active");
 };
+const addQuestionRemoveFunc = () => {
+  addQuestion.classList.remove("active");
+  body.classList.remove("active");
+};
+const alertRemoveFunc = () => {
+  confirm.classList.remove("active");
+  body.classList.remove("active");
+};
 if (addBtn) {
   addBtn.onclick = function () {
     addUser.classList.toggle("active");
@@ -123,6 +142,7 @@ if (editItemBtn) {
     }
   });
 }
+
 if (previewBallotBtn) {
   previewBallotBtn.onclick = function () {
     previewBallot.classList.toggle("active");
@@ -133,6 +153,42 @@ if (previewBallotBtn) {
   window.addEventListener("click", function (e) {
     if (e.target == previewBallot) {
       previewBallotRemoveFunc();
+    }
+  });
+}
+
+if (questionBtn) {
+  questionBtn.onclick = function () {
+    addQuestion.classList.toggle("active");
+    body.classList.toggle("active");
+  };
+  window.addEventListener("click", function (e) {
+    if (e.target == addQuestion) {
+      addQuestionRemoveFunc();
+    }
+  });
+  questionClose.onclick = () => addQuestionRemoveFunc();
+
+  const questionItems = document.querySelectorAll(".questionItem__footer");
+  questionItems.forEach((questionItem) => {
+    let questionItemCanel = questionItem.querySelector(".button.previous");
+    questionItemCanel.addEventListener("click", () => {
+      addQuestion.classList.remove("active");
+      body.classList.remove("active");
+    });
+  });
+}
+
+if (alertBtn) {
+  alertBtn.onclick = function () {
+    confirm.classList.toggle("active");
+    body.classList.toggle("active");
+  };
+  confirmClose.onclick = () => alertRemoveFunc();
+  confirmChange.onclick = () => alertRemoveFunc();
+  window.addEventListener("click", function (e) {
+    if (e.target == confirm) {
+      alertRemoveFunc();
     }
   });
 }
@@ -181,16 +237,4 @@ function onTabClick(tabBtns, tabItems, item) {
   });
 }
 
-const questionItems = document.querySelectorAll(".questionItem");
 
-questionItems.forEach((questionItem) => {
-  const addBtn = questionItem.querySelectorAll(".button.primary")[0];
-  const addBtn2 = questionItem.querySelectorAll(".button.primary")[1];
-  const myTable = questionItem.querySelector(".questionItem__content-table");
-  if (addBtn) {
-    addBtn.addEventListener("click", () => {
-      myTable.classList.add("active");
-      addBtn2.classList.remove("disabled");
-    });
-  }
-});

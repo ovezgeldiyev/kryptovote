@@ -94,7 +94,7 @@
             </a>
           </li>
         </ul>
-        <a href="#" class="sidebar__inner-user">
+        <a href="#" class="sidebar__inner-user" >
           <span>
             <img src="./images/sidebar/user.png" alt="">
           </span>
@@ -167,7 +167,7 @@
               Questions
             </h2>
             <div class="list__tools-buttons">
-              <button class="button primary" id="addBtn">
+              <button class="button primary" id="questionBtn">
                 <svg>
                   <use xlink:href="#plus"></use>
                 </svg>
@@ -753,10 +753,10 @@
           Are you sure that you want to discard all changes?
         </p>
         <div class="confirm__inner-buttons">
-          <button class="button secondary">
+          <button class="button secondary" id="confirmClose">
             Cancel
           </button>
-          <button class="button primary">
+          <button class="button primary" id="confirmChange">
             <svg>
               <use xlink:href="#bin"></use>
             </svg>
@@ -764,6 +764,977 @@
           </button>
         </div>
       </div>
+    </div>
+    <div class="question" id="addQuestion">
+      <div class="question__inner">
+        <div class="question__inner-header">
+          <h3>
+            Add new question
+          </h3>
+          <p class="sm">
+            Select the type of question that you want to add to your survey/poll
+          </p>
+        </div>
+        <div class="question__inner-list">
+          <div class="questionItem">
+            <div class="questionItem__button tabBtn " data-tab="#tab-3">
+              <div class="questionItem__button-icon">
+                <img src="./images/question-list/question-1.png" alt="">
+              </div>
+              <div class="questionItem__button-text">
+                <h4>
+                  Single Choice
+                </h4>
+                <p class="sm">
+                  Users can choose a single item among a list of options
+                </p>
+              </div>
+            </div>
+            <div class="questionItem__content tabEvent " id="tab-3">
+              <div class="input textarea">
+                <label for="description">
+                  Question <span>155</span>
+                </label>
+                <textarea name="question" id="question1"
+                  placeholder="Which color do you prefer? Choose one of the options below"></textarea>
+              </div>
+              <div class="questionItem__content-check">
+                <div class="check__outer">
+                  <div class="check">
+                    <input type="checkbox" id="checkTab1" checked>
+                    <div class="check__box"></div>
+                  </div>
+                  <label for="checkTab1">
+                    Mandatory
+                  </label>
+                </div>
+                <div class="check__outer">
+                  <div class="check">
+                    <input type="checkbox" id="checkTab2" checked>
+                    <div class="check__box"></div>
+                  </div>
+                  <label for="checkTab2">
+                    Order the options randomly
+                  </label>
+                </div>
+              </div>
+              <div class="questionItem__content-options">
+                <h4>
+                  Answers Options
+                </h4>
+                <p class="sm">
+                  Add all the possible choices below. Users will be able to select only one option.
+                </p>
+                <div class="questionItem__content-row">
+                  <div class="input file">
+                    <input type="file">
+                    <span>
+                      <img src="./images/icons/img.png" alt="">
+                    </span>
+                  </div>
+                  <div class="input text">
+                    <input type="text" placeholder="red">
+
+                  </div>
+                  <button class="button primary">
+                    <svg>
+                      <use xlink:href="#plus"></use>
+                    </svg>
+                    Add
+                  </button>
+                </div>
+                <div class="questionItem__content-table">
+                  <table class="scoring table">
+                    <thead>
+                      <th style="display: none;"></th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="draggable">
+                          <svg>
+                            <use xlink:href="#drag"></use>
+                          </svg>
+                        </td>
+                        <td>
+                          <h3>
+                            <span>
+                              <img src="./images/pizza.png" alt="">
+                            </span>
+                            Pizza
+                          </h3>
+                        </td>
+                        <td>
+                          <button class="button close">
+                            <svg>
+                              <use xlink:href="#delete"></use>
+                            </svg>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="draggable">
+                          <svg>
+                            <use xlink:href="#drag"></use>
+                          </svg>
+                        </td>
+                        <td>
+                          <h3>
+                            <span>
+                              <img src="./images/hamburger.png" alt="">
+                            </span>
+                            Pizza
+                          </h3>
+                        </td>
+                        <td>
+                          <button class="button close">
+                            <svg>
+                              <use xlink:href="#delete"></use>
+                            </svg>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="draggable">
+                          <svg>
+                            <use xlink:href="#drag"></use>
+                          </svg>
+                        </td>
+                        <td>
+                          <h3>
+                            <span>
+                              <img src="./images/pizza.png" alt="">
+                            </span>
+                            Pizza
+                          </h3>
+                        </td>
+                        <td>
+                          <button class="button close">
+                            <svg>
+                              <use xlink:href="#delete"></use>
+                            </svg>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="draggable">
+                          <svg>
+                            <use xlink:href="#drag"></use>
+                          </svg>
+                        </td>
+                        <td>
+                          <h3>
+                            <span>
+                              <img src="./images/hamburger.png" alt="">
+                            </span>
+                            Pizza
+                          </h3>
+                        </td>
+                        <td>
+                          <button class="button close">
+                            <svg>
+                              <use xlink:href="#delete"></use>
+                            </svg>
+                          </button>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="questionItem__footer">
+              <button class="button previous">
+                Cancel
+              </button>
+              <div class="button__row">
+                <button class="button previous">
+                  Previous
+                </button>
+                <button class="button primary disabled">
+                  Add
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="questionItem">
+            <div class="questionItem__button tabBtn" data-tab="#tab-4">
+              <div class="questionItem__button-icon">
+                <img src="./images/question-list/question-2.png" alt="">
+              </div>
+              <div class="questionItem__button-text">
+                <h4>
+                  Multiple Choice
+                </h4>
+                <p class="sm">
+                  Users can choose more than one item among a list of options
+                </p>
+              </div>
+            </div>
+            <div class="questionItem__content tabEvent" id="tab-4">
+              <div class="input textarea">
+                <label for="description">
+                  Question <span>0</span>
+                </label>
+                <textarea name="question" id="question1"
+                  placeholder="Which color do you prefer? Choose one of the options below"></textarea>
+              </div>
+              <div class="questionItem__content-check">
+                <div class="check__outer">
+                  <div class="check">
+                    <input type="checkbox" id="checkTab1" checked>
+                    <div class="check__box"></div>
+                  </div>
+                  <label for="checkTab1">
+                    Mandatory
+                  </label>
+                </div>
+                <div class="check__outer">
+                  <div class="check">
+                    <input type="checkbox" id="checkTab2" checked>
+                    <div class="check__box"></div>
+                  </div>
+                  <label for="checkTab2">
+                    Order the options randomly
+                  </label>
+                </div>
+              </div>
+              <div class="questionItem__content-select">
+                <label for="num1">
+                  Maximum selections
+                </label>
+                <div class="input text">
+                  <input type="number" class="text" id="num1" value="2" min="0">
+
+                </div>
+              </div>
+              <div class="questionItem__content-options">
+                <h4>
+                  Answers Options
+                </h4>
+                <p class="sm">
+                  Add all the possible choices below. Users will be able to select only one option.
+                </p>
+                <div class="questionItem__content-row">
+                  <div class="input file">
+                    <input type="file">
+                    <span>
+                      <img src="./images/icons/img.png" alt="">
+                    </span>
+                  </div>
+                  <div class="input text">
+                    <input type="text" placeholder="red">
+
+                  </div>
+                  <button class="button primary">
+                    <svg>
+                      <use xlink:href="#plus"></use>
+                    </svg>
+                    Add
+                  </button>
+                </div>
+                <div class="questionItem__content-table">
+                  <table class="scoring table">
+                    <tbody>
+                      <tr>
+                        <td class="draggable">
+                          <svg>
+                            <use xlink:href="#drag"></use>
+                          </svg>
+                        </td>
+                        <td>
+                          <h3>
+                            <span>
+                              <img src="./images/pizza.png" alt="">
+                            </span>
+                            Pizza
+                          </h3>
+                        </td>
+                        <td>
+                          <button class="button close">
+                            <svg>
+                              <use xlink:href="#delete"></use>
+                            </svg>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="draggable">
+                          <svg>
+                            <use xlink:href="#drag"></use>
+                          </svg>
+                        </td>
+                        <td>
+                          <h3>
+                            <span>
+                              <img src="./images/hamburger.png" alt="">
+                            </span>
+                            Pizza
+                          </h3>
+                        </td>
+                        <td>
+                          <button class="button close">
+                            <svg>
+                              <use xlink:href="#delete"></use>
+                            </svg>
+                          </button>
+                        </td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="questionItem__footer">
+              <button class="button previous">
+                Cancel
+              </button>
+              <div class="button__row">
+                <button class="button previous">
+                  Previous
+                </button>
+                <button class="button primary disabled">
+                  Add
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="questionItem">
+            <div class="questionItem__button tabBtn " data-tab="#tab-5">
+              <div class="questionItem__button-icon">
+                <img src="./images/question-list/question-3.png" alt="">
+              </div>
+              <div class="questionItem__button-text">
+                <h4>
+                  Scoring
+                </h4>
+                <p class="sm">
+                  Users can apply the score for one or more items. The total score is configurable.
+                </p>
+              </div>
+            </div>
+            <div class="questionItem__content tabEvent " id="tab-5">
+              <div class="input textarea">
+                <label for="description">
+                  Question <span>0</span>
+                </label>
+                <textarea name="question" id="question1"
+                  placeholder="Which color do you prefer? Choose one of the options below"></textarea>
+              </div>
+              <div class="questionItem__content-check">
+                <div class="check__outer">
+                  <div class="check">
+                    <input type="checkbox" id="checkTab1" checked>
+                    <div class="check__box"></div>
+                  </div>
+                  <label for="checkTab1">
+                    Mandatory
+                  </label>
+                </div>
+                <div class="check__outer">
+                  <div class="check">
+                    <input type="checkbox" id="checkTab2" checked>
+                    <div class="check__box"></div>
+                  </div>
+                  <label for="checkTab2">
+                    Order the options randomly
+                  </label>
+                </div>
+              </div>
+              <div class="questionItem__content-scale">
+                <h4>
+                  Scale type
+                </h4>
+                <label for="scale1">
+                  <div class="input radio">
+                    <input type="radio" name="scale" id="scale1">
+                    <span></span>
+                  </div>
+                  5 points scale (1-5)
+                </label>
+                <label for="scale2">
+                  <div class="input radio">
+                    <input type="radio" name="scale" id="scale2">
+                    <span></span>
+                  </div>
+                  7 points scale (1-7)
+                </label>
+                <label for="scale3">
+                  <div class="input radio">
+                    <input type="radio" name="scale" id="scale3">
+                    <span></span>
+                  </div>
+                  10 points scale
+                </label>
+                <label for="scale4">
+                  <div class="input radio">
+                    <input type="radio" name="scale" id="scale4">
+                    <span></span>
+                  </div>
+                  NPS (0-10 scale)
+                </label>
+              </div>
+              <div class="questionItem__content-options">
+                <h4>
+                  Answers Options
+                </h4>
+                <p class="sm">
+                  Add all the possible choices below. Users will be able to select only one option.
+                </p>
+                <div class="questionItem__content-row">
+                  <div class="input file">
+                    <input type="file">
+                    <span>
+                      <img src="./images/icons/img.png" alt="">
+                    </span>
+                  </div>
+                  <div class="input text">
+                    <input type="text" placeholder="red">
+
+                  </div>
+                  <button class="button primary">
+                    <svg>
+                      <use xlink:href="#plus"></use>
+                    </svg>
+                    Add
+                  </button>
+                </div>
+
+                <div class="questionItem__content-table">
+                  <table class="scoring table">
+                    <tbody>
+                      <tr>
+                        <td class="draggable">
+                          <svg>
+                            <use xlink:href="#drag"></use>
+                          </svg>
+                        </td>
+                        <td>
+                          <h3>
+                            <span>
+                              <img src="./images/pizza.png" alt="">
+                            </span>
+                            Pizza
+                          </h3>
+                        </td>
+                        <td>
+                          <button class="button close">
+                            <svg>
+                              <use xlink:href="#delete"></use>
+                            </svg>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="draggable">
+                          <svg>
+                            <use xlink:href="#drag"></use>
+                          </svg>
+                        </td>
+                        <td>
+                          <h3>
+                            <span>
+                              <img src="./images/hamburger.png" alt="">
+                            </span>
+                            Pizza
+                          </h3>
+                        </td>
+                        <td>
+                          <button class="button close">
+                            <svg>
+                              <use xlink:href="#delete"></use>
+                            </svg>
+                          </button>
+                        </td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="questionItem__footer">
+              <button class="button previous">
+                Cancel
+              </button>
+              <div class="button__row">
+                <button class="button previous">
+                  Previous
+                </button>
+                <button class="button primary disabled">
+                  Add
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="questionItem">
+            <div class="questionItem__button tabBtn" data-tab="#tab-6">
+              <div class="questionItem__button-icon">
+                <img src="./images/question-list/question-4.png" alt="">
+              </div>
+              <div class="questionItem__button-text">
+                <h4>
+                  Cumulative Scoring
+                </h4>
+                <p class="sm">
+                  Users can spread the available points among a list of options
+                </p>
+              </div>
+            </div>
+            <div class="questionItem__content tabEvent" id="tab-6">
+              <div class="input textarea">
+                <label for="description">
+                  Question <span>0</span>
+                </label>
+                <textarea name="question" id="question1"
+                  placeholder="Which color do you prefer? Choose one of the options below"></textarea>
+              </div>
+              <div class="questionItem__content-check">
+                <div class="check__outer">
+                  <div class="check">
+                    <input type="checkbox" id="checkTab1" checked>
+                    <div class="check__box"></div>
+                  </div>
+                  <label for="checkTab1">
+                    Mandatory
+                  </label>
+                </div>
+                <div class="check__outer">
+                  <div class="check">
+                    <input type="checkbox" id="checkTab2" checked>
+                    <div class="check__box"></div>
+                  </div>
+                  <label for="checkTab2">
+                    Order the options randomly
+                  </label>
+                </div>
+              </div>
+              <div class="questionItem__content-select">
+                <label for="num1">
+                  Total score per user
+                </label>
+                <div class="input text">
+                  <input type="number" class="text" id="num1" value="2" min="0">
+
+                </div>
+              </div>
+              <div class="questionItem__content-options">
+                <h4>
+                  Answers Options
+                </h4>
+                <p class="sm">
+                  Add all the possible choices below. Users will be able to select only one option.
+                </p>
+                <div class="questionItem__content-row">
+                  <div class="input file">
+                    <input type="file">
+                    <span>
+                      <img src="./images/icons/img.png" alt="">
+                    </span>
+                  </div>
+                  <div class="input text">
+                    <input type="text" placeholder="red">
+
+                  </div>
+                  <button class="button primary">
+                    <svg>
+                      <use xlink:href="#plus"></use>
+                    </svg>
+                    Add
+                  </button>
+                </div>
+                <div class="questionItem__content-table">
+                  <table class="scoring table">
+                    <tbody>
+                      <tr>
+                        <td class="draggable">
+                          <svg>
+                            <use xlink:href="#drag"></use>
+                          </svg>
+                        </td>
+                        <td>
+                          <h3>
+                            <span>
+                              <img src="./images/pizza.png" alt="">
+                            </span>
+                            Pizza
+                          </h3>
+                        </td>
+                        <td>
+                          <button class="button close">
+                            <svg>
+                              <use xlink:href="#delete"></use>
+                            </svg>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="draggable">
+                          <svg>
+                            <use xlink:href="#drag"></use>
+                          </svg>
+                        </td>
+                        <td>
+                          <h3>
+                            <span>
+                              <img src="./images/hamburger.png" alt="">
+                            </span>
+                            Pizza
+                          </h3>
+                        </td>
+                        <td>
+                          <button class="button close">
+                            <svg>
+                              <use xlink:href="#delete"></use>
+                            </svg>
+                          </button>
+                        </td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="questionItem__footer">
+              <button class="button previous">
+                Cancel
+              </button>
+              <div class="button__row">
+                <button class="button previous">
+                  Previous
+                </button>
+                <button class="button primary disabled">
+                  Add
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="questionItem">
+            <div class="questionItem__button tabBtn " data-tab="#tab-7">
+              <div class="questionItem__button-icon">
+                <img src="./images/question-list/question-5.png" alt="">
+              </div>
+              <div class="questionItem__button-text">
+                <h4>
+                  Input text
+                </h4>
+                <p class="sm">
+                  User can enter a custom text
+                </p>
+              </div>
+            </div>
+            <div class="questionItem__content tabEvent " id="tab-7">
+              <div class="input textarea">
+                <label for="description">
+                  Question <span>0</span>
+                </label>
+                <textarea name="question" id="question1"
+                  placeholder="Which color do you prefer? Choose one of the options below"></textarea>
+              </div>
+              <div class="questionItem__content-check">
+                <div class="check__outer">
+                  <div class="check">
+                    <input type="checkbox" id="checkTab1" checked>
+                    <div class="check__box"></div>
+                  </div>
+                  <label for="checkTab1">
+                    Mandatory
+                  </label>
+                </div>
+              </div>
+              <div class="questionItem__content-scale">
+                <h4>
+                  Input text type
+                </h4>
+                <label for="text1">
+                  <div class="input radio">
+                    <input type="radio" name="text" id="text1">
+                    <span></span>
+                  </div>
+                  Short text
+                </label>
+                <label for="text2">
+                  <div class="input radio">
+                    <input type="radio" name="text" id="text2">
+                    <span></span>
+                  </div>
+                  Medium text
+                </label>
+                <label for="text3">
+                  <div class="input radio">
+                    <input type="radio" name="text" id="text3">
+                    <span></span>
+                  </div>
+                  Long text
+                </label>
+              </div>
+            </div>
+            <div class="questionItem__footer">
+              <button class="button previous">
+                Cancel
+              </button>
+              <div class="button__row">
+                <button class="button previous">
+                  Previous
+                </button>
+                <button class="button primary disabled">
+                  Add
+                </button>
+              </div>
+            </div>
+
+          </div>
+          <div class="questionItem">
+            <div class="questionItem__button tabBtn " data-tab="#tab-8">
+              <div class="questionItem__button-icon">
+                <img src="./images/question-list/question-6.png" alt="">
+              </div>
+              <div class="questionItem__button-text">
+                <h4>
+                  Ranking
+                </h4>
+                <p class="sm">
+                  Users can decide the rank of a given list of options
+                </p>
+              </div>
+            </div>
+            <div class="questionItem__content tabEvent " id="tab-8">
+              <div class="input textarea">
+                <label for="description">
+                  Question <span>0</span>
+                </label>
+                <textarea name="question" id="question1"
+                  placeholder="Which color do you prefer? Choose one of the options below"></textarea>
+              </div>
+              <div class="questionItem__content-check">
+                <div class="check__outer">
+                  <div class="check">
+                    <input type="checkbox" id="checkTab1" checked>
+                    <div class="check__box"></div>
+                  </div>
+                  <label for="checkTab1">
+                    Mandatory
+                  </label>
+                </div>
+                <div class="check__outer">
+                  <div class="check">
+                    <input type="checkbox" id="checkTab2" checked>
+                    <div class="check__box"></div>
+                  </div>
+                  <label for="checkTab2">
+                    Order the options randomly
+                  </label>
+                </div>
+              </div>
+              <div class="questionItem__content-select">
+                <label for="num1">
+                  Maximum rankable items
+                </label>
+                <div class="input text">
+                  <input type="number" class="text" id="num1" value="2" min="0">
+                </div>
+              </div>
+              <div class="questionItem__content-options">
+                <h4>
+                  Answers Options
+                </h4>
+                <p class="sm">
+                  Add all the possible choices below. Users will be able to select only one option.
+                </p>
+                <div class="questionItem__content-row">
+                  <div class="input file">
+                    <input type="file">
+                    <span>
+                      <img src="./images/icons/img.png" alt="">
+                    </span>
+                  </div>
+                  <div class="input text">
+                    <input type="text" placeholder="red">
+
+                  </div>
+                  <button class="button primary">
+                    <svg>
+                      <use xlink:href="#plus"></use>
+                    </svg>
+                    Add
+                  </button>
+                </div>
+                <div class="questionItem__content-table">
+                  <table class="scoring table">
+                    <tbody>
+                      <tr>
+                        <td class="draggable">
+                          <svg>
+                            <use xlink:href="#drag"></use>
+                          </svg>
+                        </td>
+                        <td>
+                          <h3>
+                            <span>
+                              <img src="./images/pizza.png" alt="">
+                            </span>
+                            Pizza
+                          </h3>
+                        </td>
+                        <td>
+                          <button class="button close">
+                            <svg>
+                              <use xlink:href="#delete"></use>
+                            </svg>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="draggable">
+                          <svg>
+                            <use xlink:href="#drag"></use>
+                          </svg>
+                        </td>
+                        <td>
+                          <h3>
+                            <span>
+                              <img src="./images/hamburger.png" alt="">
+                            </span>
+                            Pizza
+                          </h3>
+                        </td>
+                        <td>
+                          <button class="button close">
+                            <svg>
+                              <use xlink:href="#delete"></use>
+                            </svg>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="questionItem__footer">
+              <button class="button previous">
+                Cancel
+              </button>
+              <div class="button__row">
+                <button class="button previous">
+                  Previous
+                </button>
+                <button class="button primary disabled">
+                  Add
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="questionItem">
+            <div class="questionItem__button tabBtn " data-tab="#tab-9">
+              <div class="questionItem__button-icon">
+                <img src="./images/question-list/question-7.png" alt="">
+              </div>
+              <div class="questionItem__button-text">
+                <h4>
+                  Yes/No
+                </h4>
+                <p class="sm">
+                  Users can answer yes or no to a specific question
+                </p>
+              </div>
+            </div>
+            <div class="questionItem__content tabEvent " id="tab-9">
+              <div class="input textarea">
+                <label for="description">
+                  Question <span>0</span>
+                </label>
+                <textarea name="question" id="question1"
+                  placeholder="Which color do you prefer? Choose one of the options below"></textarea>
+              </div>
+              <div class="questionItem__content-check">
+                <div class="check__outer">
+                  <div class="check">
+                    <input type="checkbox" id="checkTab1" checked>
+                    <div class="check__box"></div>
+                  </div>
+                  <label for="checkTab1">
+                    Mandatory
+                  </label>
+                </div>
+              </div>
+            </div>
+              <div class="questionItem__footer">
+            <button class="button previous">
+              Cancel
+            </button>
+            <div class="button__row">
+              <button class="button previous">
+                Previous
+              </button>
+              <button class="button primary disabled">
+                Add
+              </button>
+            </div>
+          </div>
+          </div>
+          <div class="questionItem">
+            <div class="questionItem__button tabBtn " data-tab="#tab-10">
+              <div class="questionItem__button-icon">
+                <img src="./images/question-list/question-8.png" alt="">
+              </div>
+              <div class="questionItem__button-text">
+                <h4>
+                  Simple text
+                </h4>
+                <p class="sm">
+                  Simple text to add titles or explainations
+                </p>
+              </div>
+            </div>
+            <div class="questionItem__content tabEvent " id="tab-10">
+              <div class="input textarea">
+                <label for="description">
+                  Question <span>0</span>
+                </label>
+                <textarea name="question" id="question1"
+                  placeholder="Which color do you prefer? Choose one of the options below"></textarea>
+              </div>
+              <div class="questionItem__content-check">
+                <div class="check__outer">
+                  <div class="check">
+                    <input type="checkbox" id="checkTab1" checked>
+                    <div class="check__box"></div>
+                  </div>
+                  <label for="checkTab1">
+                    Mandatory
+                  </label>
+                </div>
+              </div>
+            </div>
+          <div class="questionItem__footer">
+            <button class="button previous">
+              Cancel
+            </button>
+            <div class="button__row">
+              <button class="button previous">
+                Previous
+              </button>
+              <button class="button primary disabled">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        </div>
+        <div class="question__inner-footer">
+          <button class="button previous" id="questionClose">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
     </div>
     <!-- modals end
      =========================================== -->

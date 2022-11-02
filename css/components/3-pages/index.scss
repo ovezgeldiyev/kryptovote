@@ -1101,6 +1101,7 @@
             }
 
             &-text {
+                width: calc(100% - 55px);
                 max-width: 280px;
             }
         }
@@ -1249,7 +1250,17 @@
 
     }
 }
-
+// 390px
+@mixin question-xxxsm-xxsm{
+    .question{
+        &__inner {
+            margin: 0;
+            width: 100%;
+        }
+   
+      
+    }
+  }
 .confirm {
     z-index: 7;
     position: fixed;

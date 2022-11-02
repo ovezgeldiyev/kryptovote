@@ -607,6 +607,7 @@ table {
     box-shadow: unset;
     min-width: 400px;
     padding: 0 15px 0 10px;
+
     .button {
       &.close {
         padding: 9px 11px;
@@ -653,6 +654,8 @@ table {
     }
     tbody {
       tr {
+        animation-name: fadeUp;
+        animation-duration: .3s;
         &::after {
           left: 0;
           width: calc(100% + 15px);
@@ -664,6 +667,10 @@ table {
     max-width: 680px;
     min-width: 380px !important;
     padding: unset;
+    tr {
+      animation-name: fadeUp;
+      animation-duration: .3s;
+    }
     td {
       padding: 15px 10px !important;
       &:nth-child(2) {
@@ -762,6 +769,8 @@ table {
     border-collapse: collapse;
     tbody {
       tr {
+        animation-name: fadeUp;
+        animation-duration: .3s;
         &::after {
           background-color: #eeeeee;
         }
@@ -1348,6 +1357,8 @@ table {
 .shadow {
   background-color: #e3e8f1;
   position: relative;
+  animation: none !important;
+
   &:after {
     content: "";
     width: calc(100% + 4px);
@@ -1363,6 +1374,7 @@ table {
   border: 1px solid #9e9a9a;
   box-shadow: 0px 4px 10px 0px #00000040;
   z-index: 10;
+
 }
 
 .check {
@@ -1431,6 +1443,17 @@ table {
 
   to {
     opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeUp {
+  from {
+
+    transform: translate3d(0, 15%, 0);
+  }
+
+  to {
+
     transform: translate3d(0, 0, 0);
   }
 }

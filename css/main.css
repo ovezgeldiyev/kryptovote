@@ -802,6 +802,12 @@ table.items .button.secondary:hover {
 table.items .button.secondary:hover svg {
   stroke: #fff;
 }
+table.items tbody tr {
+  -webkit-animation-name: fadeUp;
+          animation-name: fadeUp;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+}
 table.items tbody tr::after {
   left: 0;
   width: calc(100% + 15px);
@@ -810,6 +816,12 @@ table.questions {
   max-width: 680px;
   min-width: 380px !important;
   padding: unset;
+}
+table.questions tr {
+  -webkit-animation-name: fadeUp;
+          animation-name: fadeUp;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
 }
 table.questions td {
   padding: 15px 10px !important;
@@ -900,6 +912,12 @@ table.scoring {
   min-width: 200px;
   padding: 0;
   border-collapse: collapse;
+}
+table.scoring tbody tr {
+  -webkit-animation-name: fadeUp;
+          animation-name: fadeUp;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
 }
 table.scoring tbody tr::after {
   background-color: #eeeeee;
@@ -1015,7 +1033,7 @@ table thead tr::after {
 table td {
   background: #fff;
   padding: 7.5px 15px 7.5px 0;
-  min-width: 190px;
+  min-width: 150px;
 }
 table td:first-child {
   min-width: 190px;
@@ -1462,6 +1480,8 @@ table tfoot td .pagination a:hover {
 .shadow {
   background-color: #e3e8f1;
   position: relative;
+  -webkit-animation: none !important;
+          animation: none !important;
 }
 .shadow:after {
   content: "";
@@ -1567,6 +1587,26 @@ table tfoot td .pagination a:hover {
   }
   to {
     opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes fadeUp {
+  from {
+    -webkit-transform: translate3d(0, 15%, 0);
+            transform: translate3d(0, 15%, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeUp {
+  from {
+    -webkit-transform: translate3d(0, 15%, 0);
+            transform: translate3d(0, 15%, 0);
+  }
+  to {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
@@ -2532,6 +2572,7 @@ table tfoot td .pagination a:hover {
   width: 100%;
 }
 .questionItem__button-text {
+  width: calc(100% - 55px);
   max-width: 280px;
 }
 .questionItem__content {
@@ -2918,6 +2959,21 @@ table tfoot td .pagination a:hover {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
+  .list__tools.ques {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .list__tools.ques h2 {
+    margin-bottom: 0;
+  }
   .list__tools h2 {
     margin-bottom: 20px;
   }
@@ -3004,6 +3060,24 @@ table tfoot td .pagination a:hover {
   .list__tools h2 {
     font-size: 18px;
     margin-bottom: 15px;
+  }
+  .list__tools.ques {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .list__tools.ques .list__tools-buttons {
+    width: unset;
+  }
+  .list__tools.ques .list__tools-buttons .button {
+    margin: 0;
   }
   .list__tools-buttons {
     -ms-flex-wrap: wrap;
@@ -3129,6 +3203,11 @@ table tfoot td .pagination a:hover {
   }
   .intro__inner-footer.items .button__row .button {
     padding: 4px 10px;
+  }
+
+  .question__inner {
+    margin: 0;
+    width: 100%;
   }
 
   .list.sm .list__table {

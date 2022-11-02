@@ -40,21 +40,66 @@ let body = document.body;
 
 const changeAvatar = document.getElementById("changeAvatar");
 const imageInput = document.getElementById("imageInput");
-
+const itemName = document.getElementById("itemName");
+const description = document.getElementById("description");
+const tableBody = document.getElementById("tableBody");
 if (changeAvatar) {
   changeAvatar.onchange = (e) => {
     const [file] = changeAvatar.files;
     if (file) {
       myAvatar.src = URL.createObjectURL(file);
+
       imageInput.classList.add("active");
     }
   };
 }
+
+const addNewItem = (data) => {
+  console.log("jjj");
+  const tableRow = document.createElement("tr");
+
+  tableRow.innerHTML = `   
+    <td class="draggable">
+      <svg>
+        <use xlink:href="#drag"></use>
+      </svg>
+    </td>
+    <td>
+      <div class="listItems">
+        <span>
+          <img src="${data.avatar}" alt="">
+        </span>
+        <h3>
+          ${data.name}
+        </h3>
+      </div>
+    </td>
+    <td>
+      <div class="button__row">
+        <button class="button secondary">
+          <svg>
+            <use xlink:href="#pen"></use>
+          </svg>
+          Edit
+        </button>
+        <button class="button close">
+          <svg>
+            <use xlink:href="#delete"></use>
+          </svg>
+        </button>
+      </div>
+    </td>
+    `;
+  tableBody.insertBefore(tableRow, tableBody.firstChild);
+  tableRow.style.animationName = "fadeUp";
+  tableRow.style.animationDuration = ".4s";
+
+};
+
 const eChangeAvatar = document.getElementById("eChangeAvatar");
 const eImageInput = document.getElementById("eImageInput");
 
 if (eChangeAvatar) {
-  
   eChangeAvatar.onchange = (e) => {
     const [file] = eChangeAvatar.files;
     if (file) {
@@ -101,12 +146,28 @@ const alertRemoveFunc = () => {
   confirm.classList.remove("active");
   body.classList.remove("active");
 };
+
+const table = document.getElementById("table");
+if(addConfirm) {
+  addConfirm.onclick = () => {
+    let name = document.querySelector("#itemName").value;
+    let avatar = imageInput.querySelector(".input__avatar-image > img").src;
+    addNewItem({
+      name: name,
+      avatar: avatar,
+    });
+    addRemoveFunc();
+    draggableTable(table);
+  };
+}
+
+
 if (addBtn) {
   addBtn.onclick = function () {
     addUser.classList.toggle("active");
     body.classList.toggle("active");
   };
-  addConfirm.onclick = () => addRemoveFunc();
+
   addCancel.onclick = () => addRemoveFunc();
 }
 
@@ -233,7 +294,6 @@ function onTabClick(tabBtns, tabItems, item) {
       currentTab.classList.add("active");
     }
 
-
     const questionItems = document.querySelectorAll(".questionItem");
     questionItems.forEach((questionItem) => {
       const previousBtns = questionItem.querySelectorAll(".button.previous");
@@ -241,7 +301,6 @@ function onTabClick(tabBtns, tabItems, item) {
         currentBtn.classList.remove("active");
         currentTab.classList.remove("active");
       };
-
     });
   });
 }

@@ -90,11 +90,17 @@ MyTables.forEach((table) => {
 
 const questionItems = document.querySelectorAll(".questionItem");
 
+
 questionItems.forEach((questionItem) => {
   const addBtn = questionItem.querySelectorAll(".button.primary")[0];
   const addBtn2 = questionItem.querySelectorAll(".button.primary")[1];
   const myTable = questionItem.querySelector(".questionItem__content-table");
-
+  const textarea = questionItem.querySelector("textarea");
+  textarea.onkeyup = () => {
+    if(textarea.value !== "") {
+      addBtn2.classList.remove("disabled");
+    }
+  }
   if (addBtn) {
     const table = questionItem.querySelector(".table");
     

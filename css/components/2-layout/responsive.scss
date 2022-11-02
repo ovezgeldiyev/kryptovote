@@ -117,7 +117,14 @@
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
-
+      &.ques {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        h2 {
+          margin-bottom: 0;
+        }
+      }
       h2 {
         margin-bottom: 20px;
       }
@@ -172,7 +179,17 @@
         font-size: 18px;
         margin-bottom: 15px;
       }
-
+      &.ques {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .list__tools-buttons {
+          width: unset;
+          .button {
+            margin:  0;
+          }
+        }
+      }
       &-buttons {
         flex-wrap: wrap;
         align-items: flex-start;
@@ -225,6 +242,7 @@
   @include addUser-xxxsm-xxsm;
   @include importUser-xxxsm-xxsm;
   @include intro-xxxsm-xxsm;
+  @include question-xxxsm-xxsm;
 
   .list {
     &.sm {

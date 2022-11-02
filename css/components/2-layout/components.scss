@@ -884,6 +884,10 @@ table {
     background: $white;
     padding: 7.5px 15px 7.5px 0;
     min-width: 150px;
+    &:first-child{
+    min-width: 190px;
+
+    }
 
     &:last-child {
       padding-right: 0;
@@ -1312,7 +1316,7 @@ table {
       margin: 0;
     }
     table {
-      min-width: 460px;
+      min-width: 500px;
       box-shadow: unset;
       overflow: hidden;
       td {

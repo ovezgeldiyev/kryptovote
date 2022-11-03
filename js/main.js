@@ -5,7 +5,6 @@ const sidebar = document.getElementById("sidebar");
 const addBtn = document.getElementById("addBtn");
 const addUser = document.getElementById("addUser");
 const addConfirm = document.getElementById("addConfirm");
-const addCancel = document.getElementById("addCancel");
 
 const importBtn = document.getElementById("importBtn");
 const importUser = document.getElementById("importUser");
@@ -35,8 +34,6 @@ const alertBtn = document.getElementById("alertBtn");
 const confirm = document.getElementById("confirm");
 const confirmClose = document.getElementById("confirmClose");
 const confirmChange = document.getElementById("confirmChange");
-
-
 
 let body = document.body;
 
@@ -108,7 +105,6 @@ if (addBtn) {
     body.classList.toggle("active");
   };
   addConfirm.onclick = () => addRemoveFunc();
-  addCancel.onclick = () => addRemoveFunc();
 }
 
 if (importBtn) {
@@ -235,5 +231,40 @@ function onTabClick(tabBtns, tabItems, item) {
     }
   });
 }
-
-
+const tableBody = document.querySelector("#tbody");
+const newRow = () => {
+  const newItem = document.createElement("tr");
+  newItem.innerHTML = `
+                  <td class="draggable">
+                    <svg>
+                      <use xlink:href="#drag"></use>
+                    </svg>
+                  </td>
+                  <td>
+                    <div class="listItems">
+                      <span>
+                        <img src="images/items/1.png" alt="">
+                      </span>
+                      <h3>
+                        Richard Burr
+                      </h3>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="button__row">
+                      <button class="button secondary" id="editItemBtn">
+                        <svg>
+                          <use xlink:href="#pen"></use>
+                        </svg>
+                        Edit
+                      </button>
+                      <button class="button close">
+                        <svg>
+                          <use xlink:href="#delete"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+  `;
+  tableBody.insertBefore(newItem, tableBody.firstChild);
+};

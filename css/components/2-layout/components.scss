@@ -660,6 +660,7 @@ table {
           left: 0;
           width: calc(100% + 15px);
         }
+
       }
     }
     .shadow {
@@ -1068,6 +1069,9 @@ table {
 
       h3 {
         color: $gray16;
+      }
+      p {
+       margin-left: 10px;
       }
       svg {
         width: 22px;

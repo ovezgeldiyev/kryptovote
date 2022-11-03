@@ -1204,6 +1204,9 @@ table td .listItems span img {
 table td .listItems h3 {
   color: #616161;
 }
+table td .listItems p {
+  margin-left: 10px;
+}
 table td .listItems svg {
   width: 22px;
   height: 16px;

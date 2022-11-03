@@ -55,7 +55,7 @@ if (changeAvatar) {
 }
 
 const addNewItem = (data) => {
-  console.log("jjj");
+
   const tableRow = document.createElement("tr");
 
   tableRow.innerHTML = `   
@@ -72,6 +72,9 @@ const addNewItem = (data) => {
         <h3>
           ${data.name}
         </h3>
+        <p>
+        ${data.description}
+        </p>
       </div>
     </td>
     <td>
@@ -151,9 +154,11 @@ const table = document.getElementById("table");
 if(addConfirm) {
   addConfirm.onclick = () => {
     let name = document.querySelector("#itemName").value;
+    let description = document.querySelector("#description").value;
     let avatar = imageInput.querySelector(".input__avatar-image > img").src;
     addNewItem({
       name: name,
+      description: description,
       avatar: avatar,
     });
     addRemoveFunc();

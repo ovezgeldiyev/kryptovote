@@ -30,8 +30,8 @@ const questionBtn = document.getElementById("questionBtn");
 const addQuestion = document.getElementById("addQuestion");
 const questionClose = document.getElementById("questionClose");
 
-const alertBtn = document.getElementById("alertBtn");
-const confirm = document.getElementById("confirm");
+const alertBtn = document.getElementsByClassName(".alertBtn");
+const confirmBox = document.getElementById("confirm");
 const confirmClose = document.getElementById("confirmClose");
 const confirmChange = document.getElementById("confirmChange");
 
@@ -167,7 +167,7 @@ const addQuestionRemoveFunc = () => {
   body.classList.remove("active");
 };
 const alertRemoveFunc = () => {
-  confirm.classList.remove("active");
+  confirmBox.classList.remove("active");
   body.classList.remove("active");
 };
 
@@ -267,16 +267,9 @@ if (questionBtn) {
 
 if (alertBtn) {
   alertBtn.onclick = function () {
-    confirm.classList.toggle("active");
-    body.classList.toggle("active");
+  
   };
-  confirmClose.onclick = () => alertRemoveFunc();
-  confirmChange.onclick = () => alertRemoveFunc();
-  window.addEventListener("click", function (e) {
-    if (e.target == confirm) {
-      alertRemoveFunc();
-    }
-  });
+
 }
 window.addEventListener("click", function (event) {
   if (

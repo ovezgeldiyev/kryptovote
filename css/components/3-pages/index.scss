@@ -150,6 +150,9 @@
             padding-top: 5px;
             &.items {
                 max-width: 800px;
+                &.sm {
+                    max-width: unset;
+                }
             }
             &::after {
                 content: "";
@@ -160,6 +163,7 @@
                 top: 0;
                 left: -12px;
                 border-top: 1px solid $gray12;
+                pointer-events: none;
             }
 
             .button {
@@ -1014,12 +1018,13 @@
     width: 100%;
     height: 100%;
     background-color: rgba($black, 0.4);
-    display: none;
+    
     overflow-y: auto;
 
+    transition: .4s ease;
+    display: none;
     &.active {
         display: block;
-
         .question {
             &__inner {
                 animation-name: fadeInLeft;
@@ -1028,7 +1033,15 @@
             }
         }
     }
+    &.disappear {
+        .question {
+            &__inner {
+                animation-name: fadeInRight;
+                animation-duration: 0.4s;
 
+            }
+        }
+    }
     &__inner {
         background-color: $white;
         width: 381px;

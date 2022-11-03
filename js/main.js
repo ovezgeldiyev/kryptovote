@@ -163,8 +163,14 @@ const previewBallotRemoveFunc = () => {
   body.classList.remove("active");
 };
 const addQuestionRemoveFunc = () => {
-  addQuestion.classList.remove("active");
-  body.classList.remove("active");
+  addQuestion.classList.add("disappear");
+
+  setTimeout(()=> {
+    addQuestion.classList.remove("active");
+
+    body.classList.remove("active");
+  }, 300);
+
 };
 const alertRemoveFunc = () => {
   confirmBox.classList.remove("active");
@@ -245,6 +251,8 @@ if (previewBallotBtn) {
 
 if (questionBtn) {
   questionBtn.onclick = function () {
+  addQuestion.classList.remove("disappear");
+
     addQuestion.classList.toggle("active");
     body.classList.toggle("active");
   };
@@ -265,12 +273,7 @@ if (questionBtn) {
   });
 }
 
-if (alertBtn) {
-  alertBtn.onclick = function () {
-  
-  };
 
-}
 window.addEventListener("click", function (event) {
   if (
     event.target == addUser ||

@@ -5,7 +5,6 @@ const sidebar = document.getElementById("sidebar");
 const addBtn = document.getElementById("addBtn");
 const addUser = document.getElementById("addUser");
 const addConfirm = document.getElementById("addConfirm");
-const addCancel = document.getElementById("addCancel");
 
 const importBtn = document.getElementById("importBtn");
 const importUser = document.getElementById("importUser");

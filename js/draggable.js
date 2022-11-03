@@ -1,6 +1,6 @@
 const MyTables = document.querySelectorAll(".table");
 const draggableTable = (table) => {
-  table.style = "position:relative;";
+  // table.style = "position:relative;";
 
   let rows = table.querySelectorAll("tr");
   let dragginElement = null;

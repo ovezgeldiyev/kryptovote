@@ -249,9 +249,6 @@ main {
     height: 32px;
     margin-right: 14px;
     position: relative;
-    border: 1px solid #ADA7A7;
-    padding: 4px;
-    background-color: #EAEAEA;
     border-radius: 5px;
     cursor: pointer;
     transition: .2s ease;
@@ -280,7 +277,7 @@ main {
       cursor: pointer;
 
       img {
-        width: 100%;
+       @include fullImage;
       }
     }
   }
@@ -681,7 +678,7 @@ table {
     }
   }
   &.questions {
-    max-width: 680px;
+    max-width: 800px;
     min-width: 380px !important;
     padding: unset;
     tr {
@@ -1337,6 +1334,9 @@ table {
 
   &.sm {
     max-width: 680px;
+    &.items {
+      max-width: 800px;
+    }
     .list__tools {
       margin-bottom: 20px;
     }
@@ -1393,7 +1393,7 @@ table {
 .dragging {
   border: 1px solid #9e9a9a;
   box-shadow: 0px 4px 10px 0px #00000040;
-  z-index: 10;
+  z-index: 99;
 
 }
 
@@ -1475,5 +1475,16 @@ table {
   to {
 
     transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

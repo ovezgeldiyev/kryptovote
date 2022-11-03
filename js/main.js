@@ -111,6 +111,28 @@ if (eChangeAvatar) {
     }
   };
 }
+const inputFiles = document.querySelectorAll(".input.file");
+inputFiles.forEach((inputFile)=> {
+  const itemImage = inputFile.querySelector("img");
+  const itemInput = inputFile.querySelector("input");
+  itemInput.onchange = (e) => {
+    const [file] = itemInput.files;
+    if (file) {
+      itemImage.src = URL.createObjectURL(file);
+    }
+  }
+
+});
+
+if (eChangeAvatar) {
+  eChangeAvatar.onchange = (e) => {
+    const [file] = eChangeAvatar.files;
+    if (file) {
+      eMyAvatar.src = URL.createObjectURL(file);
+      eImageInput.classList.add("active");
+    }
+  };
+}
 
 sidebarBtn.onclick = function () {
   sidebar.classList.toggle("active");

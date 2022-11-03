@@ -120,7 +120,7 @@
             <span>
               <img src="images/icons/check-white.png" alt="">
             </span>
-            Ballot Settings
+            Settings
           </a>
           <a href="items.html">
             <span>
@@ -158,11 +158,11 @@
             New Ballot - Survey questions
           </h2>
           <p>
-            Configure the questions for your survey/poll..
+            Configure the questions for your survey/poll.
           </p>
         </div>
         <div class="list sm">
-          <div class="list__tools">
+          <div class="list__tools ques">
             <h2>
               Questions
             </h2>
@@ -580,6 +580,7 @@
                 <p class="sm">
                   Add all the possible choices below. Users will be able to select only one option.
                 </p>
+               <div class="questionItem__wrapper">
                 <div class="questionItem__content-row">
                   <div class="input file">
                     <input type="file">
@@ -648,138 +649,7 @@
                           </button>
                         </td>
                       </tr>
-                      <tr>
-                        <td class="draggable">
-                          <svg>
-                            <use xlink:href="#drag"></use>
-                          </svg>
-                        </td>
-                        <td>
-                          <h3>
-                            <span>
-                              <img src="./images/pizza.png" alt="">
-                            </span>
-                            Pizza
-                          </h3>
-                        </td>
-                        <td>
-                          <button class="button close">
-                            <svg>
-                              <use xlink:href="#delete"></use>
-                            </svg>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="draggable">
-                          <svg>
-                            <use xlink:href="#drag"></use>
-                          </svg>
-                        </td>
-                        <td>
-                          <h3>
-                            <span>
-                              <img src="./images/hamburger.png" alt="">
-                            </span>
-                            Pizza
-                          </h3>
-                        </td>
-                        <td>
-                          <button class="button close">
-                            <svg>
-                              <use xlink:href="#delete"></use>
-                            </svg>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="draggable">
-                          <svg>
-                            <use xlink:href="#drag"></use>
-                          </svg>
-                        </td>
-                        <td>
-                          <h3>
-                            <span>
-                              <img src="./images/pizza.png" alt="">
-                            </span>
-                            Pizza
-                          </h3>
-                        </td>
-                        <td>
-                          <button class="button close">
-                            <svg>
-                              <use xlink:href="#delete"></use>
-                            </svg>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="draggable">
-                          <svg>
-                            <use xlink:href="#drag"></use>
-                          </svg>
-                        </td>
-                        <td>
-                          <h3>
-                            <span>
-                              <img src="./images/hamburger.png" alt="">
-                            </span>
-                            Pizza
-                          </h3>
-                        </td>
-                        <td>
-                          <button class="button close">
-                            <svg>
-                              <use xlink:href="#delete"></use>
-                            </svg>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="draggable">
-                          <svg>
-                            <use xlink:href="#drag"></use>
-                          </svg>
-                        </td>
-                        <td>
-                          <h3>
-                            <span>
-                              <img src="./images/pizza.png" alt="">
-                            </span>
-                            Pizza
-                          </h3>
-                        </td>
-                        <td>
-                          <button class="button close">
-                            <svg>
-                              <use xlink:href="#delete"></use>
-                            </svg>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="draggable">
-                          <svg>
-                            <use xlink:href="#drag"></use>
-                          </svg>
-                        </td>
-                        <td>
-                          <h3>
-                            <span>
-                              <img src="./images/hamburger.png" alt="">
-                            </span>
-                            Pizza
-                          </h3>
-                        </td>
-                        <td>
-                          <button class="button close">
-                            <svg>
-                              <use xlink:href="#delete"></use>
-                            </svg>
-                          </button>
-                        </td>
-                      </tr>
+
                       <!--please keep this empty row for being able to move items to the bottom -->
                       <tr>
                         <td></td>
@@ -787,6 +657,7 @@
                     </tbody>
                   </table>
                 </div>
+               </div>
               </div>
             </div>
             <div class="questionItem__footer">
@@ -861,6 +732,7 @@
                 <p class="sm">
                   Add all the possible choices below. Users will be able to select only one option.
                 </p>
+               <div class="questionItem__wrapper">
                 <div class="questionItem__content-row">
                   <div class="input file">
                     <input type="file">
@@ -934,6 +806,7 @@
                     </tbody>
                   </table>
                 </div>
+               </div>
               </div>
             </div>
             <div class="questionItem__footer">
@@ -1032,80 +905,81 @@
                 <p class="sm">
                   Add all the possible choices below. Users will be able to select only one option.
                 </p>
-                <div class="questionItem__content-row">
-                  <div class="input file">
-                    <input type="file">
-                    <span>
-                      <img src="./images/icons/img.png" alt="">
-                    </span>
+                <div class="questionItem__wrapper">
+                  <div class="questionItem__content-row">
+                    <div class="input file">
+                      <input type="file">
+                      <span>
+                        <img src="./images/icons/img.png" alt="">
+                      </span>
+                    </div>
+                    <div class="input text">
+                      <input type="text" placeholder="red">
+  
+                    </div>
+                    <button class="button primary">
+                      <svg>
+                        <use xlink:href="#plus"></use>
+                      </svg>
+                      Add
+                    </button>
                   </div>
-                  <div class="input text">
-                    <input type="text" placeholder="red">
-
+                  <div class="questionItem__content-table">
+                    <table class="scoring table">
+                      <tbody>
+                        <tr>
+                          <td class="draggable">
+                            <svg>
+                              <use xlink:href="#drag"></use>
+                            </svg>
+                          </td>
+                          <td>
+                            <h3>
+                              <span>
+                                <img src="./images/pizza.png" alt="">
+                              </span>
+                              Pizza
+                            </h3>
+                          </td>
+                          <td>
+                            <button class="button close">
+                              <svg>
+                                <use xlink:href="#delete"></use>
+                              </svg>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="draggable">
+                            <svg>
+                              <use xlink:href="#drag"></use>
+                            </svg>
+                          </td>
+                          <td>
+                            <h3>
+                              <span>
+                                <img src="./images/hamburger.png" alt="">
+                              </span>
+                              Pizza
+                            </h3>
+                          </td>
+                          <td>
+                            <button class="button close">
+                              <svg>
+                                <use xlink:href="#delete"></use>
+                              </svg>
+                            </button>
+                          </td>
+                        </tr>
+                        <!--please keep this empty row for being able to move items to the bottom -->
+  
+                        <tr>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                  <button class="button primary">
-                    <svg>
-                      <use xlink:href="#plus"></use>
-                    </svg>
-                    Add
-                  </button>
-                </div>
-
-                <div class="questionItem__content-table">
-                  <table class="scoring table">
-                    <tbody>
-                      <tr>
-                        <td class="draggable">
-                          <svg>
-                            <use xlink:href="#drag"></use>
-                          </svg>
-                        </td>
-                        <td>
-                          <h3>
-                            <span>
-                              <img src="./images/pizza.png" alt="">
-                            </span>
-                            Pizza
-                          </h3>
-                        </td>
-                        <td>
-                          <button class="button close">
-                            <svg>
-                              <use xlink:href="#delete"></use>
-                            </svg>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="draggable">
-                          <svg>
-                            <use xlink:href="#drag"></use>
-                          </svg>
-                        </td>
-                        <td>
-                          <h3>
-                            <span>
-                              <img src="./images/hamburger.png" alt="">
-                            </span>
-                            Pizza
-                          </h3>
-                        </td>
-                        <td>
-                          <button class="button close">
-                            <svg>
-                              <use xlink:href="#delete"></use>
-                            </svg>
-                          </button>
-                        </td>
-                      </tr>
-                      <!--please keep this empty row for being able to move items to the bottom -->
-
-                      <tr>
-                        <td></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                 </div>
               </div>
             </div>
             <div class="questionItem__footer">
@@ -1180,79 +1054,81 @@
                 <p class="sm">
                   Add all the possible choices below. Users will be able to select only one option.
                 </p>
-                <div class="questionItem__content-row">
-                  <div class="input file">
-                    <input type="file">
-                    <span>
-                      <img src="./images/icons/img.png" alt="">
-                    </span>
+                <div class="questionItem__wrapper">
+                  <div class="questionItem__content-row">
+                    <div class="input file">
+                      <input type="file">
+                      <span>
+                        <img src="./images/icons/img.png" alt="">
+                      </span>
+                    </div>
+                    <div class="input text">
+                      <input type="text" placeholder="red">
+  
+                    </div>
+                    <button class="button primary">
+                      <svg>
+                        <use xlink:href="#plus"></use>
+                      </svg>
+                      Add
+                    </button>
                   </div>
-                  <div class="input text">
-                    <input type="text" placeholder="red">
-
+                  <div class="questionItem__content-table">
+                    <table class="scoring table">
+                      <tbody>
+                        <tr>
+                          <td class="draggable">
+                            <svg>
+                              <use xlink:href="#drag"></use>
+                            </svg>
+                          </td>
+                          <td>
+                            <h3>
+                              <span>
+                                <img src="./images/pizza.png" alt="">
+                              </span>
+                              Pizza
+                            </h3>
+                          </td>
+                          <td>
+                            <button class="button close">
+                              <svg>
+                                <use xlink:href="#delete"></use>
+                              </svg>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="draggable">
+                            <svg>
+                              <use xlink:href="#drag"></use>
+                            </svg>
+                          </td>
+                          <td>
+                            <h3>
+                              <span>
+                                <img src="./images/hamburger.png" alt="">
+                              </span>
+                              Pizza
+                            </h3>
+                          </td>
+                          <td>
+                            <button class="button close">
+                              <svg>
+                                <use xlink:href="#delete"></use>
+                              </svg>
+                            </button>
+                          </td>
+                        </tr>
+                        <!--please keep this empty row for being able to move items to the bottom -->
+  
+                        <tr>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                  <button class="button primary">
-                    <svg>
-                      <use xlink:href="#plus"></use>
-                    </svg>
-                    Add
-                  </button>
-                </div>
-                <div class="questionItem__content-table">
-                  <table class="scoring table">
-                    <tbody>
-                      <tr>
-                        <td class="draggable">
-                          <svg>
-                            <use xlink:href="#drag"></use>
-                          </svg>
-                        </td>
-                        <td>
-                          <h3>
-                            <span>
-                              <img src="./images/pizza.png" alt="">
-                            </span>
-                            Pizza
-                          </h3>
-                        </td>
-                        <td>
-                          <button class="button close">
-                            <svg>
-                              <use xlink:href="#delete"></use>
-                            </svg>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="draggable">
-                          <svg>
-                            <use xlink:href="#drag"></use>
-                          </svg>
-                        </td>
-                        <td>
-                          <h3>
-                            <span>
-                              <img src="./images/hamburger.png" alt="">
-                            </span>
-                            Pizza
-                          </h3>
-                        </td>
-                        <td>
-                          <button class="button close">
-                            <svg>
-                              <use xlink:href="#delete"></use>
-                            </svg>
-                          </button>
-                        </td>
-                      </tr>
-                      <!--please keep this empty row for being able to move items to the bottom -->
-
-                      <tr>
-                        <td></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                 </div>
               </div>
             </div>
             <div class="questionItem__footer">
@@ -1301,6 +1177,89 @@
                     Mandatory
                   </label>
                 </div>
+              </div>
+              <div class="questionItem__content-options" style="display:none;">
+                <h4>
+                  Answers Options
+                </h4>
+                <p class="sm">
+                  Add all the possible choices below. Users will be able to select only one option.
+                </p>
+                <div class="questionItem__wrapper">
+                  <div class="questionItem__content-row">
+                    <div class="input file">
+                      <input type="file">
+                      <span>
+                        <img src="./images/icons/img.png" alt="">
+                      </span>
+                    </div>
+                    <div class="input text">
+                      <input type="text" placeholder="red">
+  
+                    </div>
+                    <button class="button primary">
+                      <svg>
+                        <use xlink:href="#plus"></use>
+                      </svg>
+                      Add
+                    </button>
+                  </div>
+                  <div class="questionItem__content-table">
+                    <table class="scoring table">
+                      <tbody>
+                        <tr>
+                          <td class="draggable">
+                            <svg>
+                              <use xlink:href="#drag"></use>
+                            </svg>
+                          </td>
+                          <td>
+                            <h3>
+                              <span>
+                                <img src="./images/pizza.png" alt="">
+                              </span>
+                              Pizza
+                            </h3>
+                          </td>
+                          <td>
+                            <button class="button close">
+                              <svg>
+                                <use xlink:href="#delete"></use>
+                              </svg>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="draggable">
+                            <svg>
+                              <use xlink:href="#drag"></use>
+                            </svg>
+                          </td>
+                          <td>
+                            <h3>
+                              <span>
+                                <img src="./images/hamburger.png" alt="">
+                              </span>
+                              Pizza
+                            </h3>
+                          </td>
+                          <td>
+                            <button class="button close">
+                              <svg>
+                                <use xlink:href="#delete"></use>
+                              </svg>
+                            </button>
+                          </td>
+                        </tr>
+                        <!--please keep this empty row for being able to move items to the bottom -->
+  
+                        <tr>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                 </div>
               </div>
               <div class="questionItem__content-scale">
                 <h4>
@@ -1401,79 +1360,81 @@
                 <p class="sm">
                   Add all the possible choices below. Users will be able to select only one option.
                 </p>
-                <div class="questionItem__content-row">
-                  <div class="input file">
-                    <input type="file">
-                    <span>
-                      <img src="./images/icons/img.png" alt="">
-                    </span>
+                <div class="questionItem__wrapper">
+                  <div class="questionItem__content-row">
+                    <div class="input file">
+                      <input type="file">
+                      <span>
+                        <img src="./images/icons/img.png" alt="">
+                      </span>
+                    </div>
+                    <div class="input text">
+                      <input type="text" placeholder="red">
+  
+                    </div>
+                    <button class="button primary">
+                      <svg>
+                        <use xlink:href="#plus"></use>
+                      </svg>
+                      Add
+                    </button>
                   </div>
-                  <div class="input text">
-                    <input type="text" placeholder="red">
-
+                  <div class="questionItem__content-table">
+                    <table class="scoring table">
+                      <tbody>
+                        <tr>
+                          <td class="draggable">
+                            <svg>
+                              <use xlink:href="#drag"></use>
+                            </svg>
+                          </td>
+                          <td>
+                            <h3>
+                              <span>
+                                <img src="./images/pizza.png" alt="">
+                              </span>
+                              Pizza
+                            </h3>
+                          </td>
+                          <td>
+                            <button class="button close">
+                              <svg>
+                                <use xlink:href="#delete"></use>
+                              </svg>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="draggable">
+                            <svg>
+                              <use xlink:href="#drag"></use>
+                            </svg>
+                          </td>
+                          <td>
+                            <h3>
+                              <span>
+                                <img src="./images/hamburger.png" alt="">
+                              </span>
+                              Pizza
+                            </h3>
+                          </td>
+                          <td>
+                            <button class="button close">
+                              <svg>
+                                <use xlink:href="#delete"></use>
+                              </svg>
+                            </button>
+                          </td>
+                        </tr>
+                        <!--please keep this empty row for being able to move items to the bottom -->
+  
+                        <tr>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                  <button class="button primary">
-                    <svg>
-                      <use xlink:href="#plus"></use>
-                    </svg>
-                    Add
-                  </button>
-                </div>
-                <div class="questionItem__content-table">
-                  <table class="scoring table">
-                    <tbody>
-                      <tr>
-                        <td class="draggable">
-                          <svg>
-                            <use xlink:href="#drag"></use>
-                          </svg>
-                        </td>
-                        <td>
-                          <h3>
-                            <span>
-                              <img src="./images/pizza.png" alt="">
-                            </span>
-                            Pizza
-                          </h3>
-                        </td>
-                        <td>
-                          <button class="button close">
-                            <svg>
-                              <use xlink:href="#delete"></use>
-                            </svg>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="draggable">
-                          <svg>
-                            <use xlink:href="#drag"></use>
-                          </svg>
-                        </td>
-                        <td>
-                          <h3>
-                            <span>
-                              <img src="./images/hamburger.png" alt="">
-                            </span>
-                            Pizza
-                          </h3>
-                        </td>
-                        <td>
-                          <button class="button close">
-                            <svg>
-                              <use xlink:href="#delete"></use>
-                            </svg>
-                          </button>
-                        </td>
-                      </tr>
-                      <!--please keep this empty row for being able to move items to the bottom -->
-
-                      <tr>
-                        <td></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                 </div>
               </div>
             </div>
             <div class="questionItem__footer">
@@ -1521,6 +1482,90 @@
                   <label for="checkTab1">
                     Mandatory
                   </label>
+                </div>
+              </div>
+              <div class="questionItem__content-options" style="display:none;">
+                <h4>
+                  Answers Options
+                </h4>
+                <p class="sm">
+                  Add all the possible choices below. Users will be able to select only one option.
+                </p>
+                <div class="questionItem__content-row">
+                  <div class="input file">
+                    <input type="file">
+                    <span>
+                      <img src="./images/icons/img.png" alt="">
+                    </span>
+                  </div>
+                  <div class="input text">
+                    <input type="text" placeholder="red">
+
+                  </div>
+                  <button class="button primary">
+                    <svg>
+                      <use xlink:href="#plus"></use>
+                    </svg>
+                    Add
+                  </button>
+                </div>
+                <div class="questionItem__content-table">
+                  <table class="scoring table">
+                    <thead>
+                      <th style="display: none;"></th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="draggable">
+                          <svg>
+                            <use xlink:href="#drag"></use>
+                          </svg>
+                        </td>
+                        <td>
+                          <h3>
+                            <span>
+                              <img src="./images/pizza.png" alt="">
+                            </span>
+                            Pizza
+                          </h3>
+                        </td>
+                        <td>
+                          <button class="button close">
+                            <svg>
+                              <use xlink:href="#delete"></use>
+                            </svg>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="draggable">
+                          <svg>
+                            <use xlink:href="#drag"></use>
+                          </svg>
+                        </td>
+                        <td>
+                          <h3>
+                            <span>
+                              <img src="./images/hamburger.png" alt="">
+                            </span>
+                            Pizza
+                          </h3>
+                        </td>
+                        <td>
+                          <button class="button close">
+                            <svg>
+                              <use xlink:href="#delete"></use>
+                            </svg>
+                          </button>
+                        </td>
+                      </tr>
+
+                      <!--please keep this empty row for being able to move items to the bottom -->
+                      <tr>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -1571,6 +1616,90 @@
                   </label>
                 </div>
               </div>
+              <div class="questionItem__content-options" style="display:none;">
+                <h4>
+                  Answers Options
+                </h4>
+                <p class="sm">
+                  Add all the possible choices below. Users will be able to select only one option.
+                </p>
+                <div class="questionItem__content-row">
+                  <div class="input file">
+                    <input type="file">
+                    <span>
+                      <img src="./images/icons/img.png" alt="">
+                    </span>
+                  </div>
+                  <div class="input text">
+                    <input type="text" placeholder="red">
+
+                  </div>
+                  <button class="button primary">
+                    <svg>
+                      <use xlink:href="#plus"></use>
+                    </svg>
+                    Add
+                  </button>
+                </div>
+                <div class="questionItem__content-table">
+                  <table class="scoring table">
+                    <thead>
+                      <th style="display: none;"></th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="draggable">
+                          <svg>
+                            <use xlink:href="#drag"></use>
+                          </svg>
+                        </td>
+                        <td>
+                          <h3>
+                            <span>
+                              <img src="./images/pizza.png" alt="">
+                            </span>
+                            Pizza
+                          </h3>
+                        </td>
+                        <td>
+                          <button class="button close">
+                            <svg>
+                              <use xlink:href="#delete"></use>
+                            </svg>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="draggable">
+                          <svg>
+                            <use xlink:href="#drag"></use>
+                          </svg>
+                        </td>
+                        <td>
+                          <h3>
+                            <span>
+                              <img src="./images/hamburger.png" alt="">
+                            </span>
+                            Pizza
+                          </h3>
+                        </td>
+                        <td>
+                          <button class="button close">
+                            <svg>
+                              <use xlink:href="#delete"></use>
+                            </svg>
+                          </button>
+                        </td>
+                      </tr>
+
+                      <!--please keep this empty row for being able to move items to the bottom -->
+                      <tr>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           <div class="questionItem__footer">
             <button class="button previous">
@@ -1596,7 +1725,7 @@
       </div>
     </div>
 
-<!-- this is an alert box to this alert box work you sholud give an id='alertBtn' to any button you want  -->
+<!-- alert box. add id="alertBtn" to your button  -->
     <div class="confirm" id="confirm">
       <div class="confirm__inner">
         <h3>

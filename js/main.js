@@ -39,16 +39,65 @@ let body = document.body;
 
 const changeAvatar = document.getElementById("changeAvatar");
 const imageInput = document.getElementById("imageInput");
-
+const itemName = document.getElementById("itemName");
+const description = document.getElementById("description");
+const tableBody = document.getElementById("tableBody");
 if (changeAvatar) {
   changeAvatar.onchange = (e) => {
     const [file] = changeAvatar.files;
     if (file) {
       myAvatar.src = URL.createObjectURL(file);
+
       imageInput.classList.add("active");
     }
   };
 }
+
+const addNewItem = (data) => {
+
+  const tableRow = document.createElement("tr");
+
+  tableRow.innerHTML = `   
+    <td class="draggable">
+      <svg>
+        <use xlink:href="#drag"></use>
+      </svg>
+    </td>
+    <td>
+      <div class="listItems">
+        <span>
+          <img src="${data.avatar}" alt="">
+        </span>
+        <h3>
+          ${data.name}
+        </h3>
+        <p>
+        ${data.description}
+        </p>
+      </div>
+    </td>
+    <td>
+      <div class="button__row">
+        <button class="button secondary">
+          <svg>
+            <use xlink:href="#pen"></use>
+          </svg>
+          Edit
+        </button>
+        <button class="button close">
+          <svg>
+            <use xlink:href="#delete"></use>
+          </svg>
+        </button>
+      </div>
+    </td>
+    `;
+  tableBody.insertBefore(tableRow, tableBody.firstChild);
+  tableRow.style.animationName = "fadeUp";
+  tableRow.style.animationDuration = ".4s";
+
+};
+
 const eChangeAvatar = document.getElementById("eChangeAvatar");
 const eImageInput = document.getElementById("eImageInput");
 
@@ -99,12 +148,31 @@ const alertRemoveFunc = () => {
   confirm.classList.remove("active");
   body.classList.remove("active");
 };
+
+const table = document.getElementById("table");
+if(addConfirm) {
+  addConfirm.onclick = () => {
+    let name = document.querySelector("#itemName").value;
+    let description = document.querySelector("#description").value;
+    let avatar = imageInput.querySelector(".input__avatar-image > img").src;
+    addNewItem({
+      name: name,
+      description: description,
+      avatar: avatar,
+    });
+    addRemoveFunc();
+    draggableTable(table);
+  };
+}
+
+
 if (addBtn) {
   addBtn.onclick = function () {
     addUser.classList.toggle("active");
     body.classList.toggle("active");
   };
-  addConfirm.onclick = () => addRemoveFunc();
+
+  addCancel.onclick = () => addRemoveFunc();
 }
 
 if (importBtn) {
@@ -229,42 +297,14 @@ function onTabClick(tabBtns, tabItems, item) {
       currentBtn.classList.add("active");
       currentTab.classList.add("active");
     }
+
+    const questionItems = document.querySelectorAll(".questionItem");
+    questionItems.forEach((questionItem) => {
+      const previousBtns = questionItem.querySelectorAll(".button.previous");
+      previousBtns[1].onclick = () => {
+        currentBtn.classList.remove("active");
+        currentTab.classList.remove("active");
+      };
+    });
   });
 }
-const tableBody = document.querySelector("#tbody");
-const newRow = () => {
-  const newItem = document.createElement("tr");
-  newItem.innerHTML = `
-                  <td class="draggable">
-                    <svg>
-                      <use xlink:href="#drag"></use>
-                    </svg>
-                  </td>
-                  <td>
-                    <div class="listItems">
-                      <span>
-                        <img src="images/items/1.png" alt="">
-                      </span>
-                      <h3>
-                        Richard Burr
-                      </h3>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="button__row">
-                      <button class="button secondary" id="editItemBtn">
-                        <svg>
-                          <use xlink:href="#pen"></use>
-                        </svg>
-                        Edit
-                      </button>
-                      <button class="button close">
-                        <svg>
-                          <use xlink:href="#delete"></use>
-                        </svg>
-                      </button>
-                    </div>
-                  </td>
-  `;
-  tableBody.insertBefore(newItem, tableBody.firstChild);
-};

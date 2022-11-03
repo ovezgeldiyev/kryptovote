@@ -599,7 +599,6 @@ table {
   width: 100%;
   text-align: left;
   padding: 0 10px;
-  position: relative;
   background-color: $white;
   border-radius: 5px;
   min-width: 800px;
@@ -653,10 +652,19 @@ table {
     }
     tbody {
       tr {
+        animation-name: fadeUp;
+        animation-duration: .3s;
         &::after {
           left: 0;
           width: calc(100% + 15px);
         }
+
+      }
+    }
+    .shadow {
+      &:after {
+        content: "";
+        left: -2px;
       }
     }
   }
@@ -664,6 +672,10 @@ table {
     max-width: 680px;
     min-width: 380px !important;
     padding: unset;
+    tr {
+      animation-name: fadeUp;
+      animation-duration: .3s;
+    }
     td {
       padding: 15px 10px !important;
       &:nth-child(2) {
@@ -762,6 +774,8 @@ table {
     border-collapse: collapse;
     tbody {
       tr {
+        animation-name: fadeUp;
+        animation-duration: .3s;
         &::after {
           background-color: #eeeeee;
         }
@@ -885,7 +899,7 @@ table {
     padding: 7.5px 15px 7.5px 0;
     min-width: 150px;
     &:first-child{
-    min-width: 190px;
+      min-width: 190px;
 
     }
 
@@ -1044,6 +1058,9 @@ table {
       h3 {
         color: $gray16;
       }
+      p {
+       margin-left: 10px;
+      }
       svg {
         width: 22px;
         height: 16px;
@@ -1157,6 +1174,7 @@ table {
 }
 
 .list {
+  position: relative;
   &__tools {
     display: flex;
     justify-content: space-between;
@@ -1282,7 +1300,6 @@ table {
     overflow: auto;
     padding: 15px 15px 0 15px;
     margin: 0 -5px;
-
     table {
       border-spacing: 0;
     }
@@ -1349,6 +1366,8 @@ table {
 .shadow {
   background-color: #e3e8f1;
   position: relative;
+  animation: none !important;
+
   &:after {
     content: "";
     width: calc(100% + 4px);
@@ -1432,6 +1451,17 @@ table {
 
   to {
     opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeUp {
+  from {
+
+    transform: translate3d(0, 15%, 0);
+  }
+
+  to {
+
     transform: translate3d(0, 0, 0);
   }
 }

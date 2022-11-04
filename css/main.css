@@ -3355,6 +3355,109 @@ table tfoot td .pagination a:hover {
           animation-duration: 0.4s;
 }
 
+.intro__inner-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(100vh - 156px);
+  overflow: auto;
+  position: relative;
+}
+.introNav {
+  width: 166px;
+  padding: 0 17px;
+  position: sticky;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.introNav a {
+  display: inline-block;
+  background-color: unset;
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  margin-bottom: 26px;
+  padding: 4px 6px;
+}
+.introNav a:last-child {
+  margin-bottom: 0;
+}
+.introNav a.active {
+  color: #fff;
+  background-color: #0f0c95;
+  border-radius: 10px;
+}
+.introItems {
+  width: calc(100% - 166px);
+  padding: 0 10px;
+}
+.introItems h1 {
+  color: #000;
+  margin-bottom: 9px;
+  font-weight: 600;
+}
+.introItems .big {
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 45px;
+}
+.introItems__config {
+  scroll-behavior: smooth;
+}
+.introItems__config-info {
+  margin-bottom: 30px;
+}
+.introItems__config-info:last-child {
+  margin-bottom: 0;
+}
+.introItems__config-info h2 {
+  margin-bottom: 22px;
+}
+.introItems__config-info-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 8px 0;
+  position: relative;
+}
+.introItems__config-info-text:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #ecebeb;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.introItems__config-info-text h3 {
+  color: #000;
+  font-weight: 500;
+  width: 214px;
+}
+.introItems__config-info-text .big {
+  width: calc(100% - 214px);
+  font-size: 16px;
+  margin-bottom: unset;
+  font-weight: 300;
+}
+
 @media (max-width: 1180px) {
   .header {
     display: block;

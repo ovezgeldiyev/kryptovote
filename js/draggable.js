@@ -89,25 +89,43 @@ MyTables.forEach((table) => {
 });
 
 const questionItems = document.querySelectorAll(".questionItem");
+const alertDetector = (questionItem) => {
+  const alertBtn = questionItem.querySelector(".alertBtn");
+  const myTable = questionItem.querySelector(".questionItem__content-table");
+  alertBtn.onclick = () => {
+    confirmBox.classList.add("active");
+    body.classList.add("active");
 
-
+    confirmClose.onclick = () => alertRemoveFunc();
+    confirmChange.onclick = () => alertRemoveFunc();
+    window.addEventListener("click", function (e) {
+      if (e.target == confirmBox) {
+        alertRemoveFunc();
+      }
+    });
+  };
+};
 questionItems.forEach((questionItem) => {
   const addBtn = questionItem.querySelectorAll(".button.primary")[0];
   const addBtn2 = questionItem.querySelectorAll(".button.primary")[1];
   const myTable = questionItem.querySelector(".questionItem__content-table");
   const textarea = questionItem.querySelector("textarea");
-  textarea.onkeyup = () => {
-    if(textarea.value !== "") {
+  textarea.onchange = () => {
+    if (textarea.value !== "") {
       addBtn2.classList.remove("disabled");
+      console.log("asd")
+      alertDetector(questionItem);
+
     }
-  }
+  };
   if (addBtn) {
     const table = questionItem.querySelector(".table");
-    
+
     addBtn.addEventListener("click", () => {
       myTable.classList.add("active");
       addBtn2.classList.remove("disabled");
       draggableTable(table);
+      alertDetector(questionItem);
     });
   }
 });

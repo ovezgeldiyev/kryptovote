@@ -30,8 +30,8 @@ const questionBtn = document.getElementById("questionBtn");
 const addQuestion = document.getElementById("addQuestion");
 const questionClose = document.getElementById("questionClose");
 
-const alertBtn = document.getElementById("alertBtn");
-const confirm = document.getElementById("confirm");
+const alertBtn = document.getElementsByClassName(".alertBtn");
+const confirmBox = document.getElementById("confirm");
 const confirmClose = document.getElementById("confirmClose");
 const confirmChange = document.getElementById("confirmChange");
 
@@ -110,6 +110,28 @@ if (eChangeAvatar) {
     }
   };
 }
+const inputFiles = document.querySelectorAll(".input.file");
+inputFiles.forEach((inputFile)=> {
+  const itemImage = inputFile.querySelector("img");
+  const itemInput = inputFile.querySelector("input");
+  itemInput.onchange = (e) => {
+    const [file] = itemInput.files;
+    if (file) {
+      itemImage.src = URL.createObjectURL(file);
+    }
+  }
+
+});
+
+if (eChangeAvatar) {
+  eChangeAvatar.onchange = (e) => {
+    const [file] = eChangeAvatar.files;
+    if (file) {
+      eMyAvatar.src = URL.createObjectURL(file);
+      eImageInput.classList.add("active");
+    }
+  };
+}
 
 sidebarBtn.onclick = function () {
   sidebar.classList.toggle("active");
@@ -141,11 +163,17 @@ const previewBallotRemoveFunc = () => {
   body.classList.remove("active");
 };
 const addQuestionRemoveFunc = () => {
-  addQuestion.classList.remove("active");
-  body.classList.remove("active");
+  addQuestion.classList.add("disappear");
+
+  setTimeout(()=> {
+    addQuestion.classList.remove("active");
+
+    body.classList.remove("active");
+  }, 300);
+
 };
 const alertRemoveFunc = () => {
-  confirm.classList.remove("active");
+  confirmBox.classList.remove("active");
   body.classList.remove("active");
 };
 
@@ -223,6 +251,8 @@ if (previewBallotBtn) {
 
 if (questionBtn) {
   questionBtn.onclick = function () {
+  addQuestion.classList.remove("disappear");
+
     addQuestion.classList.toggle("active");
     body.classList.toggle("active");
   };
@@ -243,19 +273,7 @@ if (questionBtn) {
   });
 }
 
-if (alertBtn) {
-  alertBtn.onclick = function () {
-    confirm.classList.toggle("active");
-    body.classList.toggle("active");
-  };
-  confirmClose.onclick = () => alertRemoveFunc();
-  confirmChange.onclick = () => alertRemoveFunc();
-  window.addEventListener("click", function (e) {
-    if (e.target == confirm) {
-      alertRemoveFunc();
-    }
-  });
-}
+
 window.addEventListener("click", function (event) {
   if (
     event.target == addUser ||

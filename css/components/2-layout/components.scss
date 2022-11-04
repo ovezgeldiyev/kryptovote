@@ -249,9 +249,6 @@ main {
     height: 32px;
     margin-right: 14px;
     position: relative;
-    border: 1px solid #ADA7A7;
-    padding: 4px;
-    background-color: #EAEAEA;
     border-radius: 5px;
     cursor: pointer;
     transition: .2s ease;
@@ -280,7 +277,7 @@ main {
       cursor: pointer;
 
       img {
-        width: 100%;
+       @include fullImage;
       }
     }
   }
@@ -606,6 +603,11 @@ table {
     box-shadow: unset;
     min-width: 400px;
     padding: 0 15px 0 10px;
+    td {
+      &:nth-child(2) {
+        min-width: 250px;
+      }
+    }
     .button {
       &.close {
         padding: 9px 11px;
@@ -653,12 +655,11 @@ table {
     tbody {
       tr {
         animation-name: fadeUp;
-        animation-duration: .3s;
+        animation-duration: 0.3s;
         &::after {
           left: 0;
           width: calc(100% + 15px);
         }
-
       }
     }
     .shadow {
@@ -669,12 +670,12 @@ table {
     }
   }
   &.questions {
-    max-width: 680px;
+    max-width: 800px;
     min-width: 380px !important;
     padding: unset;
     tr {
       animation-name: fadeUp;
-      animation-duration: .3s;
+      animation-duration: 0.3s;
     }
     td {
       padding: 15px 10px !important;
@@ -775,17 +776,17 @@ table {
     tbody {
       tr {
         animation-name: fadeUp;
-        animation-duration: .3s;
+        animation-duration: 0.3s;
         &::after {
           background-color: #eeeeee;
         }
       }
     }
     td {
-    background-color: $white;
+      background-color: $white;
 
       padding: 7.5px 10px;
-      
+
       &:last-child {
         padding-right: 18px;
         .button {
@@ -898,9 +899,8 @@ table {
     background: $white;
     padding: 7.5px 15px 7.5px 0;
     min-width: 150px;
-    &:first-child{
+    &:first-child {
       min-width: 190px;
-
     }
 
     &:last-child {
@@ -1059,7 +1059,7 @@ table {
         color: $gray16;
       }
       p {
-       margin-left: 10px;
+        margin-left: 10px;
       }
       svg {
         width: 22px;
@@ -1326,6 +1326,9 @@ table {
 
   &.sm {
     max-width: 680px;
+    &.items {
+      max-width: 800px;
+    }
     .list__tools {
       margin-bottom: 20px;
     }
@@ -1379,12 +1382,16 @@ table {
     z-index: 10;
   }
 }
+
 .dragging {
   border: 1px solid #9e9a9a;
   box-shadow: 0px 4px 10px 0px #00000040;
   z-index: 10;
 }
 
+.questionItem__wrapper{
+    position: relative;
+}
 .check {
   margin-right: 12px;
   width: 29px;
@@ -1463,5 +1470,27 @@ table {
   to {
 
     transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(100%);
   }
 }

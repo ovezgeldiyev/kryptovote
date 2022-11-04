@@ -148,7 +148,12 @@
             background-color: $white;
             position: relative;
             padding-top: 5px;
-
+            &.items {
+                max-width: 800px;
+                &.sm {
+                    max-width: unset;
+                }
+            }
             &::after {
                 content: "";
                 width: calc(100% + 30px);
@@ -158,6 +163,7 @@
                 top: 0;
                 left: -12px;
                 border-top: 1px solid $gray12;
+                pointer-events: none;
             }
 
             .button {
@@ -1012,30 +1018,42 @@
     width: 100%;
     height: 100%;
     background-color: rgba($black, 0.4);
-    display: none;
+    
     overflow-y: auto;
 
+    transition: .4s ease;
+    display: none;
     &.active {
         display: block;
-
         .question {
             &__inner {
-                animation-name: fadeInUp;
+                animation-name: fadeInLeft;
                 animation-duration: 0.4s;
+
             }
         }
     }
+    &.disappear {
+        .question {
+            &__inner {
+                animation-name: fadeInRight;
+                animation-duration: 0.4s;
 
+            }
+        }
+    }
     &__inner {
         background-color: $white;
         width: 381px;
-        margin: 0 0 20px auto;
+        height: 100%;
+        margin: 0 0 0 auto;
         box-shadow: 0px 1px 20px 0px #0000000D;
         border: 1px solid #DDDADA;
         color: #353535;
         position: relative;
-        min-height: 720px;
-
+        min-height: 740px;
+        display: flex;
+        flex-direction: column;
         &-header {
             padding: 25px 18px 18px;
             border-bottom: 1px solid #DDDADA;
@@ -1046,6 +1064,8 @@
         &-footer {
             padding: 8px 15px 16px;
             border-top: 1px solid #DDDADA;
+            background-color: $white;
+            margin: auto 0 0 0;
         }
 
         h3 {
@@ -1056,6 +1076,11 @@
     }
 
     &Item {
+        &:last-child {
+            .questionItem__button {
+                border-bottom: unset;
+            }
+        }
         &__button {
             padding: 9px;
             display: flex;
@@ -1079,9 +1104,7 @@
                 background-color: #F1FFFE;
             }
 
-            &:last-child {
-                border-bottom: unset;
-            }
+   
 
             h4 {
                 margin-bottom: 3px;
@@ -1112,7 +1135,18 @@
             overflow: hidden;
             background-color: $white;
             padding: 0 15px;
-
+            position: relative;
+            &::before {
+                position: absolute;
+                content: "";
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 51px;
+                box-shadow: 0px 1px 20px 0px #0000000D;
+                z-index: 9;
+                pointer-events: none;
+            }
             &.active {
                 position: absolute;
                 top: 70px;
@@ -1230,7 +1264,9 @@
             padding: 0 11px;
             background-color: $white;
             border-top: 1px solid #DDDADA;
+            position: relative;
 
+ 
         }
 
         .input {
@@ -1250,8 +1286,8 @@
 
     }
 }
-// 390px
-@mixin question-xxxsm-xxsm{
+// 440px
+@mixin question-xxsm-xsm{
     .question{
         &__inner {
             margin: 0;

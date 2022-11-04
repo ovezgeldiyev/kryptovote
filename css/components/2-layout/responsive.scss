@@ -219,6 +219,7 @@
   @include intro-xxsm-xsm;
   @include selectUser-xxsm-xsm;
   @include confirm-xxsm-xsm;
+  @include question-xxsm-xsm;
 
   h1 {
     font-size: 17px;
@@ -242,7 +243,6 @@
   @include addUser-xxxsm-xxsm;
   @include importUser-xxxsm-xxsm;
   @include intro-xxxsm-xxsm;
-  @include question-xxxsm-xxsm;
 
   .list {
     &.sm {

@@ -240,6 +240,14 @@
   }
 }
 
+@include xxsm-xsm-height{
+  .intro{
+    .space{
+     display: none
+    }
+  }
+}
+
 // 390px
 @include xxxsm-xxsm {
   @include addUser-xxxsm-xxsm;

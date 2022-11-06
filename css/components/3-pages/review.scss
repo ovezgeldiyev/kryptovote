@@ -54,7 +54,6 @@
       color: $black;
       margin-bottom: 45px;
     }
-
     scroll-behavior: smooth;
     &__info {
       margin-bottom: 30px;
@@ -103,6 +102,10 @@
         }
       }
     }
+    
+  }
+  .space{
+    height: 70vh;
   }
 }
 .selectUser {

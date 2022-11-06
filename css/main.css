@@ -3885,6 +3885,9 @@ table tfoot td .pagination a:hover {
 .introItems__info-text .big.introButton:hover {
   opacity: 0.8;
 }
+.intro .space {
+  height: 70vh;
+}
 
 .selectUser.sm .selectUser__inner-wrapper {
   padding: 44px 25px 20px;
@@ -4401,6 +4404,11 @@ table tfoot td .pagination a:hover {
 
   .list__table {
     height: calc(100vh - 425px);
+  }
+}
+@media (max-height: 470px) {
+  .intro .space {
+    display: none;
   }
 }
 @media (max-width: 390px) {

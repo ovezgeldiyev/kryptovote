@@ -2403,7 +2403,7 @@ datepickers.forEach((datepicker) => {
         //opens: 'center',
         //drops: 'up',
         singleDatePicker: true,
-        //autoApply: true,
+        autoApply: true,
         //linkedCalendars: false,
         //isInvalidDate: function(m){
         //    return m.weekday() == 3;

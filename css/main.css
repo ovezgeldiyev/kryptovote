@@ -2909,8 +2909,8 @@ table tfoot td .pagination a:hover {
   width: 100%;
   cursor: pointer;
   z-index: 4;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(-46%);
+          transform: translateY(-46%);
   font-size: 14px;
   line-height: 20px;
   font-family: "Inter", sans-serif;

@@ -241,6 +241,7 @@
                 &-hidden {
                     max-height: 400px;
                     opacity: 1;
+                    overflow: visible;
                 }
             }
 
@@ -251,7 +252,7 @@
             opacity: 0;
             transition: .4s ease;
             &.active {
-                max-height: unset;
+                max-height: 500px;
                 opacity: 1;
             }
             .introItem {
@@ -356,6 +357,9 @@
                 p {
                     font-weight: 400;
                     color:  #A9ABB6;
+                    transition: .2s ease;
+                    opacity: 0;
+
                 }
                 span {
                     display: flex;
@@ -370,21 +374,26 @@
                 }
                 input {
                     position: absolute;
-                    top: 0;
-                    left: 0;
+                    top: 50%;
+                    right: 0;
                     width: 100%;
-                    height: 100%;
-                    opacity: 0;
                     cursor: pointer;
                     z-index: 4;
-                    &::-webkit-calendar-picker-indicator {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        opacity: 0;
-                        cursor: pointer;
+                    transform: translateY(-50%);
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-family: $inter;
+                    font-weight: 400;
+                    color: #A9ABB6;
+                    background-color: transparent;
+                    text-align: end;
+                    padding: 6px 8px 6px 32px;
+                    transition: .2s ease;
+                    &:focus {
+                        color: #A9ABB6;
+                        & ~ p {
+                            opacity: 0;
+                        }
                     }
                 }
             }

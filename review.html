@@ -11,7 +11,7 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500&family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/main.css" />
-  <title>Items</title>
+  <title>Reviews</title>
 </head>
 
 <body>
@@ -153,7 +153,7 @@
           </a>
         </div>
         <div class="intro__inner-main">
-          <div class="introNav">
+          <div class="introNav" id="introNav">
             <a href="#config" class="links active ">
               Configuration
             </a>
@@ -170,7 +170,7 @@
               Notifications
             </a>
           </div>
-          <div class="introItems">
+          <div class="introList">
             <h1>
               Review your Configuration
             </h1>
@@ -178,11 +178,11 @@
               Preview of the elections, if anything is wrong please go back and edit the data.
             </p>
             <div class="anchor" id="config"></div>
-            <div class="introItems__info" id="config">
+            <div class="introList__info" id="config">
               <h2>
                 Configuration
               </h2>
-              <div class="introItems__info-text">
+              <div class="introList__info-text">
                 <h3>
                   Ballot Name:
                 </h3>
@@ -190,7 +190,7 @@
                   Presidential elections 2022
                 </p>
               </div>
-              <div class="introItems__info-text">
+              <div class="introList__info-text">
                 <h3>
                   Ballot Instructions:
                 </h3>
@@ -198,7 +198,7 @@
                   Vote the next president
                 </p>
               </div>
-              <div class="introItems__info-text">
+              <div class="introList__info-text">
                 <h3>
                   Ballot type:
                 </h3>
@@ -206,7 +206,7 @@
                   Nominative Elections
                 </p>
               </div>
-              <div class="introItems__info-text">
+              <div class="introList__info-text">
                 <h3>
                   Election Dates:
                 </h3>
@@ -214,7 +214,7 @@
                   2022-11-02 10:00 - 2022-11-02 18:00
                 </p>
               </div>
-              <div class="introItems__info-text">
+              <div class="introList__info-text">
                 <h3>
                   Vacant seats
                 </h3>
@@ -222,7 +222,7 @@
                   1
                 </p>
               </div>
-              <div class="introItems__info-text">
+              <div class="introList__info-text">
                 <h3>
                   Allow multiple votes:
                 </h3>
@@ -230,7 +230,7 @@
                   Yes - Minimum 0, maximum 2 votes
                 </p>
               </div>
-              <div class="introItems__info-text">
+              <div class="introList__info-text">
                 <h3>
                   Allow Blank votes:
                 </h3>
@@ -238,7 +238,7 @@
                   No
                 </p>
               </div>
-              <div class="introItems__info-text">
+              <div class="introList__info-text">
                 <h3>
                   Random Order
                 </h3>
@@ -250,11 +250,11 @@
             </div>
             <div class="anchor" id="items"></div>
 
-            <div class="introItems__info" id="items">
+            <div class="introList__info" id="items">
               <h2>
                 Items
               </h2>
-              <div class="introItems__info-text">
+              <div class="introList__info-text">
                 <h3>
                   Total Items
                 </h3>
@@ -265,11 +265,11 @@
             </div>
             <div class="anchor" id="voters"></div>
 
-            <div class="introItems__info" id="voters">
+            <div class="introList__info" id="voters">
               <h2>
                 Voters
               </h2>
-              <div class="introItems__info-text">
+              <div class="introList__info-text">
                 <h3>
                   Total Voters
                 </h3>
@@ -279,11 +279,11 @@
               </div>
             </div>
             <div class="anchor" id="security"></div>
-            <div class="introItems__info" id="security">
+            <div class="introList__info" id="security">
               <h2>
                 Security
               </h2>
-              <div class="introItems__info-text">
+              <div class="introList__info-text">
                 <h3>
                   Validate with OTP:
                 </h3>
@@ -291,7 +291,7 @@
                   Yes
                 </p>
               </div>
-              <div class="introItems__info-text">
+              <div class="introList__info-text">
                 <h3>
                   Recommended settings:
                 </h3>
@@ -299,7 +299,7 @@
                   No
                 </p>
               </div>
-              <div class="introItems__info-text">
+              <div class="introList__info-text">
                 <h3>
                   Enable blockchain:
                 </h3>
@@ -307,7 +307,7 @@
                   Yes
                 </p>
               </div>
-              <div class="introItems__info-text">
+              <div class="introList__info-text">
                 <h3>
                   Blockchain Network
                 </h3>
@@ -315,7 +315,7 @@
                   Symbol
                 </p>
               </div>
-              <div class="introItems__info-text">
+              <div class="introList__info-text">
                 <h3>
                   Encryption:
                 </h3>
@@ -323,7 +323,7 @@
                   Yes
                 </p>
               </div>
-              <div class="introItems__info-text">
+              <div class="introList__info-text">
                 <h3>
                   Anonymous:
                 </h3>
@@ -331,7 +331,7 @@
                   Admin can see users’ votes
                 </p>
               </div>
-              <div class="introItems__info-text">
+              <div class="introList__info-text">
                 <h3>
                   Wallet Configuration:
                 </h3>
@@ -342,11 +342,11 @@
             </div>
             <div class="anchor" id="notifications"></div>
 
-            <div class="introItems__info" id="notifications">
+            <div class="introList__info" id="notifications">
               <h2>
                 Notifications
               </h2>
-              <div class="introItems__info-text">
+              <div class="introList__info-text">
                 <h3>
                   Subscription:
                 </h3>
@@ -354,7 +354,7 @@
                   Yes - Immidiately
                 </p>
               </div>
-              <div class="introItems__info-text">
+              <div class="introList__info-text">
                 <h3>
                   Reminder:
                 </h3>
@@ -362,7 +362,7 @@
                   Yes - Scheduled on 2022-11-05 10.30
                 </p>
               </div>
-              <div class="introItems__info-text">
+              <div class="introList__info-text">
                 <h3>
                   Reminder not voted yet:
                 </h3>
@@ -370,7 +370,7 @@
                   Yes - 1 hour before end of election
                 </p>
               </div>
-              <div class="introItems__info-text">
+              <div class="introList__info-text">
                 <h3>
                   Opening
                 </h3>
@@ -378,7 +378,7 @@
                   Yes
                 </p>
               </div>
-              <div class="introItems__info-text">
+              <div class="introList__info-text">
                 <h3>
                   Closing:
                 </h3>
@@ -1050,7 +1050,6 @@
     </svg>
     <!-- js
     =========================================== -->
-    <script src="./js/draggable.js"></script>
     <script src="./js/main.js"></script>
 
 

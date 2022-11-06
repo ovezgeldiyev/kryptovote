@@ -320,11 +320,12 @@ function onTabClick(tabBtns, tabItems, item) {
     });
   });
 }
+const introNav = document.getElementById("introNav");
 
-const links = document.querySelectorAll(".links");
-const sections = document.querySelectorAll(".anchor");
-const asd = document.querySelector(".intro__inner-main");
-if (links) {
+if (introNav) {
+  const links = document.querySelectorAll(".links");
+  const sections = document.querySelectorAll(".anchor");
+  const asd = document.querySelector(".intro__inner-main");
   function changeLinkState() {
     let index = sections.length;
     while (--index && asd.scrollTop + 100 < sections[index].offsetTop) {}
@@ -349,26 +350,26 @@ if (securityCheck) {
   };
 }
 
-const checkNoteFunc = () => {
-  
-}
+const checkNoteFunc = () => {};
 const introItemNotes = document.querySelectorAll(".introItem.note");
 
 introItemNotes.forEach((introItemNote) => {
-  const introItemNotesCheck = introItemNote.querySelector("input[type='checkbox']");
+  const introItemNotesCheck = introItemNote.querySelector(
+    "input[type='checkbox']"
+  );
   if (introItemNote.classList.contains("two")) {
-    const myWrappers = introItemNote.querySelectorAll(".introItem__tools-wrapper");
-    myWrappers.forEach((myWrapper)=> {
+    const myWrappers = introItemNote.querySelectorAll(
+      ".introItem__tools-wrapper"
+    );
+    myWrappers.forEach((myWrapper) => {
       const myCheck = myWrapper.querySelector("input[type='checkbox']");
       myCheck.onchange = (e) => {
         myWrapper.classList.toggle("active");
       };
-    })
-
-
+    });
   } else {
     introItemNotesCheck.onchange = (e) => {
       introItemNote.classList.toggle("active");
     };
-  };
+  }
 });

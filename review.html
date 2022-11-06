@@ -133,13 +133,13 @@
             </span>
             Voters
           </a>
-          <a href="#" class="checked">
+          <a href="security.html" class="checked">
             <span>
               <img src="images/icons/check-white.png" alt="">
             </span>
             Security
           </a>
-          <a href="#" class="checked">
+          <a href="notifications.html" class="checked">
             <span>
               <img src="images/icons/check-white.png" alt="">
             </span>
@@ -395,7 +395,7 @@
             Cancel
           </a>
           <div class="button__row">
-            <a href="#" class="button previous" id="previewBallotBtn">
+            <a href="#" class="button previous">
               Previous
             </a>
             <a href="#" class="button previous" >
@@ -413,26 +413,7 @@
     <!-- modals start
      =========================================== -->
 
-    <div class="previewBallot" id="previewBallot">
-      <div class="previewBallot__inner">
-        <div class="previewBallot__inner-header">
-          <h2>
-            Ballot Preview
-          </h2>
-          <span id="ballotRemove">
-            <img src="./images/icons/close.png" alt="">
-          </span>
-        </div>
-        <div class="previewBallot__inner-frame">
-          <iframe src="https://www.google.com/webhp?igu=1"></iframe>
-        </div>
-        <div class="previewBallot__inner-footer">
-          <button class="button previous" id="ballotClose">
-            Close
-          </button>
-        </div>
-      </div>
-    </div>
+
     <div class="selectUser sm importUser" id="importUser">
       <div class="selectUser__inner">
         <div class="selectUser__inner-wrapper">
@@ -822,7 +803,7 @@
         </div>
       </div>
     </div>
-    <div class="imotrtItems addUser" id="editItem">
+    <div class="importItems addUser" id="editItem">
       <div class="list">
           <h2>
             Items
@@ -963,87 +944,7 @@
           </div>
       </div>
     </div>
-      <div class="addUser item" id="addUser">
-      <form action="" class="addUser__inner">
-        <h2>
-          Add Item
-        </h2>
-        <p class="sm">
-          Fill the form below to create a new Item
-        </p>
-        <div class="input">
-          <label for="itemName">
-            Item Name
-          </label>
-          <input type="text" id="itemName" placeholder="Mary White">
-        </div>
-        <div class="input textarea">
-          <label for="description">
-            Description <span>0</span>
-            <p>(optional - max 150 chars)</p>
-          </label>
-          <textarea name="description" id="description" placeholder="Short bio"></textarea>
-        </div>
-        <div class="input avatar">
-          <label for="changeAvatar">
-            Image
-          </label>
-          <div class="input__avatar" id="imageInput">
-            <div class="input__avatar-image">
-              <img src="#" alt="" id="myAvatar">
-            </div>
-            <div class="input__avatar-overlay">
-              <span>
-                <img src="./images/icons/edit-black.png" alt="">
-              </span>
-              Edit
-            </div>
-            <input type="file" id="changeAvatar">
-            <span>+</span>
-          </div>
-        </div>
-        <div class="addUser__inner-buttons">
-          <button type="button" class="button previous" id="addCancel">
-            Cancel
-          </button>
-          <button type="button" class="button next" id="addConfirm">
-            Confirm
-          </button>
-        </div>
-      </form>
-    </div>
-    <div class="importUser order" id="selectUser">
-      <form action="" class="importUser__inner">
-        <h2>
-          Order positions
-        </h2>
-        <p class="sm">
-          In this section you can re-order the current list by the criterias below. The operation is irreversible and it
-          applies only to the current candidates, but you will be able to re-apply it any time.
-        </p>
-        <h3>
-          Order positions by Name
-        </h3>
-        <div class="importUser__inner-deviders">
-          <label for="a-z">
-            <input type="radio" name="order" id="a-z">
-            Ascending (A-Z)
-          </label>
-          <label for="z-a" class="importUser__inner-deviders-item">
-            <input type="radio" name="order" id="z-a">
-            Descending (Z-A)
-          </label>
-        </div>
-        <div class="importUser__inner-buttons">
-          <button type="button" class="button previous" id="selectConfirm">
-            Cancel
-          </button>
-          <button type="submit" class="button next" id="selectCancel">
-            Confirm
-          </button>
-        </div>
-      </form>
-    </div>
+
     <!-- modals end
      =========================================== -->
     <!-- Sprites

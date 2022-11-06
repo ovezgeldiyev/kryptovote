@@ -94,6 +94,11 @@
           &.introButton{
             color: #0F0C95;
             text-decoration: underline;
+            cursor: pointer;
+            transition: .3s ease;
+            &:hover {
+              opacity: .8;
+            }
           }
         }
       }
@@ -124,7 +129,7 @@
     }
   }
 }
-.imotrtItems {
+.importItems {
   z-index: 7;
   position: fixed;
   top: 0;
@@ -173,8 +178,8 @@
   }
 }
 // 540px
-@mixin imotrtItems-xsm-sm {
-  .imotrtItems {
+@mixin importItems-xsm-sm {
+  .importItems {
     .list {
       padding: 30px 20px 15px;
     }

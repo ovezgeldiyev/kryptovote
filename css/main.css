@@ -3878,6 +3878,12 @@ table tfoot td .pagination a:hover {
 .introItems__info-text .big.introButton {
   color: #0F0C95;
   text-decoration: underline;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.introItems__info-text .big.introButton:hover {
+  opacity: 0.8;
 }
 
 .selectUser.sm .selectUser__inner-wrapper {
@@ -3891,7 +3897,7 @@ table tfoot td .pagination a:hover {
   padding-left: 0;
 }
 
-.imotrtItems {
+.importItems {
   z-index: 7;
   position: fixed;
   top: 0;
@@ -3905,18 +3911,18 @@ table tfoot td .pagination a:hover {
           justify-content: center;
   overflow-y: auto;
 }
-.imotrtItems.active {
+.importItems.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.imotrtItems.active .list {
+.importItems.active .list {
   -webkit-animation-name: fadeInUp;
           animation-name: fadeInUp;
   -webkit-animation-duration: 0.4s;
           animation-duration: 0.4s;
 }
-.imotrtItems .list {
+.importItems .list {
   background-color: #fff;
   padding: 45px 30px 20px;
   border: 1px solid #d0d0d0;
@@ -3927,22 +3933,22 @@ table tfoot td .pagination a:hover {
   top: 20px;
   margin: 0 auto;
 }
-.imotrtItems .list__table {
+.importItems .list__table {
   height: calc(100vh - 175px);
   max-height: 500px;
 }
-.imotrtItems h2 {
+.importItems h2 {
   margin-bottom: 15px;
 }
-.imotrtItems table {
+.importItems table {
   background-color: unset;
   min-width: 400px;
 }
-.imotrtItems table td {
+.importItems table td {
   width: 100%;
   background-color: unset;
 }
-.imotrtItems table td:first-child {
+.importItems table td:first-child {
   cursor: unset;
 }
 
@@ -4268,10 +4274,10 @@ table tfoot td .pagination a:hover {
     max-width: unset;
   }
 
-  .imotrtItems .list {
+  .importItems .list {
     padding: 30px 20px 15px;
   }
-  .imotrtItems table {
+  .importItems table {
     padding: 0;
   }
 

@@ -321,6 +321,23 @@ function onTabClick(tabBtns, tabItems, item) {
   });
 }
 
+const links = document.querySelectorAll(".links");
+const sections = document.querySelectorAll(".anchor");
+const asd = document.querySelector(".intro__inner-main");
+if (links) {
+  function changeLinkState() {
+    let index = sections.length;
+    while (--index && asd.scrollTop + 100 < sections[index].offsetTop) {}
+
+    links.forEach((link) => link.classList.remove("active"));
+    links[index]?.classList.add("active");
+  }
+
+  asd.onscroll = function () {
+    changeLinkState();
+  };
+}
+
 const securityCheck = document.getElementById("securityCheck");
 const securityItem = document.getElementById("securityItem");
 const securityWrapper = document.getElementById("securityWrapper");

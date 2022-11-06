@@ -337,3 +337,38 @@ if (links) {
     changeLinkState();
   };
 }
+
+const securityCheck = document.getElementById("securityCheck");
+const securityItem = document.getElementById("securityItem");
+const securityWrapper = document.getElementById("securityWrapper");
+
+if (securityCheck) {
+  securityCheck.onchange = (e) => {
+    securityItem.classList.toggle("active");
+    securityWrapper.classList.toggle("active");
+  };
+}
+
+const checkNoteFunc = () => {
+  
+}
+const introItemNotes = document.querySelectorAll(".introItem.note");
+
+introItemNotes.forEach((introItemNote) => {
+  const introItemNotesCheck = introItemNote.querySelector("input[type='checkbox']");
+  if (introItemNote.classList.contains("two")) {
+    const myWrappers = introItemNote.querySelectorAll(".introItem__tools-wrapper");
+    myWrappers.forEach((myWrapper)=> {
+      const myCheck = myWrapper.querySelector("input[type='checkbox']");
+      myCheck.onchange = (e) => {
+        myWrapper.classList.toggle("active");
+      };
+    })
+
+
+  } else {
+    introItemNotesCheck.onchange = (e) => {
+      introItemNote.classList.toggle("active");
+    };
+  };
+});

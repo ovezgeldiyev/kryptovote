@@ -2394,7 +2394,7 @@ table tfoot td .pagination a:hover {
 }
 .selectUser__inner .list__table {
   height: calc(100vh - 295px);
-  max-height: 540px;
+  max-height: 500px;
   -webkit-box-shadow: unset;
           box-shadow: unset;
   padding: 0;
@@ -2406,6 +2406,10 @@ table tfoot td .pagination a:hover {
   -webkit-filter: unset;
           filter: unset;
   box-shadow: unset;
+  overflow: hidden;
+}
+.selectUser__inner table td:first-child {
+  min-width: 210px;
 }
 .selectUser__inner table thead {
   top: 2px;
@@ -2427,7 +2431,7 @@ table tfoot td .pagination a:hover {
 }
 .selectUser__inner .groups .list__table {
   height: calc(100vh - 295px);
-  max-height: 470px;
+  max-height: 440px;
 }
 .selectUser__inner .groups table {
   min-width: 600px;
@@ -2903,9 +2907,10 @@ table tfoot td .pagination a:hover {
   height: calc(100vh - 156px);
   overflow: auto;
   position: relative;
+  scroll-behavior: smooth;
 }
 .introNav {
-  width: 166px;
+  width: 154px;
   padding: 0 17px;
   position: sticky;
   top: 0;
@@ -2921,7 +2926,7 @@ table tfoot td .pagination a:hover {
           align-items: flex-start;
 }
 .introNav a {
-  display: inline-block;
+  width: 100%;
   background-color: unset;
   color: #000;
   font-family: "Inter", sans-serif;
@@ -2930,6 +2935,12 @@ table tfoot td .pagination a:hover {
   font-weight: 500;
   margin-bottom: 26px;
   padding: 4px 6px;
+  border-radius: 10px;
+}
+.introNav a:hover {
+  color: #fff;
+  background-color: #0f0c95;
+  opacity: 1;
 }
 .introNav a:last-child {
   margin-bottom: 0;
@@ -2937,11 +2948,11 @@ table tfoot td .pagination a:hover {
 .introNav a.active {
   color: #fff;
   background-color: #0f0c95;
-  border-radius: 10px;
 }
 .introItems {
-  width: calc(100% - 166px);
+  width: calc(100% - 154px);
   padding: 0 10px;
+  scroll-behavior: smooth;
 }
 .introItems h1 {
   color: #000;
@@ -2953,19 +2964,16 @@ table tfoot td .pagination a:hover {
   color: #000;
   margin-bottom: 45px;
 }
-.introItems__config {
-  scroll-behavior: smooth;
-}
-.introItems__config-info {
+.introItems__info {
   margin-bottom: 30px;
 }
-.introItems__config-info:last-child {
+.introItems__info:last-child {
   margin-bottom: 0;
 }
-.introItems__config-info h2 {
+.introItems__info h2 {
   margin-bottom: 22px;
 }
-.introItems__config-info-text {
+.introItems__info-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2978,7 +2986,7 @@ table tfoot td .pagination a:hover {
   padding: 8px 0;
   position: relative;
 }
-.introItems__config-info-text:after {
+.introItems__info-text:after {
   content: "";
   width: 100%;
   height: 1px;
@@ -2987,16 +2995,92 @@ table tfoot td .pagination a:hover {
   bottom: 0;
   left: 0;
 }
-.introItems__config-info-text h3 {
+.introItems__info-text h3 {
   color: #000;
   font-weight: 500;
   width: 214px;
 }
-.introItems__config-info-text .big {
-  width: calc(100% - 214px);
+.introItems__info-text .big {
+  width: calc(100% - 240px);
   font-size: 16px;
   margin-bottom: unset;
   font-weight: 300;
+  line-height: 20px;
+}
+.introItems__info-text .big.introButton {
+  color: #0F0C95;
+  text-decoration: underline;
+}
+
+.selectUser.sm .selectUser__inner-wrapper {
+  padding: 44px 25px 20px;
+}
+.selectUser.sm .selectUser__inner .list__table {
+  height: calc(100vh - 220px);
+  max-height: 505px;
+}
+.selectUser.sm .selectUser__inner .list__table table td:first-child {
+  padding-left: 0;
+}
+
+.imotrtItems {
+  z-index: 7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow-y: auto;
+}
+.imotrtItems.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.imotrtItems.active .list {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+}
+.imotrtItems .list {
+  background-color: #fff;
+  padding: 45px 30px 20px;
+  border: 1px solid #d0d0d0;
+  border-radius: 10px;
+  width: calc(100% - 20px);
+  max-width: 510px;
+  position: absolute;
+  top: 20px;
+  margin: 0 auto;
+}
+.imotrtItems .list__table {
+  height: calc(100vh - 175px);
+  max-height: 500px;
+}
+.imotrtItems h2 {
+  margin-bottom: 15px;
+}
+.imotrtItems table {
+  background-color: unset;
+  min-width: 400px;
+}
+.imotrtItems table td {
+  width: 100%;
+  background-color: unset;
+}
+.imotrtItems table td:first-child {
+  cursor: unset;
+}
+
+.anchor {
+  position: relative;
+  top: 0;
 }
 
 @media (max-width: 1180px) {
@@ -3008,6 +3092,9 @@ table tfoot td .pagination a:hover {
     width: 100%;
     padding-top: 66.79px;
     min-height: calc(100vh - 96.79px);
+  }
+  .intro__inner-main {
+    height: calc(100vh - 215px);
   }
 
   .list__table {
@@ -3054,6 +3141,9 @@ table tfoot td .pagination a:hover {
   .intro {
     padding: 66.79px 15px 15px;
   }
+  .intro__inner-main {
+    height: calc(100vh - 220px);
+  }
 
   .header__inner {
     padding: 10px 15px;
@@ -3067,21 +3157,8 @@ table tfoot td .pagination a:hover {
   }
 }
 @media (max-width: 930px) {
-  .intro__inner-header {
-    margin-bottom: 20px;
-  }
-  .intro__inner-info {
-    margin-bottom: 20px;
-  }
-  .intro__inner-info h2 {
-    margin-bottom: 7px;
-  }
-
-  .list__table {
-    margin: 0 -20px;
-    padding: 15px 20px 0;
-    height: calc(100vh - 328px);
-    min-height: 500px;
+  .intro__inner-main {
+    padding-top: 10px;
   }
 
   .previewBallot__inner {
@@ -3113,6 +3190,35 @@ table tfoot td .pagination a:hover {
   }
 }
 @media (max-width: 750px) {
+  .introNav {
+    padding: 0 10px;
+  }
+  .introNav a {
+    font-size: 15px;
+  }
+  .introItems {
+    width: calc(100% - 140px);
+    min-width: 480px;
+  }
+  .introItems > .big {
+    margin-bottom: 30px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .introItems h2 {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 15px;
+  }
+  .introItems h3 {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .selectUser.sm .selectUser__inner-wrapper {
+    padding: 35px 15px 20px;
+  }
+
   table td {
     font-size: 13px;
   }
@@ -3202,6 +3308,29 @@ table tfoot td .pagination a:hover {
     font-size: 13px;
     line-height: 20px;
   }
+  .intro__inner-footer.config {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: center;
+  }
+  .intro__inner-footer.config .cancel {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .intro__inner-footer.config .button__row {
+    margin: 10px 0 0 auto;
+  }
+  .intro__inner-footer.config .button__row .button {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 4px 12px;
+    margin-right: 5px;
+  }
   .intro__inner-footer.items {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3238,6 +3367,13 @@ table tfoot td .pagination a:hover {
   }
   .addUser__inner .input {
     max-width: unset;
+  }
+
+  .imotrtItems .list {
+    padding: 30px 20px 15px;
+  }
+  .imotrtItems table {
+    padding: 0;
   }
 
   h1 {
@@ -3414,6 +3550,10 @@ table tfoot td .pagination a:hover {
   .intro__inner-footer::after {
     left: 0;
     width: 100%;
+  }
+  .intro__inner-footer.config .button__row .button {
+    padding: 4px 10px;
+    font-size: 11px;
   }
   .intro__inner-footer.items .button__row .button {
     padding: 4px 10px;

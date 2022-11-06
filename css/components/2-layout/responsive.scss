@@ -51,7 +51,7 @@
 // 750px
 @include sm-md {
   @include intro-sm-md;
-
+  @include selectUser-sm-md;
   table {
     td {
       font-size: 13px;
@@ -145,6 +145,8 @@
 @include xsm-sm {
   @include intro-xsm-sm;
   @include addUser-xsm-sm;
+  @include imotrtItems-xsm-sm;
+
   h1 {
     font-size: 20px;
     line-height: 22px;

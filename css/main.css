@@ -2752,6 +2752,9 @@ table tfoot td .pagination a:hover {
   margin-bottom: 10px;
   padding: 20px 0;
 }
+.introItem.note.active {
+  padding: 20px 0;
+}
 .introItem.note:last-child {
   margin-bottom: 0;
 }

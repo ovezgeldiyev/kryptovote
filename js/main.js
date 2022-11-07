@@ -132,9 +132,11 @@ if (eChangeAvatar) {
 
 sidebarBtn.onclick = function () {
   sidebar.classList.toggle("active");
+  body.classList.toggle("active");
   window.onclick = function (e) {
     if (e.target == sidebar) {
       sidebar.classList.remove("active");
+      body.classList.remove("active");
     }
   };
 };
